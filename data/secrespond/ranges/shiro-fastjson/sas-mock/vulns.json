@@ -1,0 +1,8 @@
+{
+  "Count": 0,
+  "CurrentPage": 1,
+  "PageSize": 50,
+  "RequestId": "mock-range-shiro-fastjson-vulns",
+  "VulRecords": [],
+  "_note": "SAS未检测到应用漏洞（Shiro/Fastjson为JAR级别组件，需SCA扫描）"
+}

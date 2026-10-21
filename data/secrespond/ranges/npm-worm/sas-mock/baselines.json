@@ -1,0 +1,122 @@
+{
+  "_comment": "SAS mock baseline data for range-npm-worm. Application-level supply-chain artifacts are primarily disk evidence; this file only keeps baseline categories relevant to the npm worm scenario.",
+  "WarningSummarys": [
+    {
+      "CheckCount": 16,
+      "CheckExploit": false,
+      "ContainerRisk": false,
+      "DatabaseRisk": false,
+      "HighWarningCount": 3,
+      "LastFoundTime": "2026-05-07 04:34:00",
+      "Level": "high",
+      "LowWarningCount": 0,
+      "MediumWarningCount": 4,
+      "RiskId": 43,
+      "RiskName": "阿里云标准-Ubuntu Linux 安全基线",
+      "SubTypeAlias": "阿里云标准-Ubuntu Linux 安全基线",
+      "TypeAlias": "最佳安全实践",
+      "WarningMachineCount": 1,
+      "WarningItems": [
+        {
+          "Item": "SSH PermitRootLogin 配置为 yes",
+          "CheckId": "CHK-10",
+          "Level": "high"
+        },
+        {
+          "Item": "SSH PasswordAuthentication 配置为 yes",
+          "CheckId": "CHK-11",
+          "Level": "medium"
+        },
+        {
+          "Item": "developer 用户 sudo 权限过宽",
+          "CheckId": "CHK-18",
+          "Level": "high"
+        }
+      ]
+    },
+    {
+      "CheckCount": 1,
+      "CheckExploit": true,
+      "ContainerRisk": false,
+      "DatabaseRisk": false,
+      "HighWarningCount": 1,
+      "LastFoundTime": "2026-05-07 04:37:12",
+      "Level": "high",
+      "LowWarningCount": 0,
+      "MediumWarningCount": 0,
+      "RiskId": 105,
+      "RiskName": "弱口令-Linux系统登录弱口令检查",
+      "SubTypeAlias": "弱口令-Linux系统登录弱口令检查",
+      "TypeAlias": "弱口令",
+      "WarningMachineCount": 1,
+      "WarningItems": [
+        {
+          "Item": "root 用户存在弱密码 npm@2024",
+          "CheckId": "CHK-12",
+          "Level": "high"
+        }
+      ]
+    },
+    {
+      "CheckCount": 13,
+      "CheckExploit": false,
+      "ContainerRisk": false,
+      "DatabaseRisk": false,
+      "HighWarningCount": 0,
+      "LastFoundTime": "2026-05-07 04:35:45",
+      "Level": "medium",
+      "LowWarningCount": 1,
+      "MediumWarningCount": 2,
+      "RiskId": 96,
+      "RiskName": "阿里云标准-Nginx安全基线",
+      "SubTypeAlias": "阿里云标准-Nginx安全基线",
+      "TypeAlias": "最佳安全实践",
+      "WarningMachineCount": 1,
+      "WarningItems": [
+        {
+          "Item": "Nginx 反向代理暴露未授权部署接口 /api/webhook/deploy",
+          "CheckId": "CHK-13",
+          "Level": "medium"
+        }
+      ]
+    },
+    {
+      "CheckCount": 4,
+      "CheckExploit": false,
+      "ContainerRisk": false,
+      "DatabaseRisk": false,
+      "HighWarningCount": 2,
+      "LastFoundTime": "2026-05-07 04:36:10",
+      "Level": "high",
+      "LowWarningCount": 0,
+      "MediumWarningCount": 2,
+      "RiskId": 9001,
+      "RiskName": "应用配置敏感信息风险",
+      "SubTypeAlias": "应用配置敏感信息风险",
+      "TypeAlias": "最佳安全实践",
+      "WarningMachineCount": 1,
+      "WarningItems": [
+        {
+          "Item": "/home/developer/.npmrc 明文保存 npm token",
+          "CheckId": "CHK-14",
+          "Level": "high"
+        },
+        {
+          "Item": "/home/developer/.ssh/id_rsa 未加密保护",
+          "CheckId": "CHK-15",
+          "Level": "high"
+        },
+        {
+          "Item": "/opt/webapp/.env 权限过松并包含 DB/API/JWT 秘密",
+          "CheckId": "CHK-16",
+          "Level": "medium"
+        },
+        {
+          "Item": "/home/developer/.git-credentials 明文保存 Git 凭证",
+          "CheckId": "CHK-17",
+          "Level": "medium"
+        }
+      ]
+    }
+  ]
+}

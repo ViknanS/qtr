@@ -1,0 +1,50 @@
+[
+  {
+    "alert_id": "JK-001",
+    "severity": "high",
+    "type": "Web Application Anomaly",
+    "title": "Jenkins Script Console 未授权访问",
+    "description": "检测到来自 8.217.135.152 的多次 POST /scriptText 请求，目标主机 Jenkins 实例（端口 8080）。请求成功（HTTP 200），返回 Groovy 执行结果，疑似未授权 RCE。",
+    "timestamp_offset_seconds": 0,
+    "src_ip": "8.217.135.152",
+    "dst_port": 8080
+  },
+  {
+    "alert_id": "JK-002",
+    "severity": "critical",
+    "type": "Suspicious Process",
+    "title": "进程伪装为 Jenkins Agent 但行为异常",
+    "description": "进程名 jenkins-agent.jar 但实际执行二进制为 /var/cache/jenkins/.update（非 Java 进程）。哈希匹配 XMRig 挖矿程序家族。",
+    "timestamp_offset_seconds": 30,
+    "process_path": "/var/cache/jenkins/.update",
+    "argv0": "jenkins-agent.jar"
+  },
+  {
+    "alert_id": "JK-003",
+    "severity": "high",
+    "type": "Privilege Escalation",
+    "title": "新增 UID=0 账户",
+    "description": "/etc/passwd 监控触发，新增账户 jenkins-build:x:0:0::/: 命名贴近合法服务但 UID=0 异常。",
+    "timestamp_offset_seconds": 35,
+    "username": "jenkins-build"
+  },
+  {
+    "alert_id": "JK-004",
+    "severity": "high",
+    "type": "Persistence",
+    "title": "cron 计划任务异常",
+    "description": "/etc/cron.d/jenkins-update 包含每 2 分钟拉起 /var/cache/jenkins/.update 的条目。",
+    "timestamp_offset_seconds": 40,
+    "cron_path": "/etc/cron.d/jenkins-update"
+  },
+  {
+    "alert_id": "JK-005",
+    "severity": "medium",
+    "type": "Outbound Connection",
+    "title": "矿池协议出站连接",
+    "description": "持续出站 TCP 连接到 8.217.135.152:3333，符合 Stratum 协议特征。",
+    "timestamp_offset_seconds": 60,
+    "dst_ip": "8.217.135.152",
+    "dst_port": 3333
+  }
+]

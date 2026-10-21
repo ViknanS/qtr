@@ -1,0 +1,925 @@
+{
+  "instance_id": "i-bp1864d401as14btd9vf",
+  "pages": [
+    {
+      "Count": 7,
+      "CurrentPage": 1,
+      "PageSize": 50,
+      "RequestId": "4B10019E-816C-59D6-B93A-BD7B7BC060B8",
+      "SuspEvents": [
+        {
+          "Advanced": false,
+          "AlarmEventName": "渗透工具利用行为",
+          "AlarmEventNameDisplay": "渗透工具利用行为",
+          "AlarmEventType": "进程异常行为",
+          "AlarmEventTypeDisplay": "进程异常行为",
+          "AlarmUniqueInfo": "4bccb36a1ecc7bb8b1568593fdab4c19",
+          "AutoBreaking": false,
+          "CanBeDealOnLine": false,
+          "CanCancelFault": false,
+          "ContainHwMode": false,
+          "DataSource": "aegis_suspicious_event",
+          "Desc": "渗透工具利用行为",
+          "Details": [
+            {
+              "NameDisplay": "提示",
+              "Type": "text",
+              "Value": "在您的系统上检测到了渗透工具的利用特征, 可能是攻击者已经入侵到该服务器中.",
+              "ValueDisplay": "在您的系统上检测到了渗透工具的利用特征, 可能是攻击者已经入侵到该服务器中."
+            },
+            {
+              "NameDisplay": "告警原因",
+              "Type": "text",
+              "Value": "该进程对一个特定路径的文件有写入行为，与渗透工具的行为高度相似。\n\t  ",
+              "ValueDisplay": "该进程对一个特定路径的文件有写入行为，与渗透工具的行为高度相似。\n\t  "
+            },
+            {
+              "NameDisplay": "工具信息",
+              "Type": "text",
+              "Value": "\t    HashDump\n",
+              "ValueDisplay": "\t    HashDump\n"
+            },
+            {
+              "NameDisplay": "写入文件路径",
+              "Type": "text",
+              "Value": "c:/windows/temp/lsass.dmp",
+              "ValueDisplay": "c:/windows/temp/lsass.dmp"
+            },
+            {
+              "NameDisplay": "域名称",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "用户名",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "命令行",
+              "Type": "text",
+              "Value": "powershell.exe  -NoProfile -ExecutionPolicy Bypass -File C:\\ProgramData\\CorpBackup\\system-stage.ps1",
+              "ValueDisplay": "powershell.exe  -NoProfile -ExecutionPolicy Bypass -File C:\\ProgramData\\CorpBackup\\system-stage.ps1"
+            },
+            {
+              "NameDisplay": "进程路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+              "ValueDisplay": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+            },
+            {
+              "NameDisplay": "进程ID",
+              "Type": "text",
+              "Value": "4300",
+              "ValueDisplay": "4300"
+            },
+            {
+              "NameDisplay": "父进程命令行",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "父进程文件路径",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "父进程ID",
+              "Type": "text",
+              "Value": "476",
+              "ValueDisplay": "476"
+            },
+            {
+              "NameDisplay": "进程链",
+              "Type": "html",
+              "Value": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[476]</strong>&nbsp;&nbsp;<code>cmd.exe /c powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\\ProgramData\\CorpBackup\\system-stage.ps1</code></p>\n",
+              "ValueDisplay": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[476]</strong>&nbsp;&nbsp;<code>cmd.exe /c powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\\ProgramData\\CorpBackup\\system-stage.ps1</code></p>\n"
+            },
+            {
+              "NameDisplay": "描述",
+              "Type": "text",
+              "Value": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似.",
+              "ValueDisplay": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似."
+            },
+            {
+              "NameDisplay": "处置建议",
+              "Type": "text",
+              "Value": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为.",
+              "ValueDisplay": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为."
+            }
+          ],
+          "DisplaySandboxResult": false,
+          "EventNotes": [],
+          "EventStatus": 1,
+          "EventSubType": "渗透工具利用行为",
+          "HasTraceInfo": true,
+          "Id": 720183107,
+          "InstanceId": "i-bp1864d401as14btd9vf",
+          "InstanceName": "range-rdp-service-abuse-victim",
+          "InternetIp": "121.41.86.186",
+          "IntranetIp": "172.16.33.176",
+          "LargeModel": true,
+          "LastTime": "2026-06-03 10:51:14",
+          "LastTimeStamp": 1780455074000,
+          "Level": "serious",
+          "Name": "进程异常行为-渗透工具利用行为",
+          "OccurrenceTime": "2026-06-03 10:42:13",
+          "OccurrenceTimeStamp": 1780454533000,
+          "OperateErrorCode": "",
+          "OperateMsg": "",
+          "SaleVersion": "1",
+          "SecurityEventIds": "720183107",
+          "Stages": "[\"持久化\",\"代码执行\"]",
+          "SupportOperateCode": "AI.real_attack",
+          "TacticItems": [
+            {
+              "TacticDisplayName": "持久化",
+              "TacticId": "TA0003"
+            },
+            {
+              "TacticDisplayName": "代码执行",
+              "TacticId": "TA0002"
+            }
+          ],
+          "UniqueInfo": "dec1dca7df8d04b98964b092a07b74b2",
+          "Uuid": "81c68948-7aa1-4cc6-a520-da886bb329cf"
+        },
+        {
+          "Advanced": false,
+          "AlarmEventName": "可疑Powershell指令",
+          "AlarmEventNameDisplay": "可疑Powershell指令",
+          "AlarmEventType": "进程异常行为",
+          "AlarmEventTypeDisplay": "进程异常行为",
+          "AlarmUniqueInfo": "820f7473cd1699ad2bcd32accf40a03d",
+          "AutoBreaking": false,
+          "CanBeDealOnLine": false,
+          "CanCancelFault": false,
+          "ContainHwMode": false,
+          "DataSource": "aegis_suspicious_event",
+          "Desc": "黑客常常利用Powershell进行恶意文件下载、恶意文件不落盘持久化运行、反弹shell等恶意行为。",
+          "Details": [
+            {
+              "NameDisplay": "提示",
+              "Type": "text",
+              "Value": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关.",
+              "ValueDisplay": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关."
+            },
+            {
+              "NameDisplay": "ATT&CK 矩阵ID",
+              "Type": "text",
+              "Value": "T1059.001",
+              "ValueDisplay": "T1059.001"
+            },
+            {
+              "NameDisplay": "告警原因",
+              "Type": "text",
+              "Value": "        该Powershell命令中包含编码片段, 且解码后的内容较为可疑.\n        ",
+              "ValueDisplay": "        该Powershell命令中包含编码片段, 且解码后的内容较为可疑.\n        "
+            },
+            {
+              "NameDisplay": "用户名",
+              "Type": "text",
+              "Value": "Administrator",
+              "ValueDisplay": "Administrator"
+            },
+            {
+              "NameDisplay": "命令行",
+              "Type": "text",
+              "Value": "powershell  -NoProfile -ExecutionPolicy Bypass -EncodedCommand CgAkAEUAcgByAG8AcgBBAGMAdABpAG8AbgBQAHIAZQBmAGUAcgBlAG4AYwBlACAAPQAgACcAUwB0AG8AcAAnAAoAJABiADYANAAgAD0AIABbAEMAbwBuAHMAbwBsAGUAXQA6ADoASQBuAC4AUgBlAGEAZABUAG8ARQBuAGQAKAApAAoAWwBJAE8ALgBGAGkAbABlAF0AOgA6AFcAcgBpAHQAZQBBAGwAbABCAHkAdABlAHMAKAAnAEMAOgBcAFAAcgBvAGcAcgBhAG0ARABhAHQAYQBcAEMAbwByAHAAQgBhAGMAawB1AHAAXABzAHkAcwB0AGUAbQAtAHMAdABhAGcAZQAuAHAAcwAxACcALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACQAYgA2ADQAKQApAAoAVwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAFsAcAByAGUAcABdACAAdQBwAGwAbwBhAGQAZQBkACAAYwB1AHIAcgBlAG4AdAAgAHMAeQBzAHQAZQBtAC0AcwB0AGEAZwBlAC4AcABzADEAJwAKAA==",
+              "ValueDisplay": "powershell  -NoProfile -ExecutionPolicy Bypass -EncodedCommand CgAkAEUAcgByAG8AcgBBAGMAdABpAG8AbgBQAHIAZQBmAGUAcgBlAG4AYwBlACAAPQAgACcAUwB0AG8AcAAnAAoAJABiADYANAAgAD0AIABbAEMAbwBuAHMAbwBsAGUAXQA6ADoASQBuAC4AUgBlAGEAZABUAG8ARQBuAGQAKAApAAoAWwBJAE8ALgBGAGkAbABlAF0AOgA6AFcAcgBpAHQAZQBBAGwAbABCAHkAdABlAHMAKAAnAEMAOgBcAFAAcgBvAGcAcgBhAG0ARABhAHQAYQBcAEMAbwByAHAAQgBhAGMAawB1AHAAXABzAHkAcwB0AGUAbQAtAHMAdABhAGcAZQAuAHAAcwAxACcALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACQAYgA2ADQAKQApAAoAVwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAFsAcAByAGUAcABdACAAdQBwAGwAbwBhAGQAZQBkACAAYwB1AHIAcgBlAG4AdAAgAHMAeQBzAHQAZQBtAC0AcwB0AGEAZwBlAC4AcABzADEAJwAKAA=="
+            },
+            {
+              "NameDisplay": "进程路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+              "ValueDisplay": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+            },
+            {
+              "NameDisplay": "进程ID",
+              "Type": "text",
+              "Value": "4684",
+              "ValueDisplay": "4684"
+            },
+            {
+              "NameDisplay": "父进程命令行",
+              "Type": "text",
+              "Value": "\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -ExecutionPolicy Bypass -EncodedCommand CgAkAEUAcgByAG8AcgBBAGMAdABpAG8AbgBQAHIAZQBmAGUAcgBlAG4AYwBlACAAPQAgACcAUwB0AG8AcAAnAAoAJABiADYANAAgAD0AIABbAEMAbwBuAHMAbwBsAGUAXQA6ADoASQBuAC4AUgBlAGEAZABUAG8ARQBuAGQAKAApAAoAWwBJAE8ALgBGAGkAbABlAF0AOgA6AFcAcgBpAHQAZQBBAGwAbABCAHkAdABlAHMAKAAnAEMAOgBcAFAAcgBvAGcAcgBhAG0ARABhAHQAYQBcAEMAbwByAHAAQgBhAGMAawB1AHAAXABzAHkAcwB0AGUAbQAtAHMAdABhAGcAZQAuAHAAcwAxACcALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACQAYgA2ADQAKQApAAoAVwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAFsAcAByAGUAcABdACAAdQBwAGwAbwBhAGQAZQBkACAAYwB1AHIAcgBlAG4AdAAgAHMAeQBzAHQAZQBtAC0AcwB0AGEAZwBlAC4AcABzADEAJwAKAA==\"",
+              "ValueDisplay": "\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -ExecutionPolicy Bypass -EncodedCommand CgAkAEUAcgByAG8AcgBBAGMAdABpAG8AbgBQAHIAZQBmAGUAcgBlAG4AYwBlACAAPQAgACcAUwB0AG8AcAAnAAoAJABiADYANAAgAD0AIABbAEMAbwBuAHMAbwBsAGUAXQA6ADoASQBuAC4AUgBlAGEAZABUAG8ARQBuAGQAKAApAAoAWwBJAE8ALgBGAGkAbABlAF0AOgA6AFcAcgBpAHQAZQBBAGwAbABCAHkAdABlAHMAKAAnAEMAOgBcAFAAcgBvAGcAcgBhAG0ARABhAHQAYQBcAEMAbwByAHAAQgBhAGMAawB1AHAAXABzAHkAcwB0AGUAbQAtAHMAdABhAGcAZQAuAHAAcwAxACcALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACQAYgA2ADQAKQApAAoAVwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAFsAcAByAGUAcABdACAAdQBwAGwAbwBhAGQAZQBkACAAYwB1AHIAcgBlAG4AdAAgAHMAeQBzAHQAZQBtAC0AcwB0AGEAZwBlAC4AcABzADEAJwAKAA==\""
+            },
+            {
+              "NameDisplay": "父进程文件路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/cmd.exe",
+              "ValueDisplay": "C:/Windows/System32/cmd.exe"
+            },
+            {
+              "NameDisplay": "父进程ID",
+              "Type": "text",
+              "Value": "4464",
+              "ValueDisplay": "4464"
+            },
+            {
+              "NameDisplay": "进程链",
+              "Type": "html",
+              "Value": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2808]</strong>&nbsp;&nbsp;<code>C:\\Windows\\System32\\OpenSSH\\sshd.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[5316]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -R</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2388]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -z</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4464]</strong>&nbsp;&nbsp;<code>\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -ExecutionPolicy Bypass -EncodedCommand CgAkAEUAcgByAG8AcgBBAGMAdABpAG8AbgBQAHIAZQBmAGUAcgBlAG4AYwBlACAAPQAgACcAUwB0AG8AcAAnAAoAJABiADYANAAgAD0AIABbAEMAbwBuAHMAbwBsAGUAXQA6ADoASQBuAC4AUgBlAGEAZABUAG8ARQBuAGQAKAApAAoAWwBJAE8ALgBGAGkAbABlAF0AOgA6AFcAcgBpAHQAZQBBAGwAbABCAHkAdABlAHMAKAAnAEMAOgBcAFAAcgBvAGcAcgBhAG0ARABhAHQAYQBcAEMAbwByAHAAQgBhAGMAawB1AHAAXABzAHkAcwB0AGUAbQAtAHMAdABhAGcAZQAuAHAAcwAxACcALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACQAYgA2ADQAKQApAAoAVwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAFsAcAByAGUAcABdACAAdQBwAGwAbwBhAGQAZQBkACAAYwB1AHIAcgBlAG4AdAAgAHMAeQBzAHQAZQBtAC0AcwB0AGEAZwBlAC4AcABzADEAJwAKAA==\"</code></p>\n",
+              "ValueDisplay": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2808]</strong>&nbsp;&nbsp;<code>C:\\Windows\\System32\\OpenSSH\\sshd.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[5316]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -R</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2388]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -z</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4464]</strong>&nbsp;&nbsp;<code>\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -ExecutionPolicy Bypass -EncodedCommand CgAkAEUAcgByAG8AcgBBAGMAdABpAG8AbgBQAHIAZQBmAGUAcgBlAG4AYwBlACAAPQAgACcAUwB0AG8AcAAnAAoAJABiADYANAAgAD0AIABbAEMAbwBuAHMAbwBsAGUAXQA6ADoASQBuAC4AUgBlAGEAZABUAG8ARQBuAGQAKAApAAoAWwBJAE8ALgBGAGkAbABlAF0AOgA6AFcAcgBpAHQAZQBBAGwAbABCAHkAdABlAHMAKAAnAEMAOgBcAFAAcgBvAGcAcgBhAG0ARABhAHQAYQBcAEMAbwByAHAAQgBhAGMAawB1AHAAXABzAHkAcwB0AGUAbQAtAHMAdABhAGcAZQAuAHAAcwAxACcALABbAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACQAYgA2ADQAKQApAAoAVwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAnAFsAcAByAGUAcABdACAAdQBwAGwAbwBhAGQAZQBkACAAYwB1AHIAcgBlAG4AdAAgAHMAeQBzAHQAZQBtAC0AcwB0AGEAZwBlAC4AcABzADEAJwAKAA==\"</code></p>\n"
+            },
+            {
+              "NameDisplay": "描述",
+              "Type": "text",
+              "Value": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似.",
+              "ValueDisplay": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似."
+            },
+            {
+              "NameDisplay": "处置建议",
+              "Type": "text",
+              "Value": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为.",
+              "ValueDisplay": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为."
+            }
+          ],
+          "DisplaySandboxResult": false,
+          "EventNotes": [],
+          "EventStatus": 1,
+          "EventSubType": "可疑Powershell指令",
+          "HasTraceInfo": true,
+          "Id": 720620384,
+          "InstanceId": "i-bp1864d401as14btd9vf",
+          "InstanceName": "range-rdp-service-abuse-victim",
+          "InternetIp": "121.41.86.186",
+          "IntranetIp": "172.16.33.176",
+          "LargeModel": true,
+          "LastTime": "2026-06-03 10:41:30",
+          "LastTimeStamp": 1780454490000,
+          "Level": "suspicious",
+          "Name": "进程异常行为-可疑Powershell指令",
+          "OccurrenceTime": "2026-06-03 10:41:30",
+          "OccurrenceTimeStamp": 1780454490000,
+          "SaleVersion": "1",
+          "SecurityEventIds": "720620384",
+          "Stages": "[\"代码执行\"]",
+          "SupportOperateCode": "AI.real_attack",
+          "TacticItems": [
+            {
+              "TacticDisplayName": "代码执行",
+              "TacticId": "TA0002"
+            }
+          ],
+          "UniqueInfo": "cca5ac9005982d4db357272d5d756aba",
+          "Uuid": "81c68948-7aa1-4cc6-a520-da886bb329cf"
+        },
+        {
+          "Advanced": false,
+          "AlarmEventName": "渗透工具利用行为",
+          "AlarmEventNameDisplay": "渗透工具利用行为",
+          "AlarmEventType": "进程异常行为",
+          "AlarmEventTypeDisplay": "进程异常行为",
+          "AlarmUniqueInfo": "7f49596549a9860a3d48d7ccdd67e723",
+          "AutoBreaking": false,
+          "CanBeDealOnLine": false,
+          "CanCancelFault": false,
+          "ContainHwMode": false,
+          "DataSource": "aegis_suspicious_event",
+          "Desc": "渗透工具利用行为",
+          "Details": [
+            {
+              "NameDisplay": "提示",
+              "Type": "text",
+              "Value": "在您的系统上检测到了渗透工具的利用特征, 可能是攻击者已经入侵到该服务器中.",
+              "ValueDisplay": "在您的系统上检测到了渗透工具的利用特征, 可能是攻击者已经入侵到该服务器中."
+            },
+            {
+              "NameDisplay": "告警原因",
+              "Type": "text",
+              "Value": "该进程对一个特定路径的文件有写入行为，与渗透工具的行为高度相似。\n\t  ",
+              "ValueDisplay": "该进程对一个特定路径的文件有写入行为，与渗透工具的行为高度相似。\n\t  "
+            },
+            {
+              "NameDisplay": "工具信息",
+              "Type": "text",
+              "Value": "\t    HashDump\n",
+              "ValueDisplay": "\t    HashDump\n"
+            },
+            {
+              "NameDisplay": "写入文件路径",
+              "Type": "text",
+              "Value": "c:/windows/temp/lsass.dmp",
+              "ValueDisplay": "c:/windows/temp/lsass.dmp"
+            },
+            {
+              "NameDisplay": "域名称",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "用户名",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "命令行",
+              "Type": "text",
+              "Value": "powershell.exe  -NoProfile -ExecutionPolicy Bypass -File C:\\ProgramData\\CorpBackup\\system-stage.ps1  ",
+              "ValueDisplay": "powershell.exe  -NoProfile -ExecutionPolicy Bypass -File C:\\ProgramData\\CorpBackup\\system-stage.ps1  "
+            },
+            {
+              "NameDisplay": "进程路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+              "ValueDisplay": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+            },
+            {
+              "NameDisplay": "进程ID",
+              "Type": "text",
+              "Value": "296",
+              "ValueDisplay": "296"
+            },
+            {
+              "NameDisplay": "父进程命令行",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "父进程文件路径",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "父进程ID",
+              "Type": "text",
+              "Value": "4092",
+              "ValueDisplay": "4092"
+            },
+            {
+              "NameDisplay": "进程链",
+              "Type": "html",
+              "Value": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4092]</strong>&nbsp;&nbsp;<code>cmd.exe /c echo svc-start&gt;C:\\Windows\\Temp\\svc-diag-start.txt &amp; powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\\ProgramData\\CorpBackup\\system-stage.ps1 &gt; C:\\Windows\\Temp\\system-stage.out 2&gt;&amp;1 &amp; echo svc-end&gt;C:\\Windows\\Temp\\svc-diag-end.txt</code></p>\n",
+              "ValueDisplay": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[4092]</strong>&nbsp;&nbsp;<code>cmd.exe /c echo svc-start&gt;C:\\Windows\\Temp\\svc-diag-start.txt &amp; powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\\ProgramData\\CorpBackup\\system-stage.ps1 &gt; C:\\Windows\\Temp\\system-stage.out 2&gt;&amp;1 &amp; echo svc-end&gt;C:\\Windows\\Temp\\svc-diag-end.txt</code></p>\n"
+            },
+            {
+              "NameDisplay": "描述",
+              "Type": "text",
+              "Value": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似.",
+              "ValueDisplay": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似."
+            },
+            {
+              "NameDisplay": "处置建议",
+              "Type": "text",
+              "Value": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为.",
+              "ValueDisplay": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为."
+            }
+          ],
+          "DisplaySandboxResult": false,
+          "EventNotes": [],
+          "EventStatus": 1,
+          "EventSubType": "渗透工具利用行为",
+          "HasTraceInfo": true,
+          "Id": 720158192,
+          "InstanceId": "i-bp1864d401as14btd9vf",
+          "InstanceName": "range-rdp-service-abuse-victim",
+          "InternetIp": "121.41.86.186",
+          "IntranetIp": "172.16.33.176",
+          "LargeModel": true,
+          "LastTime": "2026-06-02 20:10:02",
+          "LastTimeStamp": 1780402202000,
+          "Level": "serious",
+          "Name": "进程异常行为-渗透工具利用行为",
+          "OccurrenceTime": "2026-06-02 20:10:02",
+          "OccurrenceTimeStamp": 1780402202000,
+          "SaleVersion": "1",
+          "SecurityEventIds": "720158192",
+          "Stages": "[\"持久化\",\"代码执行\"]",
+          "SupportOperateCode": "AI.real_attack",
+          "TacticItems": [
+            {
+              "TacticDisplayName": "持久化",
+              "TacticId": "TA0003"
+            },
+            {
+              "TacticDisplayName": "代码执行",
+              "TacticId": "TA0002"
+            }
+          ],
+          "UniqueInfo": "60b48a170b7b8bada880e831bed93ca3",
+          "Uuid": "81c68948-7aa1-4cc6-a520-da886bb329cf"
+        },
+        {
+          "Advanced": false,
+          "AlarmEventName": "可疑Powershell指令",
+          "AlarmEventNameDisplay": "可疑Powershell指令",
+          "AlarmEventType": "进程异常行为",
+          "AlarmEventTypeDisplay": "进程异常行为",
+          "AlarmUniqueInfo": "bb3c3fdec0227a38bde1aa43d2fe6989",
+          "AutoBreaking": false,
+          "CanBeDealOnLine": false,
+          "CanCancelFault": false,
+          "ContainHwMode": false,
+          "DataSource": "aegis_suspicious_event",
+          "Desc": "黑客常常利用Powershell进行恶意文件下载、恶意文件不落盘持久化运行、反弹shell等恶意行为。",
+          "Details": [
+            {
+              "NameDisplay": "提示",
+              "Type": "text",
+              "Value": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关.",
+              "ValueDisplay": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关."
+            },
+            {
+              "NameDisplay": "ATT&CK 矩阵ID",
+              "Type": "text",
+              "Value": "T1059.001",
+              "ValueDisplay": "T1059.001"
+            },
+            {
+              "NameDisplay": "告警原因",
+              "Type": "text",
+              "Value": "        该Powershell命令包含可疑的代码特征\n        ",
+              "ValueDisplay": "        该Powershell命令包含可疑的代码特征\n        "
+            },
+            {
+              "NameDisplay": "用户名",
+              "Type": "text",
+              "Value": "Administrator",
+              "ValueDisplay": "Administrator"
+            },
+            {
+              "NameDisplay": "命令行",
+              "Type": "text",
+              "Value": "powershell  -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1', [Convert]::FromBase64String('JEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICJTdG9wIgoKJFByb2dyYW1EYXRhRGlyID0gIkM6XFByb2dyYW1EYXRhXFdpbmRvd3NIZWFsdGgiCiRUZW1wRGlyID0gIkM6XFdpbmRvd3NcVGVtcCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJFByb2dyYW1EYXRhRGlyIHwgT3V0LU51bGwKCiRQYXlsb2FkID0gSm9pbi1QYXRoICRQcm9ncmFtRGF0YURpciAiV2luZG93c0hlYWx0aFN2Yy5wczEiCkAnCiRMb2dEaXIgPSAiQzpcUHJvZ3JhbURhdGFcV2luZG93c0hlYWx0aCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJExvZ0RpciB8IE91dC1OdWxsCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkTG9nRGlyXGxhc3QtYmVhY29uLmxvZyIKU3RhcnQtU2xlZXAgLVNlY29uZHMgMzAKJ0AgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgVVRGOCAtUGF0aCAkUGF5bG9hZAoKc2MuZXhlIGNyZWF0ZSBXaW5kb3dzSGVhbHRoU3ZjIGJpblBhdGg9ICJwb3dlcnNoZWxsLmV4ZSAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIGAiJFBheWxvYWRgIiIgc3RhcnQ9IGF1dG8gRGlzcGxheU5hbWU9ICJXaW5kb3dzIEhlYWx0aCBTeW5jaHJvbml6YXRpb24iIHwgT3V0LU51bGwKc2MuZXhlIHN0YXJ0IFdpbmRvd3NIZWFsdGhTdmMgfCBPdXQtTnVsbAoKJFRhc2tBY3Rpb24gPSBOZXctU2NoZWR1bGVkVGFza0FjdGlvbiAtRXhlY3V0ZSAicG93ZXJzaGVsbC5leGUiIC1Bcmd1bWVudCAiLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIiRQYXlsb2FkYCIiCiRUYXNrVHJpZ2dlciA9IE5ldy1TY2hlZHVsZWRUYXNrVHJpZ2dlciAtT25jZSAtQXQgKChHZXQtRGF0ZSkuQWRkTWludXRlcyg1KSkKJFRhc2tQcmluY2lwYWwgPSBOZXctU2NoZWR1bGVkVGFza1ByaW5jaXBhbCAtVXNlcklkICJTWVNURU0iIC1SdW5MZXZlbCBIaWdoZXN0ClJlZ2lzdGVyLVNjaGVkdWxlZFRhc2sgLVRhc2tQYXRoICJcTWljcm9zb2Z0XFdpbmRvd3NcTWFpbnRlbmFuY2VcIiAtVGFza05hbWUgIkhlYWx0aFN5bmMiIC1BY3Rpb24gJFRhc2tBY3Rpb24gLVRyaWdnZXIgJFRhc2tUcmlnZ2VyIC1QcmluY2lwYWwgJFRhc2tQcmluY2lwYWwgLUZvcmNlIHwgT3V0LU51bGwKCiJmYWtlLXByb2NkdW1wLWJpbmFyeS1tYXJrZXIiIHwgU2V0LUNvbnRlbnQgLUVuY29kaW5nIEFTQ0lJIC1QYXRoICIkVGVtcERpclxwcm9jZHVtcC5leGUiCiJNRE1QIGZha2UgTFNBU1MgZHVtcCBmb3IgYmVuY2htYXJrIGZvcmVuc2ljIGRldGVjdGlvbiIgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgQVNDSUkgLVBhdGggIiRUZW1wRGlyXGxzYXNzLmRtcCIKImNyZWRlbnRpYWwgcmVzaWR1ZTogbG9jYWwgYWNjb3VudHMgcmVxdWlyZSByb3RhdGlvbiBhZnRlciBjb21wcm9taXNlIiB8IFNldC1Db250ZW50IC1FbmNvZGluZyBVVEY4IC1QYXRoICIkVGVtcERpclxjcmVkcy50eHQiCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkUHJvZ3JhbURhdGFEaXJcbGFzdC1iZWFjb24ubG9nIgo='))\"",
+              "ValueDisplay": "powershell  -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1', [Convert]::FromBase64String('JEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICJTdG9wIgoKJFByb2dyYW1EYXRhRGlyID0gIkM6XFByb2dyYW1EYXRhXFdpbmRvd3NIZWFsdGgiCiRUZW1wRGlyID0gIkM6XFdpbmRvd3NcVGVtcCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJFByb2dyYW1EYXRhRGlyIHwgT3V0LU51bGwKCiRQYXlsb2FkID0gSm9pbi1QYXRoICRQcm9ncmFtRGF0YURpciAiV2luZG93c0hlYWx0aFN2Yy5wczEiCkAnCiRMb2dEaXIgPSAiQzpcUHJvZ3JhbURhdGFcV2luZG93c0hlYWx0aCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJExvZ0RpciB8IE91dC1OdWxsCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkTG9nRGlyXGxhc3QtYmVhY29uLmxvZyIKU3RhcnQtU2xlZXAgLVNlY29uZHMgMzAKJ0AgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgVVRGOCAtUGF0aCAkUGF5bG9hZAoKc2MuZXhlIGNyZWF0ZSBXaW5kb3dzSGVhbHRoU3ZjIGJpblBhdGg9ICJwb3dlcnNoZWxsLmV4ZSAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIGAiJFBheWxvYWRgIiIgc3RhcnQ9IGF1dG8gRGlzcGxheU5hbWU9ICJXaW5kb3dzIEhlYWx0aCBTeW5jaHJvbml6YXRpb24iIHwgT3V0LU51bGwKc2MuZXhlIHN0YXJ0IFdpbmRvd3NIZWFsdGhTdmMgfCBPdXQtTnVsbAoKJFRhc2tBY3Rpb24gPSBOZXctU2NoZWR1bGVkVGFza0FjdGlvbiAtRXhlY3V0ZSAicG93ZXJzaGVsbC5leGUiIC1Bcmd1bWVudCAiLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIiRQYXlsb2FkYCIiCiRUYXNrVHJpZ2dlciA9IE5ldy1TY2hlZHVsZWRUYXNrVHJpZ2dlciAtT25jZSAtQXQgKChHZXQtRGF0ZSkuQWRkTWludXRlcyg1KSkKJFRhc2tQcmluY2lwYWwgPSBOZXctU2NoZWR1bGVkVGFza1ByaW5jaXBhbCAtVXNlcklkICJTWVNURU0iIC1SdW5MZXZlbCBIaWdoZXN0ClJlZ2lzdGVyLVNjaGVkdWxlZFRhc2sgLVRhc2tQYXRoICJcTWljcm9zb2Z0XFdpbmRvd3NcTWFpbnRlbmFuY2VcIiAtVGFza05hbWUgIkhlYWx0aFN5bmMiIC1BY3Rpb24gJFRhc2tBY3Rpb24gLVRyaWdnZXIgJFRhc2tUcmlnZ2VyIC1QcmluY2lwYWwgJFRhc2tQcmluY2lwYWwgLUZvcmNlIHwgT3V0LU51bGwKCiJmYWtlLXByb2NkdW1wLWJpbmFyeS1tYXJrZXIiIHwgU2V0LUNvbnRlbnQgLUVuY29kaW5nIEFTQ0lJIC1QYXRoICIkVGVtcERpclxwcm9jZHVtcC5leGUiCiJNRE1QIGZha2UgTFNBU1MgZHVtcCBmb3IgYmVuY2htYXJrIGZvcmVuc2ljIGRldGVjdGlvbiIgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgQVNDSUkgLVBhdGggIiRUZW1wRGlyXGxzYXNzLmRtcCIKImNyZWRlbnRpYWwgcmVzaWR1ZTogbG9jYWwgYWNjb3VudHMgcmVxdWlyZSByb3RhdGlvbiBhZnRlciBjb21wcm9taXNlIiB8IFNldC1Db250ZW50IC1FbmNvZGluZyBVVEY4IC1QYXRoICIkVGVtcERpclxjcmVkcy50eHQiCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkUHJvZ3JhbURhdGFEaXJcbGFzdC1iZWFjb24ubG9nIgo='))\""
+            },
+            {
+              "NameDisplay": "进程路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+              "ValueDisplay": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+            },
+            {
+              "NameDisplay": "进程ID",
+              "Type": "text",
+              "Value": "5024",
+              "ValueDisplay": "5024"
+            },
+            {
+              "NameDisplay": "父进程命令行",
+              "Type": "text",
+              "Value": "\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1', [Convert]::FromBase64String('JEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICJTdG9wIgoKJFByb2dyYW1EYXRhRGlyID0gIkM6XFByb2dyYW1EYXRhXFdpbmRvd3NIZWFsdGgiCiRUZW1wRGlyID0gIkM6XFdpbmRvd3NcVGVtcCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJFByb2dyYW1EYXRhRGlyIHwgT3V0LU51bGwKCiRQYXlsb2FkID0gSm9pbi1QYXRoICRQcm9ncmFtRGF0YURpciAiV2luZG93c0hlYWx0aFN2Yy5wczEiCkAnCiRMb2dEaXIgPSAiQzpcUHJvZ3JhbURhdGFcV2luZG93c0hlYWx0aCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJExvZ0RpciB8IE91dC1OdWxsCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkTG9nRGlyXGxhc3QtYmVhY29uLmxvZyIKU3RhcnQtU2xlZXAgLVNlY29uZHMgMzAKJ0AgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgVVRGOCAtUGF0aCAkUGF5bG9hZAoKc2MuZXhlIGNyZWF0ZSBXaW5kb3dzSGVhbHRoU3ZjIGJpblBhdGg9ICJwb3dlcnNoZWxsLmV4ZSAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIGAiJFBheWxvYWRgIiIgc3RhcnQ9IGF1dG8gRGlzcGxheU5hbWU9ICJXaW5kb3dzIEhlYWx0aCBTeW5jaHJvbml6YXRpb24iIHwgT3V0LU51bGwKc2MuZXhlIHN0YXJ0IFdpbmRvd3NIZWFsdGhTdmMgfCBPdXQtTnVsbAoKJFRhc2tBY3Rpb24gPSBOZXctU2NoZWR1bGVkVGFza0FjdGlvbiAtRXhlY3V0ZSAicG93ZXJzaGVsbC5leGUiIC1Bcmd1bWVudCAiLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIiRQYXlsb2FkYCIiCiRUYXNrVHJpZ2dlciA9IE5ldy1TY2hlZHVsZWRUYXNrVHJpZ2dlciAtT25jZSAtQXQgKChHZXQtRGF0ZSkuQWRkTWludXRlcyg1KSkKJFRhc2tQcmluY2lwYWwgPSBOZXctU2NoZWR1bGVkVGFza1ByaW5jaXBhbCAtVXNlcklkICJTWVNURU0iIC1SdW5MZXZlbCBIaWdoZXN0ClJlZ2lzdGVyLVNjaGVkdWxlZFRhc2sgLVRhc2tQYXRoICJcTWljcm9zb2Z0XFdpbmRvd3NcTWFpbnRlbmFuY2VcIiAtVGFza05hbWUgIkhlYWx0aFN5bmMiIC1BY3Rpb24gJFRhc2tBY3Rpb24gLVRyaWdnZXIgJFRhc2tUcmlnZ2VyIC1QcmluY2lwYWwgJFRhc2tQcmluY2lwYWwgLUZvcmNlIHwgT3V0LU51bGwKCiJmYWtlLXByb2NkdW1wLWJpbmFyeS1tYXJrZXIiIHwgU2V0LUNvbnRlbnQgLUVuY29kaW5nIEFTQ0lJIC1QYXRoICIkVGVtcERpclxwcm9jZHVtcC5leGUiCiJNRE1QIGZha2UgTFNBU1MgZHVtcCBmb3IgYmVuY2htYXJrIGZvcmVuc2ljIGRldGVjdGlvbiIgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgQVNDSUkgLVBhdGggIiRUZW1wRGlyXGxzYXNzLmRtcCIKImNyZWRlbnRpYWwgcmVzaWR1ZTogbG9jYWwgYWNjb3VudHMgcmVxdWlyZSByb3RhdGlvbiBhZnRlciBjb21wcm9taXNlIiB8IFNldC1Db250ZW50IC1FbmNvZGluZyBVVEY4IC1QYXRoICIkVGVtcERpclxjcmVkcy50eHQiCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkUHJvZ3JhbURhdGFEaXJcbGFzdC1iZWFjb24ubG9nIgo='))\"\"",
+              "ValueDisplay": "\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1', [Convert]::FromBase64String('JEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICJTdG9wIgoKJFByb2dyYW1EYXRhRGlyID0gIkM6XFByb2dyYW1EYXRhXFdpbmRvd3NIZWFsdGgiCiRUZW1wRGlyID0gIkM6XFdpbmRvd3NcVGVtcCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJFByb2dyYW1EYXRhRGlyIHwgT3V0LU51bGwKCiRQYXlsb2FkID0gSm9pbi1QYXRoICRQcm9ncmFtRGF0YURpciAiV2luZG93c0hlYWx0aFN2Yy5wczEiCkAnCiRMb2dEaXIgPSAiQzpcUHJvZ3JhbURhdGFcV2luZG93c0hlYWx0aCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJExvZ0RpciB8IE91dC1OdWxsCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkTG9nRGlyXGxhc3QtYmVhY29uLmxvZyIKU3RhcnQtU2xlZXAgLVNlY29uZHMgMzAKJ0AgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgVVRGOCAtUGF0aCAkUGF5bG9hZAoKc2MuZXhlIGNyZWF0ZSBXaW5kb3dzSGVhbHRoU3ZjIGJpblBhdGg9ICJwb3dlcnNoZWxsLmV4ZSAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIGAiJFBheWxvYWRgIiIgc3RhcnQ9IGF1dG8gRGlzcGxheU5hbWU9ICJXaW5kb3dzIEhlYWx0aCBTeW5jaHJvbml6YXRpb24iIHwgT3V0LU51bGwKc2MuZXhlIHN0YXJ0IFdpbmRvd3NIZWFsdGhTdmMgfCBPdXQtTnVsbAoKJFRhc2tBY3Rpb24gPSBOZXctU2NoZWR1bGVkVGFza0FjdGlvbiAtRXhlY3V0ZSAicG93ZXJzaGVsbC5leGUiIC1Bcmd1bWVudCAiLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIiRQYXlsb2FkYCIiCiRUYXNrVHJpZ2dlciA9IE5ldy1TY2hlZHVsZWRUYXNrVHJpZ2dlciAtT25jZSAtQXQgKChHZXQtRGF0ZSkuQWRkTWludXRlcyg1KSkKJFRhc2tQcmluY2lwYWwgPSBOZXctU2NoZWR1bGVkVGFza1ByaW5jaXBhbCAtVXNlcklkICJTWVNURU0iIC1SdW5MZXZlbCBIaWdoZXN0ClJlZ2lzdGVyLVNjaGVkdWxlZFRhc2sgLVRhc2tQYXRoICJcTWljcm9zb2Z0XFdpbmRvd3NcTWFpbnRlbmFuY2VcIiAtVGFza05hbWUgIkhlYWx0aFN5bmMiIC1BY3Rpb24gJFRhc2tBY3Rpb24gLVRyaWdnZXIgJFRhc2tUcmlnZ2VyIC1QcmluY2lwYWwgJFRhc2tQcmluY2lwYWwgLUZvcmNlIHwgT3V0LU51bGwKCiJmYWtlLXByb2NkdW1wLWJpbmFyeS1tYXJrZXIiIHwgU2V0LUNvbnRlbnQgLUVuY29kaW5nIEFTQ0lJIC1QYXRoICIkVGVtcERpclxwcm9jZHVtcC5leGUiCiJNRE1QIGZha2UgTFNBU1MgZHVtcCBmb3IgYmVuY2htYXJrIGZvcmVuc2ljIGRldGVjdGlvbiIgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgQVNDSUkgLVBhdGggIiRUZW1wRGlyXGxzYXNzLmRtcCIKImNyZWRlbnRpYWwgcmVzaWR1ZTogbG9jYWwgYWNjb3VudHMgcmVxdWlyZSByb3RhdGlvbiBhZnRlciBjb21wcm9taXNlIiB8IFNldC1Db250ZW50IC1FbmNvZGluZyBVVEY4IC1QYXRoICIkVGVtcERpclxjcmVkcy50eHQiCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkUHJvZ3JhbURhdGFEaXJcbGFzdC1iZWFjb24ubG9nIgo='))\"\""
+            },
+            {
+              "NameDisplay": "父进程文件路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/cmd.exe",
+              "ValueDisplay": "C:/Windows/System32/cmd.exe"
+            },
+            {
+              "NameDisplay": "父进程ID",
+              "Type": "text",
+              "Value": "3092",
+              "ValueDisplay": "3092"
+            },
+            {
+              "NameDisplay": "进程链",
+              "Type": "html",
+              "Value": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2808]</strong>&nbsp;&nbsp;<code>C:\\Windows\\System32\\OpenSSH\\sshd.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[5556]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -R</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2816]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -z</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[3092]</strong>&nbsp;&nbsp;<code>\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1', [Convert]::FromBase64String('JEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICJTdG9wIgoKJFByb2dyYW1EYXRhRGlyID0gIkM6XFByb2dyYW1EYXRhXFdpbmRvd3NIZWFsdGgiCiRUZW1wRGlyID0gIkM6XFdpbmRvd3NcVGVtcCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJFByb2dyYW1EYXRhRGlyIHwgT3V0LU51bGwKCiRQYXlsb2FkID0gSm9pbi1QYXRoICRQcm9ncmFtRGF0YURpciAiV2luZG93c0hlYWx0aFN2Yy5wczEiCkAnCiRMb2dEaXIgPSAiQzpcUHJvZ3JhbURhdGFcV2luZG93c0hlYWx0aCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJExvZ0RpciB8IE91dC1OdWxsCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkTG9nRGlyXGxhc3QtYmVhY29uLmxvZyIKU3RhcnQtU2xlZXAgLVNlY29uZHMgMzAKJ0AgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgVVRGOCAtUGF0aCAkUGF5bG9hZAoKc2MuZXhlIGNyZWF0ZSBXaW5kb3dzSGVhbHRoU3ZjIGJpblBhdGg9ICJwb3dlcnNoZWxsLmV4ZSAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIGAiJFBheWxvYWRgIiIgc3RhcnQ9IGF1dG8gRGlzcGxheU5hbWU9ICJXaW5kb3dzIEhlYWx0aCBTeW5jaHJvbml6YXRpb24iIHwgT3V0LU51bGwKc2MuZXhlIHN0YXJ0IFdpbmRvd3NIZWFsdGhTdmMgfCBPdXQtTnVsbAoKJFRhc2tBY3Rpb24gPSBOZXctU2NoZWR1bGVkVGFza0FjdGlvbiAtRXhlY3V0ZSAicG93ZXJzaGVsbC5leGUiIC1Bcmd1bWVudCAiLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIiRQYXlsb2FkYCIiCiRUYXNrVHJpZ2dlciA9IE5ldy1TY2hlZHVsZWRUYXNrVHJpZ2dlciAtT25jZSAtQXQgKChHZXQtRGF0ZSkuQWRkTWludXRlcyg1KSkKJFRhc2tQcmluY2lwYWwgPSBOZXctU2NoZWR1bGVkVGFza1ByaW5jaXBhbCAtVXNlcklkICJTWVNURU0iIC1SdW5MZXZlbCBIaWdoZXN0ClJlZ2lzdGVyLVNjaGVkdWxlZFRhc2sgLVRhc2tQYXRoICJcTWljcm9zb2Z0XFdpbmRvd3NcTWFpbnRlbmFuY2VcIiAtVGFza05hbWUgIkhlYWx0aFN5bmMiIC1BY3Rpb24gJFRhc2tBY3Rpb24gLVRyaWdnZXIgJFRhc2tUcmlnZ2VyIC1QcmluY2lwYWwgJFRhc2tQcmluY2lwYWwgLUZvcmNlIHwgT3V0LU51bGwKCiJmYWtlLXByb2NkdW1wLWJpbmFyeS1tYXJrZXIiIHwgU2V0LUNvbnRlbnQgLUVuY29kaW5nIEFTQ0lJIC1QYXRoICIkVGVtcERpclxwcm9jZHVtcC5leGUiCiJNRE1QIGZha2UgTFNBU1MgZHVtcCBmb3IgYmVuY2htYXJrIGZvcmVuc2ljIGRldGVjdGlvbiIgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgQVNDSUkgLVBhdGggIiRUZW1wRGlyXGxzYXNzLmRtcCIKImNyZWRlbnRpYWwgcmVzaWR1ZTogbG9jYWwgYWNjb3VudHMgcmVxdWlyZSByb3RhdGlvbiBhZnRlciBjb21wcm9taXNlIiB8IFNldC1Db250ZW50IC1FbmNvZGluZyBVVEY4IC1QYXRoICIkVGVtcERpclxjcmVkcy50eHQiCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkUHJvZ3JhbURhdGFEaXJcbGFzdC1iZWFjb24ubG9nIgo='))\"\"</code></p>\n",
+              "ValueDisplay": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2808]</strong>&nbsp;&nbsp;<code>C:\\Windows\\System32\\OpenSSH\\sshd.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[5556]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -R</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2816]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -z</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[3092]</strong>&nbsp;&nbsp;<code>\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\payloads\\system-stage.ps1', [Convert]::FromBase64String('JEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICJTdG9wIgoKJFByb2dyYW1EYXRhRGlyID0gIkM6XFByb2dyYW1EYXRhXFdpbmRvd3NIZWFsdGgiCiRUZW1wRGlyID0gIkM6XFdpbmRvd3NcVGVtcCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJFByb2dyYW1EYXRhRGlyIHwgT3V0LU51bGwKCiRQYXlsb2FkID0gSm9pbi1QYXRoICRQcm9ncmFtRGF0YURpciAiV2luZG93c0hlYWx0aFN2Yy5wczEiCkAnCiRMb2dEaXIgPSAiQzpcUHJvZ3JhbURhdGFcV2luZG93c0hlYWx0aCIKTmV3LUl0ZW0gLUl0ZW1UeXBlIERpcmVjdG9yeSAtRm9yY2UgLVBhdGggJExvZ0RpciB8IE91dC1OdWxsCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkTG9nRGlyXGxhc3QtYmVhY29uLmxvZyIKU3RhcnQtU2xlZXAgLVNlY29uZHMgMzAKJ0AgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgVVRGOCAtUGF0aCAkUGF5bG9hZAoKc2MuZXhlIGNyZWF0ZSBXaW5kb3dzSGVhbHRoU3ZjIGJpblBhdGg9ICJwb3dlcnNoZWxsLmV4ZSAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIGAiJFBheWxvYWRgIiIgc3RhcnQ9IGF1dG8gRGlzcGxheU5hbWU9ICJXaW5kb3dzIEhlYWx0aCBTeW5jaHJvbml6YXRpb24iIHwgT3V0LU51bGwKc2MuZXhlIHN0YXJ0IFdpbmRvd3NIZWFsdGhTdmMgfCBPdXQtTnVsbAoKJFRhc2tBY3Rpb24gPSBOZXctU2NoZWR1bGVkVGFza0FjdGlvbiAtRXhlY3V0ZSAicG93ZXJzaGVsbC5leGUiIC1Bcmd1bWVudCAiLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIiRQYXlsb2FkYCIiCiRUYXNrVHJpZ2dlciA9IE5ldy1TY2hlZHVsZWRUYXNrVHJpZ2dlciAtT25jZSAtQXQgKChHZXQtRGF0ZSkuQWRkTWludXRlcyg1KSkKJFRhc2tQcmluY2lwYWwgPSBOZXctU2NoZWR1bGVkVGFza1ByaW5jaXBhbCAtVXNlcklkICJTWVNURU0iIC1SdW5MZXZlbCBIaWdoZXN0ClJlZ2lzdGVyLVNjaGVkdWxlZFRhc2sgLVRhc2tQYXRoICJcTWljcm9zb2Z0XFdpbmRvd3NcTWFpbnRlbmFuY2VcIiAtVGFza05hbWUgIkhlYWx0aFN5bmMiIC1BY3Rpb24gJFRhc2tBY3Rpb24gLVRyaWdnZXIgJFRhc2tUcmlnZ2VyIC1QcmluY2lwYWwgJFRhc2tQcmluY2lwYWwgLUZvcmNlIHwgT3V0LU51bGwKCiJmYWtlLXByb2NkdW1wLWJpbmFyeS1tYXJrZXIiIHwgU2V0LUNvbnRlbnQgLUVuY29kaW5nIEFTQ0lJIC1QYXRoICIkVGVtcERpclxwcm9jZHVtcC5leGUiCiJNRE1QIGZha2UgTFNBU1MgZHVtcCBmb3IgYmVuY2htYXJrIGZvcmVuc2ljIGRldGVjdGlvbiIgfCBTZXQtQ29udGVudCAtRW5jb2RpbmcgQVNDSUkgLVBhdGggIiRUZW1wRGlyXGxzYXNzLmRtcCIKImNyZWRlbnRpYWwgcmVzaWR1ZTogbG9jYWwgYWNjb3VudHMgcmVxdWlyZSByb3RhdGlvbiBhZnRlciBjb21wcm9taXNlIiB8IFNldC1Db250ZW50IC1FbmNvZGluZyBVVEY4IC1QYXRoICIkVGVtcERpclxjcmVkcy50eHQiCiIkKEdldC1EYXRlIC1Gb3JtYXQgbykgYmVhY29uIG1hbGljaW91cy11cGRhdGUuZXhhbXBsZS5jbjo4NDQzIiB8IEFkZC1Db250ZW50IC1QYXRoICIkUHJvZ3JhbURhdGFEaXJcbGFzdC1iZWFjb24ubG9nIgo='))\"\"</code></p>\n"
+            },
+            {
+              "NameDisplay": "描述",
+              "Type": "text",
+              "Value": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似.",
+              "ValueDisplay": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似."
+            },
+            {
+              "NameDisplay": "处置建议",
+              "Type": "text",
+              "Value": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为.",
+              "ValueDisplay": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为."
+            }
+          ],
+          "DisplaySandboxResult": false,
+          "EventNotes": [],
+          "EventStatus": 1,
+          "EventSubType": "可疑Powershell指令",
+          "HasTraceInfo": true,
+          "Id": 720376928,
+          "InstanceId": "i-bp1864d401as14btd9vf",
+          "InstanceName": "range-rdp-service-abuse-victim",
+          "InternetIp": "121.41.86.186",
+          "IntranetIp": "172.16.33.176",
+          "LargeModel": true,
+          "LastTime": "2026-06-02 20:03:46",
+          "LastTimeStamp": 1780401826000,
+          "Level": "suspicious",
+          "Name": "进程异常行为-可疑Powershell指令",
+          "OccurrenceTime": "2026-06-02 20:03:46",
+          "OccurrenceTimeStamp": 1780401826000,
+          "SaleVersion": "1",
+          "SecurityEventIds": "720376928",
+          "Stages": "[\"代码执行\"]",
+          "SupportOperateCode": "AI.real_attack",
+          "TacticItems": [
+            {
+              "TacticDisplayName": "代码执行",
+              "TacticId": "TA0002"
+            }
+          ],
+          "UniqueInfo": "05c49433311af1816aa5d1dfb5d958d1",
+          "Uuid": "81c68948-7aa1-4cc6-a520-da886bb329cf"
+        },
+        {
+          "Advanced": false,
+          "AlarmEventName": "可疑Powershell指令",
+          "AlarmEventNameDisplay": "可疑Powershell指令",
+          "AlarmEventType": "进程异常行为",
+          "AlarmEventTypeDisplay": "进程异常行为",
+          "AlarmUniqueInfo": "01fc72a26e64ad5039daf0b7d7a10b18",
+          "AutoBreaking": false,
+          "CanBeDealOnLine": false,
+          "CanCancelFault": false,
+          "ContainHwMode": false,
+          "DataSource": "aegis_suspicious_event",
+          "Desc": "黑客常常利用Powershell进行恶意文件下载、恶意文件不落盘持久化运行、反弹shell等恶意行为。",
+          "Details": [
+            {
+              "NameDisplay": "提示",
+              "Type": "text",
+              "Value": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关.",
+              "ValueDisplay": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关."
+            },
+            {
+              "NameDisplay": "ATT&CK 矩阵ID",
+              "Type": "text",
+              "Value": "T1059.001",
+              "ValueDisplay": "T1059.001"
+            },
+            {
+              "NameDisplay": "告警原因",
+              "Type": "text",
+              "Value": "        该Powershell命令包含可疑的代码特征\n        ",
+              "ValueDisplay": "        该Powershell命令包含可疑的代码特征\n        "
+            },
+            {
+              "NameDisplay": "用户名",
+              "Type": "text",
+              "Value": "Administrator",
+              "ValueDisplay": "Administrator"
+            },
+            {
+              "NameDisplay": "命令行",
+              "Type": "text",
+              "Value": "powershell  -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1', [Convert]::FromBase64String('JExvZ0RpciA9ICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwIgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAkTG9nRGlyIHwgT3V0LU51bGwKIiQoR2V0LURhdGUgLUZvcm1hdCBvKSBDb3JwQmFja3VwU3ZjIGhlYXJ0YmVhdCIgfCBBZGQtQ29udGVudCAtUGF0aCAiJExvZ0RpclxiYWNrdXAubG9nIgpTdGFydC1TbGVlcCAtU2Vjb25kcyAzMAo='))\"",
+              "ValueDisplay": "powershell  -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1', [Convert]::FromBase64String('JExvZ0RpciA9ICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwIgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAkTG9nRGlyIHwgT3V0LU51bGwKIiQoR2V0LURhdGUgLUZvcm1hdCBvKSBDb3JwQmFja3VwU3ZjIGhlYXJ0YmVhdCIgfCBBZGQtQ29udGVudCAtUGF0aCAiJExvZ0RpclxiYWNrdXAubG9nIgpTdGFydC1TbGVlcCAtU2Vjb25kcyAzMAo='))\""
+            },
+            {
+              "NameDisplay": "进程路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+              "ValueDisplay": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+            },
+            {
+              "NameDisplay": "进程ID",
+              "Type": "text",
+              "Value": "3244",
+              "ValueDisplay": "3244"
+            },
+            {
+              "NameDisplay": "父进程命令行",
+              "Type": "text",
+              "Value": "\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1', [Convert]::FromBase64String('JExvZ0RpciA9ICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwIgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAkTG9nRGlyIHwgT3V0LU51bGwKIiQoR2V0LURhdGUgLUZvcm1hdCBvKSBDb3JwQmFja3VwU3ZjIGhlYXJ0YmVhdCIgfCBBZGQtQ29udGVudCAtUGF0aCAiJExvZ0RpclxiYWNrdXAubG9nIgpTdGFydC1TbGVlcCAtU2Vjb25kcyAzMAo='))\"\"",
+              "ValueDisplay": "\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1', [Convert]::FromBase64String('JExvZ0RpciA9ICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwIgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAkTG9nRGlyIHwgT3V0LU51bGwKIiQoR2V0LURhdGUgLUZvcm1hdCBvKSBDb3JwQmFja3VwU3ZjIGhlYXJ0YmVhdCIgfCBBZGQtQ29udGVudCAtUGF0aCAiJExvZ0RpclxiYWNrdXAubG9nIgpTdGFydC1TbGVlcCAtU2Vjb25kcyAzMAo='))\"\""
+            },
+            {
+              "NameDisplay": "父进程文件路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/cmd.exe",
+              "ValueDisplay": "C:/Windows/System32/cmd.exe"
+            },
+            {
+              "NameDisplay": "父进程ID",
+              "Type": "text",
+              "Value": "3748",
+              "ValueDisplay": "3748"
+            },
+            {
+              "NameDisplay": "进程链",
+              "Type": "html",
+              "Value": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2808]</strong>&nbsp;&nbsp;<code>C:\\Windows\\System32\\OpenSSH\\sshd.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[1716]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -R</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[1068]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -z</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[3748]</strong>&nbsp;&nbsp;<code>\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1', [Convert]::FromBase64String('JExvZ0RpciA9ICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwIgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAkTG9nRGlyIHwgT3V0LU51bGwKIiQoR2V0LURhdGUgLUZvcm1hdCBvKSBDb3JwQmFja3VwU3ZjIGhlYXJ0YmVhdCIgfCBBZGQtQ29udGVudCAtUGF0aCAiJExvZ0RpclxiYWNrdXAubG9nIgpTdGFydC1TbGVlcCAtU2Vjb25kcyAzMAo='))\"\"</code></p>\n",
+              "ValueDisplay": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2808]</strong>&nbsp;&nbsp;<code>C:\\Windows\\System32\\OpenSSH\\sshd.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[1716]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -R</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[1068]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -z</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[3748]</strong>&nbsp;&nbsp;<code>\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\corp-backup-svc.ps1', [Convert]::FromBase64String('JExvZ0RpciA9ICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwIgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAkTG9nRGlyIHwgT3V0LU51bGwKIiQoR2V0LURhdGUgLUZvcm1hdCBvKSBDb3JwQmFja3VwU3ZjIGhlYXJ0YmVhdCIgfCBBZGQtQ29udGVudCAtUGF0aCAiJExvZ0RpclxiYWNrdXAubG9nIgpTdGFydC1TbGVlcCAtU2Vjb25kcyAzMAo='))\"\"</code></p>\n"
+            },
+            {
+              "NameDisplay": "描述",
+              "Type": "text",
+              "Value": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似.",
+              "ValueDisplay": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似."
+            },
+            {
+              "NameDisplay": "处置建议",
+              "Type": "text",
+              "Value": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为.",
+              "ValueDisplay": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为."
+            }
+          ],
+          "DisplaySandboxResult": false,
+          "EventNotes": [],
+          "EventStatus": 1,
+          "EventSubType": "可疑Powershell指令",
+          "HasTraceInfo": true,
+          "Id": 720376911,
+          "InstanceId": "i-bp1864d401as14btd9vf",
+          "InstanceName": "range-rdp-service-abuse-victim",
+          "InternetIp": "121.41.86.186",
+          "IntranetIp": "172.16.33.176",
+          "LargeModel": true,
+          "LastTime": "2026-06-02 20:03:45",
+          "LastTimeStamp": 1780401825000,
+          "Level": "suspicious",
+          "Name": "进程异常行为-可疑Powershell指令",
+          "OccurrenceTime": "2026-06-02 20:03:45",
+          "OccurrenceTimeStamp": 1780401825000,
+          "SaleVersion": "1",
+          "SecurityEventIds": "720376911",
+          "Stages": "[\"代码执行\"]",
+          "SupportOperateCode": "AI.real_attack",
+          "TacticItems": [
+            {
+              "TacticDisplayName": "代码执行",
+              "TacticId": "TA0002"
+            }
+          ],
+          "UniqueInfo": "3bb2e232b6b831e624123345cbd4fb0b",
+          "Uuid": "81c68948-7aa1-4cc6-a520-da886bb329cf"
+        },
+        {
+          "Advanced": false,
+          "AlarmEventName": "可疑Powershell指令",
+          "AlarmEventNameDisplay": "可疑Powershell指令",
+          "AlarmEventType": "进程异常行为",
+          "AlarmEventTypeDisplay": "进程异常行为",
+          "AlarmUniqueInfo": "76aecac45b4bc4e83cca83e5df4ed98b",
+          "AutoBreaking": false,
+          "CanBeDealOnLine": false,
+          "CanCancelFault": false,
+          "ContainHwMode": false,
+          "DataSource": "aegis_suspicious_event",
+          "Desc": "黑客常常利用Powershell进行恶意文件下载、恶意文件不落盘持久化运行、反弹shell等恶意行为。",
+          "Details": [
+            {
+              "NameDisplay": "提示",
+              "Type": "text",
+              "Value": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关.",
+              "ValueDisplay": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关."
+            },
+            {
+              "NameDisplay": "ATT&CK 矩阵ID",
+              "Type": "text",
+              "Value": "T1059.001",
+              "ValueDisplay": "T1059.001"
+            },
+            {
+              "NameDisplay": "告警原因",
+              "Type": "text",
+              "Value": "        该Powershell命令包含可疑的代码特征\n        ",
+              "ValueDisplay": "        该Powershell命令包含可疑的代码特征\n        "
+            },
+            {
+              "NameDisplay": "用户名",
+              "Type": "text",
+              "Value": "Administrator",
+              "ValueDisplay": "Administrator"
+            },
+            {
+              "NameDisplay": "命令行",
+              "Type": "text",
+              "Value": "powershell  -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\setup_victim.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\setup_victim.ps1', [Convert]::FromBase64String('cGFyYW0oCiAgICBbUGFyYW1ldGVyKE1hbmRhdG9yeT0kdHJ1ZSldW3N0cmluZ10kQWRtaW5QYXNzd29yZCwKICAgIFtQYXJhbWV0ZXIoTWFuZGF0b3J5PSR0cnVlKV1bc3RyaW5nXSRIZWxwZGVza1Bhc3N3b3JkCikKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAiU3RvcCIKU2V0LUxvY2F0aW9uIC1QYXRoICRQU1NjcmlwdFJvb3QKCmZ1bmN0aW9uIEVuc3VyZS1Mb2NhbFVzZXIgewogICAgcGFyYW0oW3N0cmluZ10kTmFtZSwgW3N0cmluZ10kUGFzc3dvcmQsIFtzdHJpbmddJERlc2NyaXB0aW9uKQogICAgJFNlY3VyZSA9IENvbnZlcnRUby1TZWN1cmVTdHJpbmcgJFBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UKICAgICRFeGlzdGluZyA9IEdldC1Mb2NhbFVzZXIgLU5hbWUgJE5hbWUgLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUKICAgIGlmICgkRXhpc3RpbmcpIHsKICAgICAgICBTZXQtTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlCiAgICAgICAgRW5hYmxlLUxvY2FsVXNlciAtTmFtZSAkTmFtZQogICAgfSBlbHNlIHsKICAgICAgICBOZXctTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlIC1EZXNjcmlwdGlvbiAkRGVzY3JpcHRpb24gLVBhc3N3b3JkTmV2ZXJFeHBpcmVzIHwgT3V0LU51bGwKICAgIH0KfQoKZnVuY3Rpb24gRW5hYmxlLUZpcmV3YWxsUnVsZXMgewogICAgcGFyYW0oCiAgICAgICAgW3N0cmluZ1tdXSROYW1lUGF0dGVybnMgPSBAKCksCiAgICAgICAgW3N0cmluZ1tdXSREaXNwbGF5R3JvdXBzID0gQCgpCiAgICApCiAgICBmb3JlYWNoICgkUGF0dGVybiBpbiAkTmFtZVBhdHRlcm5zKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtTmFtZSAkUGF0dGVybiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQogICAgZm9yZWFjaCAoJEdyb3VwIGluICREaXNwbGF5R3JvdXBzKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtRGlzcGxheUdyb3VwICRHcm91cCAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQp9CgpFbnN1cmUtTG9jYWxVc2VyIC1OYW1lICJoZWxwZGVzayIgLVBhc3N3b3JkICRIZWxwZGVza1Bhc3N3b3JkIC1EZXNjcmlwdGlvbiAiSGVscGRlc2sgb3BlcmF0b3IiCiRCYWNrdXBQYXNzd29yZCA9ICIkKFtHdWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCdOJykpQWExISIKRW5zdXJlLUxvY2FsVXNlciAtTmFtZSAiYmFja3VwIiAtUGFzc3dvcmQgJEJhY2t1cFBhc3N3b3JkIC1EZXNjcmlwdGlvbiAiQmFja3VwIG9wZXJhdG9yIGRlY295IgoKU2V0LUxvY2FsVXNlciAtTmFtZSAiQWRtaW5pc3RyYXRvciIgLVBhc3N3b3JkIChDb252ZXJ0VG8tU2VjdXJlU3RyaW5nICRBZG1pblBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UpCkFkZC1Mb2NhbEdyb3VwTWVtYmVyIC1Hcm91cCAiUmVtb3RlIERlc2t0b3AgVXNlcnMiIC1NZW1iZXIgImhlbHBkZXNrIiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQoKU2V0LUl0ZW1Qcm9wZXJ0eSAtUGF0aCAiSEtMTTpcU3lzdGVtXEN1cnJlbnRDb250cm9sU2V0XENvbnRyb2xcVGVybWluYWwgU2VydmVyIiAtTmFtZSAiZkRlbnlUU0Nvbm5lY3Rpb25zIiAtVmFsdWUgMApFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZURlc2t0b3AqIikgLURpc3BsYXlHcm91cHMgQCgiUmVtb3RlIERlc2t0b3AiKQpFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZVN2Y0FkbWluKiIsICJSZW1vdGVFdmVudExvZ1N2YyoiLCAiUmVtb3RlRndBZG1pbioiKSAtRGlzcGxheUdyb3VwcyBAKCJSZW1vdGUgU2VydmljZSBNYW5hZ2VtZW50IikKRW5hYmxlLUZpcmV3YWxsUnVsZXMgLU5hbWVQYXR0ZXJucyBAKCJGUFMtKiIpIC1EaXNwbGF5R3JvdXBzIEAoIkZpbGUgYW5kIFByaW50ZXIgU2hhcmluZyIpCgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAiQzpcUHJvZ3JhbURhdGFcQ29ycEJhY2t1cCIgfCBPdXQtTnVsbApDb3B5LUl0ZW0gLUZvcmNlIChKb2luLVBhdGggJFBTU2NyaXB0Um9vdCAiY29ycC1iYWNrdXAtc3ZjLnBzMSIpICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwXGNvcnAtYmFja3VwLXN2Yy5wczEiCkNvcHktSXRlbSAtRm9yY2UgKEpvaW4tUGF0aCAkUFNTY3JpcHRSb290ICJwYXlsb2Fkc1xzeXN0ZW0tc3RhZ2UucHMxIikgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcc3lzdGVtLXN0YWdlLnBzMSIKCnNjLmV4ZSBjcmVhdGUgQ29ycEJhY2t1cFN2YyBiaW5QYXRoPSAicG93ZXJzaGVsbC5leGUgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcY29ycC1iYWNrdXAtc3ZjLnBzMWAiIiBzdGFydD0gZGVtYW5kIERpc3BsYXlOYW1lPSAiQ29ycG9yYXRlIEJhY2t1cCBTZXJ2aWNlIiB8IE91dC1OdWxsCgokSGVscGRlc2tTaWQgPSAoTmV3LU9iamVjdCBTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLk5UQWNjb3VudCgiJGVudjpDT01QVVRFUk5BTUVcaGVscGRlc2siKSkuVHJhbnNsYXRlKFtTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLlNlY3VyaXR5SWRlbnRpZmllcl0pLlZhbHVlCiRTZXJ2aWNlU2RkbCA9ICJEOihBOztHQTs7O1NZKShBOztHQTs7O0JBKShBOztDQ0xDU1dMT0NSUkM7OztBVSkoQTs7R0E7OzskSGVscGRlc2tTaWQpIgpzYy5leGUgc2RzZXQgQ29ycEJhY2t1cFN2YyAkU2VydmljZVNkZGwgfCBPdXQtTnVsbAoKd2V2dHV0aWwgc2wgU2VjdXJpdHkgL2U6dHJ1ZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTUtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMUMtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTEtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCgpXcml0ZS1Ib3N0ICJWaWN0aW0gc2V0dXAgY29tcGxldGUiCg=='))\"",
+              "ValueDisplay": "powershell  -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\setup_victim.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\setup_victim.ps1', [Convert]::FromBase64String('cGFyYW0oCiAgICBbUGFyYW1ldGVyKE1hbmRhdG9yeT0kdHJ1ZSldW3N0cmluZ10kQWRtaW5QYXNzd29yZCwKICAgIFtQYXJhbWV0ZXIoTWFuZGF0b3J5PSR0cnVlKV1bc3RyaW5nXSRIZWxwZGVza1Bhc3N3b3JkCikKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAiU3RvcCIKU2V0LUxvY2F0aW9uIC1QYXRoICRQU1NjcmlwdFJvb3QKCmZ1bmN0aW9uIEVuc3VyZS1Mb2NhbFVzZXIgewogICAgcGFyYW0oW3N0cmluZ10kTmFtZSwgW3N0cmluZ10kUGFzc3dvcmQsIFtzdHJpbmddJERlc2NyaXB0aW9uKQogICAgJFNlY3VyZSA9IENvbnZlcnRUby1TZWN1cmVTdHJpbmcgJFBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UKICAgICRFeGlzdGluZyA9IEdldC1Mb2NhbFVzZXIgLU5hbWUgJE5hbWUgLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUKICAgIGlmICgkRXhpc3RpbmcpIHsKICAgICAgICBTZXQtTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlCiAgICAgICAgRW5hYmxlLUxvY2FsVXNlciAtTmFtZSAkTmFtZQogICAgfSBlbHNlIHsKICAgICAgICBOZXctTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlIC1EZXNjcmlwdGlvbiAkRGVzY3JpcHRpb24gLVBhc3N3b3JkTmV2ZXJFeHBpcmVzIHwgT3V0LU51bGwKICAgIH0KfQoKZnVuY3Rpb24gRW5hYmxlLUZpcmV3YWxsUnVsZXMgewogICAgcGFyYW0oCiAgICAgICAgW3N0cmluZ1tdXSROYW1lUGF0dGVybnMgPSBAKCksCiAgICAgICAgW3N0cmluZ1tdXSREaXNwbGF5R3JvdXBzID0gQCgpCiAgICApCiAgICBmb3JlYWNoICgkUGF0dGVybiBpbiAkTmFtZVBhdHRlcm5zKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtTmFtZSAkUGF0dGVybiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQogICAgZm9yZWFjaCAoJEdyb3VwIGluICREaXNwbGF5R3JvdXBzKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtRGlzcGxheUdyb3VwICRHcm91cCAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQp9CgpFbnN1cmUtTG9jYWxVc2VyIC1OYW1lICJoZWxwZGVzayIgLVBhc3N3b3JkICRIZWxwZGVza1Bhc3N3b3JkIC1EZXNjcmlwdGlvbiAiSGVscGRlc2sgb3BlcmF0b3IiCiRCYWNrdXBQYXNzd29yZCA9ICIkKFtHdWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCdOJykpQWExISIKRW5zdXJlLUxvY2FsVXNlciAtTmFtZSAiYmFja3VwIiAtUGFzc3dvcmQgJEJhY2t1cFBhc3N3b3JkIC1EZXNjcmlwdGlvbiAiQmFja3VwIG9wZXJhdG9yIGRlY295IgoKU2V0LUxvY2FsVXNlciAtTmFtZSAiQWRtaW5pc3RyYXRvciIgLVBhc3N3b3JkIChDb252ZXJ0VG8tU2VjdXJlU3RyaW5nICRBZG1pblBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UpCkFkZC1Mb2NhbEdyb3VwTWVtYmVyIC1Hcm91cCAiUmVtb3RlIERlc2t0b3AgVXNlcnMiIC1NZW1iZXIgImhlbHBkZXNrIiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQoKU2V0LUl0ZW1Qcm9wZXJ0eSAtUGF0aCAiSEtMTTpcU3lzdGVtXEN1cnJlbnRDb250cm9sU2V0XENvbnRyb2xcVGVybWluYWwgU2VydmVyIiAtTmFtZSAiZkRlbnlUU0Nvbm5lY3Rpb25zIiAtVmFsdWUgMApFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZURlc2t0b3AqIikgLURpc3BsYXlHcm91cHMgQCgiUmVtb3RlIERlc2t0b3AiKQpFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZVN2Y0FkbWluKiIsICJSZW1vdGVFdmVudExvZ1N2YyoiLCAiUmVtb3RlRndBZG1pbioiKSAtRGlzcGxheUdyb3VwcyBAKCJSZW1vdGUgU2VydmljZSBNYW5hZ2VtZW50IikKRW5hYmxlLUZpcmV3YWxsUnVsZXMgLU5hbWVQYXR0ZXJucyBAKCJGUFMtKiIpIC1EaXNwbGF5R3JvdXBzIEAoIkZpbGUgYW5kIFByaW50ZXIgU2hhcmluZyIpCgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAiQzpcUHJvZ3JhbURhdGFcQ29ycEJhY2t1cCIgfCBPdXQtTnVsbApDb3B5LUl0ZW0gLUZvcmNlIChKb2luLVBhdGggJFBTU2NyaXB0Um9vdCAiY29ycC1iYWNrdXAtc3ZjLnBzMSIpICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwXGNvcnAtYmFja3VwLXN2Yy5wczEiCkNvcHktSXRlbSAtRm9yY2UgKEpvaW4tUGF0aCAkUFNTY3JpcHRSb290ICJwYXlsb2Fkc1xzeXN0ZW0tc3RhZ2UucHMxIikgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcc3lzdGVtLXN0YWdlLnBzMSIKCnNjLmV4ZSBjcmVhdGUgQ29ycEJhY2t1cFN2YyBiaW5QYXRoPSAicG93ZXJzaGVsbC5leGUgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcY29ycC1iYWNrdXAtc3ZjLnBzMWAiIiBzdGFydD0gZGVtYW5kIERpc3BsYXlOYW1lPSAiQ29ycG9yYXRlIEJhY2t1cCBTZXJ2aWNlIiB8IE91dC1OdWxsCgokSGVscGRlc2tTaWQgPSAoTmV3LU9iamVjdCBTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLk5UQWNjb3VudCgiJGVudjpDT01QVVRFUk5BTUVcaGVscGRlc2siKSkuVHJhbnNsYXRlKFtTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLlNlY3VyaXR5SWRlbnRpZmllcl0pLlZhbHVlCiRTZXJ2aWNlU2RkbCA9ICJEOihBOztHQTs7O1NZKShBOztHQTs7O0JBKShBOztDQ0xDU1dMT0NSUkM7OztBVSkoQTs7R0E7OzskSGVscGRlc2tTaWQpIgpzYy5leGUgc2RzZXQgQ29ycEJhY2t1cFN2YyAkU2VydmljZVNkZGwgfCBPdXQtTnVsbAoKd2V2dHV0aWwgc2wgU2VjdXJpdHkgL2U6dHJ1ZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTUtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMUMtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTEtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCgpXcml0ZS1Ib3N0ICJWaWN0aW0gc2V0dXAgY29tcGxldGUiCg=='))\""
+            },
+            {
+              "NameDisplay": "进程路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+              "ValueDisplay": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+            },
+            {
+              "NameDisplay": "进程ID",
+              "Type": "text",
+              "Value": "3152",
+              "ValueDisplay": "3152"
+            },
+            {
+              "NameDisplay": "父进程命令行",
+              "Type": "text",
+              "Value": "\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\setup_victim.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\setup_victim.ps1', [Convert]::FromBase64String('cGFyYW0oCiAgICBbUGFyYW1ldGVyKE1hbmRhdG9yeT0kdHJ1ZSldW3N0cmluZ10kQWRtaW5QYXNzd29yZCwKICAgIFtQYXJhbWV0ZXIoTWFuZGF0b3J5PSR0cnVlKV1bc3RyaW5nXSRIZWxwZGVza1Bhc3N3b3JkCikKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAiU3RvcCIKU2V0LUxvY2F0aW9uIC1QYXRoICRQU1NjcmlwdFJvb3QKCmZ1bmN0aW9uIEVuc3VyZS1Mb2NhbFVzZXIgewogICAgcGFyYW0oW3N0cmluZ10kTmFtZSwgW3N0cmluZ10kUGFzc3dvcmQsIFtzdHJpbmddJERlc2NyaXB0aW9uKQogICAgJFNlY3VyZSA9IENvbnZlcnRUby1TZWN1cmVTdHJpbmcgJFBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UKICAgICRFeGlzdGluZyA9IEdldC1Mb2NhbFVzZXIgLU5hbWUgJE5hbWUgLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUKICAgIGlmICgkRXhpc3RpbmcpIHsKICAgICAgICBTZXQtTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlCiAgICAgICAgRW5hYmxlLUxvY2FsVXNlciAtTmFtZSAkTmFtZQogICAgfSBlbHNlIHsKICAgICAgICBOZXctTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlIC1EZXNjcmlwdGlvbiAkRGVzY3JpcHRpb24gLVBhc3N3b3JkTmV2ZXJFeHBpcmVzIHwgT3V0LU51bGwKICAgIH0KfQoKZnVuY3Rpb24gRW5hYmxlLUZpcmV3YWxsUnVsZXMgewogICAgcGFyYW0oCiAgICAgICAgW3N0cmluZ1tdXSROYW1lUGF0dGVybnMgPSBAKCksCiAgICAgICAgW3N0cmluZ1tdXSREaXNwbGF5R3JvdXBzID0gQCgpCiAgICApCiAgICBmb3JlYWNoICgkUGF0dGVybiBpbiAkTmFtZVBhdHRlcm5zKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtTmFtZSAkUGF0dGVybiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQogICAgZm9yZWFjaCAoJEdyb3VwIGluICREaXNwbGF5R3JvdXBzKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtRGlzcGxheUdyb3VwICRHcm91cCAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQp9CgpFbnN1cmUtTG9jYWxVc2VyIC1OYW1lICJoZWxwZGVzayIgLVBhc3N3b3JkICRIZWxwZGVza1Bhc3N3b3JkIC1EZXNjcmlwdGlvbiAiSGVscGRlc2sgb3BlcmF0b3IiCiRCYWNrdXBQYXNzd29yZCA9ICIkKFtHdWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCdOJykpQWExISIKRW5zdXJlLUxvY2FsVXNlciAtTmFtZSAiYmFja3VwIiAtUGFzc3dvcmQgJEJhY2t1cFBhc3N3b3JkIC1EZXNjcmlwdGlvbiAiQmFja3VwIG9wZXJhdG9yIGRlY295IgoKU2V0LUxvY2FsVXNlciAtTmFtZSAiQWRtaW5pc3RyYXRvciIgLVBhc3N3b3JkIChDb252ZXJ0VG8tU2VjdXJlU3RyaW5nICRBZG1pblBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UpCkFkZC1Mb2NhbEdyb3VwTWVtYmVyIC1Hcm91cCAiUmVtb3RlIERlc2t0b3AgVXNlcnMiIC1NZW1iZXIgImhlbHBkZXNrIiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQoKU2V0LUl0ZW1Qcm9wZXJ0eSAtUGF0aCAiSEtMTTpcU3lzdGVtXEN1cnJlbnRDb250cm9sU2V0XENvbnRyb2xcVGVybWluYWwgU2VydmVyIiAtTmFtZSAiZkRlbnlUU0Nvbm5lY3Rpb25zIiAtVmFsdWUgMApFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZURlc2t0b3AqIikgLURpc3BsYXlHcm91cHMgQCgiUmVtb3RlIERlc2t0b3AiKQpFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZVN2Y0FkbWluKiIsICJSZW1vdGVFdmVudExvZ1N2YyoiLCAiUmVtb3RlRndBZG1pbioiKSAtRGlzcGxheUdyb3VwcyBAKCJSZW1vdGUgU2VydmljZSBNYW5hZ2VtZW50IikKRW5hYmxlLUZpcmV3YWxsUnVsZXMgLU5hbWVQYXR0ZXJucyBAKCJGUFMtKiIpIC1EaXNwbGF5R3JvdXBzIEAoIkZpbGUgYW5kIFByaW50ZXIgU2hhcmluZyIpCgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAiQzpcUHJvZ3JhbURhdGFcQ29ycEJhY2t1cCIgfCBPdXQtTnVsbApDb3B5LUl0ZW0gLUZvcmNlIChKb2luLVBhdGggJFBTU2NyaXB0Um9vdCAiY29ycC1iYWNrdXAtc3ZjLnBzMSIpICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwXGNvcnAtYmFja3VwLXN2Yy5wczEiCkNvcHktSXRlbSAtRm9yY2UgKEpvaW4tUGF0aCAkUFNTY3JpcHRSb290ICJwYXlsb2Fkc1xzeXN0ZW0tc3RhZ2UucHMxIikgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcc3lzdGVtLXN0YWdlLnBzMSIKCnNjLmV4ZSBjcmVhdGUgQ29ycEJhY2t1cFN2YyBiaW5QYXRoPSAicG93ZXJzaGVsbC5leGUgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcY29ycC1iYWNrdXAtc3ZjLnBzMWAiIiBzdGFydD0gZGVtYW5kIERpc3BsYXlOYW1lPSAiQ29ycG9yYXRlIEJhY2t1cCBTZXJ2aWNlIiB8IE91dC1OdWxsCgokSGVscGRlc2tTaWQgPSAoTmV3LU9iamVjdCBTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLk5UQWNjb3VudCgiJGVudjpDT01QVVRFUk5BTUVcaGVscGRlc2siKSkuVHJhbnNsYXRlKFtTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLlNlY3VyaXR5SWRlbnRpZmllcl0pLlZhbHVlCiRTZXJ2aWNlU2RkbCA9ICJEOihBOztHQTs7O1NZKShBOztHQTs7O0JBKShBOztDQ0xDU1dMT0NSUkM7OztBVSkoQTs7R0E7OzskSGVscGRlc2tTaWQpIgpzYy5leGUgc2RzZXQgQ29ycEJhY2t1cFN2YyAkU2VydmljZVNkZGwgfCBPdXQtTnVsbAoKd2V2dHV0aWwgc2wgU2VjdXJpdHkgL2U6dHJ1ZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTUtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMUMtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTEtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCgpXcml0ZS1Ib3N0ICJWaWN0aW0gc2V0dXAgY29tcGxldGUiCg=='))\"\"",
+              "ValueDisplay": "\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\setup_victim.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\setup_victim.ps1', [Convert]::FromBase64String('cGFyYW0oCiAgICBbUGFyYW1ldGVyKE1hbmRhdG9yeT0kdHJ1ZSldW3N0cmluZ10kQWRtaW5QYXNzd29yZCwKICAgIFtQYXJhbWV0ZXIoTWFuZGF0b3J5PSR0cnVlKV1bc3RyaW5nXSRIZWxwZGVza1Bhc3N3b3JkCikKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAiU3RvcCIKU2V0LUxvY2F0aW9uIC1QYXRoICRQU1NjcmlwdFJvb3QKCmZ1bmN0aW9uIEVuc3VyZS1Mb2NhbFVzZXIgewogICAgcGFyYW0oW3N0cmluZ10kTmFtZSwgW3N0cmluZ10kUGFzc3dvcmQsIFtzdHJpbmddJERlc2NyaXB0aW9uKQogICAgJFNlY3VyZSA9IENvbnZlcnRUby1TZWN1cmVTdHJpbmcgJFBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UKICAgICRFeGlzdGluZyA9IEdldC1Mb2NhbFVzZXIgLU5hbWUgJE5hbWUgLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUKICAgIGlmICgkRXhpc3RpbmcpIHsKICAgICAgICBTZXQtTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlCiAgICAgICAgRW5hYmxlLUxvY2FsVXNlciAtTmFtZSAkTmFtZQogICAgfSBlbHNlIHsKICAgICAgICBOZXctTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlIC1EZXNjcmlwdGlvbiAkRGVzY3JpcHRpb24gLVBhc3N3b3JkTmV2ZXJFeHBpcmVzIHwgT3V0LU51bGwKICAgIH0KfQoKZnVuY3Rpb24gRW5hYmxlLUZpcmV3YWxsUnVsZXMgewogICAgcGFyYW0oCiAgICAgICAgW3N0cmluZ1tdXSROYW1lUGF0dGVybnMgPSBAKCksCiAgICAgICAgW3N0cmluZ1tdXSREaXNwbGF5R3JvdXBzID0gQCgpCiAgICApCiAgICBmb3JlYWNoICgkUGF0dGVybiBpbiAkTmFtZVBhdHRlcm5zKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtTmFtZSAkUGF0dGVybiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQogICAgZm9yZWFjaCAoJEdyb3VwIGluICREaXNwbGF5R3JvdXBzKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtRGlzcGxheUdyb3VwICRHcm91cCAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQp9CgpFbnN1cmUtTG9jYWxVc2VyIC1OYW1lICJoZWxwZGVzayIgLVBhc3N3b3JkICRIZWxwZGVza1Bhc3N3b3JkIC1EZXNjcmlwdGlvbiAiSGVscGRlc2sgb3BlcmF0b3IiCiRCYWNrdXBQYXNzd29yZCA9ICIkKFtHdWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCdOJykpQWExISIKRW5zdXJlLUxvY2FsVXNlciAtTmFtZSAiYmFja3VwIiAtUGFzc3dvcmQgJEJhY2t1cFBhc3N3b3JkIC1EZXNjcmlwdGlvbiAiQmFja3VwIG9wZXJhdG9yIGRlY295IgoKU2V0LUxvY2FsVXNlciAtTmFtZSAiQWRtaW5pc3RyYXRvciIgLVBhc3N3b3JkIChDb252ZXJ0VG8tU2VjdXJlU3RyaW5nICRBZG1pblBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UpCkFkZC1Mb2NhbEdyb3VwTWVtYmVyIC1Hcm91cCAiUmVtb3RlIERlc2t0b3AgVXNlcnMiIC1NZW1iZXIgImhlbHBkZXNrIiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQoKU2V0LUl0ZW1Qcm9wZXJ0eSAtUGF0aCAiSEtMTTpcU3lzdGVtXEN1cnJlbnRDb250cm9sU2V0XENvbnRyb2xcVGVybWluYWwgU2VydmVyIiAtTmFtZSAiZkRlbnlUU0Nvbm5lY3Rpb25zIiAtVmFsdWUgMApFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZURlc2t0b3AqIikgLURpc3BsYXlHcm91cHMgQCgiUmVtb3RlIERlc2t0b3AiKQpFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZVN2Y0FkbWluKiIsICJSZW1vdGVFdmVudExvZ1N2YyoiLCAiUmVtb3RlRndBZG1pbioiKSAtRGlzcGxheUdyb3VwcyBAKCJSZW1vdGUgU2VydmljZSBNYW5hZ2VtZW50IikKRW5hYmxlLUZpcmV3YWxsUnVsZXMgLU5hbWVQYXR0ZXJucyBAKCJGUFMtKiIpIC1EaXNwbGF5R3JvdXBzIEAoIkZpbGUgYW5kIFByaW50ZXIgU2hhcmluZyIpCgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAiQzpcUHJvZ3JhbURhdGFcQ29ycEJhY2t1cCIgfCBPdXQtTnVsbApDb3B5LUl0ZW0gLUZvcmNlIChKb2luLVBhdGggJFBTU2NyaXB0Um9vdCAiY29ycC1iYWNrdXAtc3ZjLnBzMSIpICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwXGNvcnAtYmFja3VwLXN2Yy5wczEiCkNvcHktSXRlbSAtRm9yY2UgKEpvaW4tUGF0aCAkUFNTY3JpcHRSb290ICJwYXlsb2Fkc1xzeXN0ZW0tc3RhZ2UucHMxIikgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcc3lzdGVtLXN0YWdlLnBzMSIKCnNjLmV4ZSBjcmVhdGUgQ29ycEJhY2t1cFN2YyBiaW5QYXRoPSAicG93ZXJzaGVsbC5leGUgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcY29ycC1iYWNrdXAtc3ZjLnBzMWAiIiBzdGFydD0gZGVtYW5kIERpc3BsYXlOYW1lPSAiQ29ycG9yYXRlIEJhY2t1cCBTZXJ2aWNlIiB8IE91dC1OdWxsCgokSGVscGRlc2tTaWQgPSAoTmV3LU9iamVjdCBTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLk5UQWNjb3VudCgiJGVudjpDT01QVVRFUk5BTUVcaGVscGRlc2siKSkuVHJhbnNsYXRlKFtTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLlNlY3VyaXR5SWRlbnRpZmllcl0pLlZhbHVlCiRTZXJ2aWNlU2RkbCA9ICJEOihBOztHQTs7O1NZKShBOztHQTs7O0JBKShBOztDQ0xDU1dMT0NSUkM7OztBVSkoQTs7R0E7OzskSGVscGRlc2tTaWQpIgpzYy5leGUgc2RzZXQgQ29ycEJhY2t1cFN2YyAkU2VydmljZVNkZGwgfCBPdXQtTnVsbAoKd2V2dHV0aWwgc2wgU2VjdXJpdHkgL2U6dHJ1ZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTUtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMUMtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTEtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCgpXcml0ZS1Ib3N0ICJWaWN0aW0gc2V0dXAgY29tcGxldGUiCg=='))\"\""
+            },
+            {
+              "NameDisplay": "父进程文件路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/cmd.exe",
+              "ValueDisplay": "C:/Windows/System32/cmd.exe"
+            },
+            {
+              "NameDisplay": "父进程ID",
+              "Type": "text",
+              "Value": "3628",
+              "ValueDisplay": "3628"
+            },
+            {
+              "NameDisplay": "进程链",
+              "Type": "html",
+              "Value": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2808]</strong>&nbsp;&nbsp;<code>C:\\Windows\\System32\\OpenSSH\\sshd.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2312]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -R</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2944]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -z</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[3628]</strong>&nbsp;&nbsp;<code>\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\setup_victim.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\setup_victim.ps1', [Convert]::FromBase64String('cGFyYW0oCiAgICBbUGFyYW1ldGVyKE1hbmRhdG9yeT0kdHJ1ZSldW3N0cmluZ10kQWRtaW5QYXNzd29yZCwKICAgIFtQYXJhbWV0ZXIoTWFuZGF0b3J5PSR0cnVlKV1bc3RyaW5nXSRIZWxwZGVza1Bhc3N3b3JkCikKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAiU3RvcCIKU2V0LUxvY2F0aW9uIC1QYXRoICRQU1NjcmlwdFJvb3QKCmZ1bmN0aW9uIEVuc3VyZS1Mb2NhbFVzZXIgewogICAgcGFyYW0oW3N0cmluZ10kTmFtZSwgW3N0cmluZ10kUGFzc3dvcmQsIFtzdHJpbmddJERlc2NyaXB0aW9uKQogICAgJFNlY3VyZSA9IENvbnZlcnRUby1TZWN1cmVTdHJpbmcgJFBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UKICAgICRFeGlzdGluZyA9IEdldC1Mb2NhbFVzZXIgLU5hbWUgJE5hbWUgLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUKICAgIGlmICgkRXhpc3RpbmcpIHsKICAgICAgICBTZXQtTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlCiAgICAgICAgRW5hYmxlLUxvY2FsVXNlciAtTmFtZSAkTmFtZQogICAgfSBlbHNlIHsKICAgICAgICBOZXctTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlIC1EZXNjcmlwdGlvbiAkRGVzY3JpcHRpb24gLVBhc3N3b3JkTmV2ZXJFeHBpcmVzIHwgT3V0LU51bGwKICAgIH0KfQoKZnVuY3Rpb24gRW5hYmxlLUZpcmV3YWxsUnVsZXMgewogICAgcGFyYW0oCiAgICAgICAgW3N0cmluZ1tdXSROYW1lUGF0dGVybnMgPSBAKCksCiAgICAgICAgW3N0cmluZ1tdXSREaXNwbGF5R3JvdXBzID0gQCgpCiAgICApCiAgICBmb3JlYWNoICgkUGF0dGVybiBpbiAkTmFtZVBhdHRlcm5zKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtTmFtZSAkUGF0dGVybiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQogICAgZm9yZWFjaCAoJEdyb3VwIGluICREaXNwbGF5R3JvdXBzKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtRGlzcGxheUdyb3VwICRHcm91cCAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQp9CgpFbnN1cmUtTG9jYWxVc2VyIC1OYW1lICJoZWxwZGVzayIgLVBhc3N3b3JkICRIZWxwZGVza1Bhc3N3b3JkIC1EZXNjcmlwdGlvbiAiSGVscGRlc2sgb3BlcmF0b3IiCiRCYWNrdXBQYXNzd29yZCA9ICIkKFtHdWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCdOJykpQWExISIKRW5zdXJlLUxvY2FsVXNlciAtTmFtZSAiYmFja3VwIiAtUGFzc3dvcmQgJEJhY2t1cFBhc3N3b3JkIC1EZXNjcmlwdGlvbiAiQmFja3VwIG9wZXJhdG9yIGRlY295IgoKU2V0LUxvY2FsVXNlciAtTmFtZSAiQWRtaW5pc3RyYXRvciIgLVBhc3N3b3JkIChDb252ZXJ0VG8tU2VjdXJlU3RyaW5nICRBZG1pblBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UpCkFkZC1Mb2NhbEdyb3VwTWVtYmVyIC1Hcm91cCAiUmVtb3RlIERlc2t0b3AgVXNlcnMiIC1NZW1iZXIgImhlbHBkZXNrIiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQoKU2V0LUl0ZW1Qcm9wZXJ0eSAtUGF0aCAiSEtMTTpcU3lzdGVtXEN1cnJlbnRDb250cm9sU2V0XENvbnRyb2xcVGVybWluYWwgU2VydmVyIiAtTmFtZSAiZkRlbnlUU0Nvbm5lY3Rpb25zIiAtVmFsdWUgMApFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZURlc2t0b3AqIikgLURpc3BsYXlHcm91cHMgQCgiUmVtb3RlIERlc2t0b3AiKQpFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZVN2Y0FkbWluKiIsICJSZW1vdGVFdmVudExvZ1N2YyoiLCAiUmVtb3RlRndBZG1pbioiKSAtRGlzcGxheUdyb3VwcyBAKCJSZW1vdGUgU2VydmljZSBNYW5hZ2VtZW50IikKRW5hYmxlLUZpcmV3YWxsUnVsZXMgLU5hbWVQYXR0ZXJucyBAKCJGUFMtKiIpIC1EaXNwbGF5R3JvdXBzIEAoIkZpbGUgYW5kIFByaW50ZXIgU2hhcmluZyIpCgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAiQzpcUHJvZ3JhbURhdGFcQ29ycEJhY2t1cCIgfCBPdXQtTnVsbApDb3B5LUl0ZW0gLUZvcmNlIChKb2luLVBhdGggJFBTU2NyaXB0Um9vdCAiY29ycC1iYWNrdXAtc3ZjLnBzMSIpICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwXGNvcnAtYmFja3VwLXN2Yy5wczEiCkNvcHktSXRlbSAtRm9yY2UgKEpvaW4tUGF0aCAkUFNTY3JpcHRSb290ICJwYXlsb2Fkc1xzeXN0ZW0tc3RhZ2UucHMxIikgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcc3lzdGVtLXN0YWdlLnBzMSIKCnNjLmV4ZSBjcmVhdGUgQ29ycEJhY2t1cFN2YyBiaW5QYXRoPSAicG93ZXJzaGVsbC5leGUgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcY29ycC1iYWNrdXAtc3ZjLnBzMWAiIiBzdGFydD0gZGVtYW5kIERpc3BsYXlOYW1lPSAiQ29ycG9yYXRlIEJhY2t1cCBTZXJ2aWNlIiB8IE91dC1OdWxsCgokSGVscGRlc2tTaWQgPSAoTmV3LU9iamVjdCBTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLk5UQWNjb3VudCgiJGVudjpDT01QVVRFUk5BTUVcaGVscGRlc2siKSkuVHJhbnNsYXRlKFtTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLlNlY3VyaXR5SWRlbnRpZmllcl0pLlZhbHVlCiRTZXJ2aWNlU2RkbCA9ICJEOihBOztHQTs7O1NZKShBOztHQTs7O0JBKShBOztDQ0xDU1dMT0NSUkM7OztBVSkoQTs7R0E7OzskSGVscGRlc2tTaWQpIgpzYy5leGUgc2RzZXQgQ29ycEJhY2t1cFN2YyAkU2VydmljZVNkZGwgfCBPdXQtTnVsbAoKd2V2dHV0aWwgc2wgU2VjdXJpdHkgL2U6dHJ1ZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTUtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMUMtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTEtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCgpXcml0ZS1Ib3N0ICJWaWN0aW0gc2V0dXAgY29tcGxldGUiCg=='))\"\"</code></p>\n",
+              "ValueDisplay": "<p>-<strong>[440]</strong>&nbsp;&nbsp;<code>wininit.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[580]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\services.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2808]</strong>&nbsp;&nbsp;<code>C:\\Windows\\System32\\OpenSSH\\sshd.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2312]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -R</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2944]</strong>&nbsp;&nbsp;<code>\"C:\\Windows\\System32\\OpenSSH\\sshd.exe\" -z</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[3628]</strong>&nbsp;&nbsp;<code>\"c:\\windows\\system32\\cmd.exe\" /c \"powershell -NoProfile -Command \"[IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName('C:\\range-rdp-service-abuse\\setup_victim.ps1')) | Out-Null; [IO.File]::WriteAllBytes('C:\\range-rdp-service-abuse\\setup_victim.ps1', [Convert]::FromBase64String('cGFyYW0oCiAgICBbUGFyYW1ldGVyKE1hbmRhdG9yeT0kdHJ1ZSldW3N0cmluZ10kQWRtaW5QYXNzd29yZCwKICAgIFtQYXJhbWV0ZXIoTWFuZGF0b3J5PSR0cnVlKV1bc3RyaW5nXSRIZWxwZGVza1Bhc3N3b3JkCikKCiRFcnJvckFjdGlvblByZWZlcmVuY2UgPSAiU3RvcCIKU2V0LUxvY2F0aW9uIC1QYXRoICRQU1NjcmlwdFJvb3QKCmZ1bmN0aW9uIEVuc3VyZS1Mb2NhbFVzZXIgewogICAgcGFyYW0oW3N0cmluZ10kTmFtZSwgW3N0cmluZ10kUGFzc3dvcmQsIFtzdHJpbmddJERlc2NyaXB0aW9uKQogICAgJFNlY3VyZSA9IENvbnZlcnRUby1TZWN1cmVTdHJpbmcgJFBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UKICAgICRFeGlzdGluZyA9IEdldC1Mb2NhbFVzZXIgLU5hbWUgJE5hbWUgLUVycm9yQWN0aW9uIFNpbGVudGx5Q29udGludWUKICAgIGlmICgkRXhpc3RpbmcpIHsKICAgICAgICBTZXQtTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlCiAgICAgICAgRW5hYmxlLUxvY2FsVXNlciAtTmFtZSAkTmFtZQogICAgfSBlbHNlIHsKICAgICAgICBOZXctTG9jYWxVc2VyIC1OYW1lICROYW1lIC1QYXNzd29yZCAkU2VjdXJlIC1EZXNjcmlwdGlvbiAkRGVzY3JpcHRpb24gLVBhc3N3b3JkTmV2ZXJFeHBpcmVzIHwgT3V0LU51bGwKICAgIH0KfQoKZnVuY3Rpb24gRW5hYmxlLUZpcmV3YWxsUnVsZXMgewogICAgcGFyYW0oCiAgICAgICAgW3N0cmluZ1tdXSROYW1lUGF0dGVybnMgPSBAKCksCiAgICAgICAgW3N0cmluZ1tdXSREaXNwbGF5R3JvdXBzID0gQCgpCiAgICApCiAgICBmb3JlYWNoICgkUGF0dGVybiBpbiAkTmFtZVBhdHRlcm5zKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtTmFtZSAkUGF0dGVybiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQogICAgZm9yZWFjaCAoJEdyb3VwIGluICREaXNwbGF5R3JvdXBzKSB7CiAgICAgICAgR2V0LU5ldEZpcmV3YWxsUnVsZSAtRGlzcGxheUdyb3VwICRHcm91cCAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZSB8IEVuYWJsZS1OZXRGaXJld2FsbFJ1bGUgfCBPdXQtTnVsbAogICAgfQp9CgpFbnN1cmUtTG9jYWxVc2VyIC1OYW1lICJoZWxwZGVzayIgLVBhc3N3b3JkICRIZWxwZGVza1Bhc3N3b3JkIC1EZXNjcmlwdGlvbiAiSGVscGRlc2sgb3BlcmF0b3IiCiRCYWNrdXBQYXNzd29yZCA9ICIkKFtHdWlkXTo6TmV3R3VpZCgpLlRvU3RyaW5nKCdOJykpQWExISIKRW5zdXJlLUxvY2FsVXNlciAtTmFtZSAiYmFja3VwIiAtUGFzc3dvcmQgJEJhY2t1cFBhc3N3b3JkIC1EZXNjcmlwdGlvbiAiQmFja3VwIG9wZXJhdG9yIGRlY295IgoKU2V0LUxvY2FsVXNlciAtTmFtZSAiQWRtaW5pc3RyYXRvciIgLVBhc3N3b3JkIChDb252ZXJ0VG8tU2VjdXJlU3RyaW5nICRBZG1pblBhc3N3b3JkIC1Bc1BsYWluVGV4dCAtRm9yY2UpCkFkZC1Mb2NhbEdyb3VwTWVtYmVyIC1Hcm91cCAiUmVtb3RlIERlc2t0b3AgVXNlcnMiIC1NZW1iZXIgImhlbHBkZXNrIiAtRXJyb3JBY3Rpb24gU2lsZW50bHlDb250aW51ZQoKU2V0LUl0ZW1Qcm9wZXJ0eSAtUGF0aCAiSEtMTTpcU3lzdGVtXEN1cnJlbnRDb250cm9sU2V0XENvbnRyb2xcVGVybWluYWwgU2VydmVyIiAtTmFtZSAiZkRlbnlUU0Nvbm5lY3Rpb25zIiAtVmFsdWUgMApFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZURlc2t0b3AqIikgLURpc3BsYXlHcm91cHMgQCgiUmVtb3RlIERlc2t0b3AiKQpFbmFibGUtRmlyZXdhbGxSdWxlcyAtTmFtZVBhdHRlcm5zIEAoIlJlbW90ZVN2Y0FkbWluKiIsICJSZW1vdGVFdmVudExvZ1N2YyoiLCAiUmVtb3RlRndBZG1pbioiKSAtRGlzcGxheUdyb3VwcyBAKCJSZW1vdGUgU2VydmljZSBNYW5hZ2VtZW50IikKRW5hYmxlLUZpcmV3YWxsUnVsZXMgLU5hbWVQYXR0ZXJucyBAKCJGUFMtKiIpIC1EaXNwbGF5R3JvdXBzIEAoIkZpbGUgYW5kIFByaW50ZXIgU2hhcmluZyIpCgpOZXctSXRlbSAtSXRlbVR5cGUgRGlyZWN0b3J5IC1Gb3JjZSAtUGF0aCAiQzpcUHJvZ3JhbURhdGFcQ29ycEJhY2t1cCIgfCBPdXQtTnVsbApDb3B5LUl0ZW0gLUZvcmNlIChKb2luLVBhdGggJFBTU2NyaXB0Um9vdCAiY29ycC1iYWNrdXAtc3ZjLnBzMSIpICJDOlxQcm9ncmFtRGF0YVxDb3JwQmFja3VwXGNvcnAtYmFja3VwLXN2Yy5wczEiCkNvcHktSXRlbSAtRm9yY2UgKEpvaW4tUGF0aCAkUFNTY3JpcHRSb290ICJwYXlsb2Fkc1xzeXN0ZW0tc3RhZ2UucHMxIikgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcc3lzdGVtLXN0YWdlLnBzMSIKCnNjLmV4ZSBjcmVhdGUgQ29ycEJhY2t1cFN2YyBiaW5QYXRoPSAicG93ZXJzaGVsbC5leGUgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBgIkM6XFByb2dyYW1EYXRhXENvcnBCYWNrdXBcY29ycC1iYWNrdXAtc3ZjLnBzMWAiIiBzdGFydD0gZGVtYW5kIERpc3BsYXlOYW1lPSAiQ29ycG9yYXRlIEJhY2t1cCBTZXJ2aWNlIiB8IE91dC1OdWxsCgokSGVscGRlc2tTaWQgPSAoTmV3LU9iamVjdCBTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLk5UQWNjb3VudCgiJGVudjpDT01QVVRFUk5BTUVcaGVscGRlc2siKSkuVHJhbnNsYXRlKFtTeXN0ZW0uU2VjdXJpdHkuUHJpbmNpcGFsLlNlY3VyaXR5SWRlbnRpZmllcl0pLlZhbHVlCiRTZXJ2aWNlU2RkbCA9ICJEOihBOztHQTs7O1NZKShBOztHQTs7O0JBKShBOztDQ0xDU1dMT0NSUkM7OztBVSkoQTs7R0E7OzskSGVscGRlc2tTaWQpIgpzYy5leGUgc2RzZXQgQ29ycEJhY2t1cFN2YyAkU2VydmljZVNkZGwgfCBPdXQtTnVsbAoKd2V2dHV0aWwgc2wgU2VjdXJpdHkgL2U6dHJ1ZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTUtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMUMtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCmF1ZGl0cG9sIC9zZXQgL3N1YmNhdGVnb3J5OiJ7MENDRTkyMTEtNjlBRS0xMUQ5LUJFRDMtNTA1MDU0NTAzMDMwfSIgL3N1Y2Nlc3M6ZW5hYmxlIC9mYWlsdXJlOmVuYWJsZSB8IE91dC1OdWxsCgpXcml0ZS1Ib3N0ICJWaWN0aW0gc2V0dXAgY29tcGxldGUiCg=='))\"\"</code></p>\n"
+            },
+            {
+              "NameDisplay": "描述",
+              "Type": "text",
+              "Value": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似.",
+              "ValueDisplay": "该进程的命令行特征, 进程文件特征, 父子进程调用关系等, 与已知的蠕虫病毒特征或黑客攻击行为较为相似."
+            },
+            {
+              "NameDisplay": "处置建议",
+              "Type": "text",
+              "Value": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为.",
+              "ValueDisplay": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为."
+            }
+          ],
+          "DisplaySandboxResult": false,
+          "EventNotes": [],
+          "EventStatus": 1,
+          "EventSubType": "可疑Powershell指令",
+          "HasTraceInfo": true,
+          "Id": 720157670,
+          "InstanceId": "i-bp1864d401as14btd9vf",
+          "InstanceName": "range-rdp-service-abuse-victim",
+          "InternetIp": "121.41.86.186",
+          "IntranetIp": "172.16.33.176",
+          "LargeModel": true,
+          "LastTime": "2026-06-02 20:03:43",
+          "LastTimeStamp": 1780401823000,
+          "Level": "suspicious",
+          "Name": "进程异常行为-可疑Powershell指令",
+          "OccurrenceTime": "2026-06-02 20:03:43",
+          "OccurrenceTimeStamp": 1780401823000,
+          "SaleVersion": "1",
+          "SecurityEventIds": "720157670",
+          "Stages": "[\"代码执行\"]",
+          "SupportOperateCode": "AI.real_attack",
+          "TacticItems": [
+            {
+              "TacticDisplayName": "代码执行",
+              "TacticId": "TA0002"
+            }
+          ],
+          "UniqueInfo": "9ef4c7dc9d1ed2ae6a3c228f2e0c86b1",
+          "Uuid": "81c68948-7aa1-4cc6-a520-da886bb329cf"
+        },
+        {
+          "Advanced": false,
+          "AlarmEventName": "异常注册表操作",
+          "AlarmEventNameDisplay": "异常的注册表操作",
+          "AlarmEventType": "进程异常行为",
+          "AlarmEventTypeDisplay": "进程异常行为",
+          "AlarmUniqueInfo": "ca7ef5e051dc2a9434a3fbea79c984d6",
+          "AutoBreaking": false,
+          "CanBeDealOnLine": false,
+          "CanCancelFault": false,
+          "ContainHwMode": false,
+          "DataSource": "aegis_suspicious_event",
+          "Desc": "检测模型在您的机器上发现该命令操作注册表的方式高度可疑，可能是恶意软件或攻击者入侵后的配置修改行为。",
+          "Details": [
+            {
+              "NameDisplay": "提示",
+              "Type": "text",
+              "Value": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关.",
+              "ValueDisplay": "在您的系统上发现一个可疑进程, 可能与蠕虫病毒或入侵事件相关."
+            },
+            {
+              "NameDisplay": "告警原因",
+              "Type": "text",
+              "Value": "        修改该注册表可以关闭UAC或实现UAC绕过攻击.\n        \n",
+              "ValueDisplay": "        修改该注册表可以关闭UAC或实现UAC绕过攻击.\n        \n"
+            },
+            {
+              "NameDisplay": "路径",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "内容",
+              "Type": "text",
+              "Value": "-",
+              "ValueDisplay": "-"
+            },
+            {
+              "NameDisplay": "用户名",
+              "Type": "text",
+              "Value": "SYSTEM",
+              "ValueDisplay": "SYSTEM"
+            },
+            {
+              "NameDisplay": "命令行",
+              "Type": "text",
+              "Value": "reg  add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f",
+              "ValueDisplay": "reg  add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f"
+            },
+            {
+              "NameDisplay": "进程路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/reg.exe",
+              "ValueDisplay": "C:/Windows/System32/reg.exe"
+            },
+            {
+              "NameDisplay": "进程ID",
+              "Type": "text",
+              "Value": "5536",
+              "ValueDisplay": "5536"
+            },
+            {
+              "NameDisplay": "父进程命令行",
+              "Type": "text",
+              "Value": "C:\\Windows\\system32\\cmd.exe /c C:\\ProgramData\\aliyun\\assist\\work\\script\\t-hz06mqcfoidrk74.bat",
+              "ValueDisplay": "C:\\Windows\\system32\\cmd.exe /c C:\\ProgramData\\aliyun\\assist\\work\\script\\t-hz06mqcfoidrk74.bat"
+            },
+            {
+              "NameDisplay": "父进程文件路径",
+              "Type": "text",
+              "Value": "C:/Windows/System32/cmd.exe",
+              "ValueDisplay": "C:/Windows/System32/cmd.exe"
+            },
+            {
+              "NameDisplay": "父进程ID",
+              "Type": "text",
+              "Value": "2760",
+              "ValueDisplay": "2760"
+            },
+            {
+              "NameDisplay": "进程链",
+              "Type": "html",
+              "Value": "<p>-<strong>[2460]</strong>&nbsp;&nbsp;<code>C:\\ProgramData\\aliyun\\assist\\2.1.4.1065\\aliyun_assist_service.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2760]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\cmd.exe /c C:\\ProgramData\\aliyun\\assist\\work\\script\\t-hz06mqcfoidrk74.bat</code></p>\n",
+              "ValueDisplay": "<p>-<strong>[2460]</strong>&nbsp;&nbsp;<code>C:\\ProgramData\\aliyun\\assist\\2.1.4.1065\\aliyun_assist_service.exe</code>\n<br  />&nbsp;&nbsp;&nbsp;&nbsp;-<strong>[2760]</strong>&nbsp;&nbsp;<code>C:\\Windows\\system32\\cmd.exe /c C:\\ProgramData\\aliyun\\assist\\work\\script\\t-hz06mqcfoidrk74.bat</code></p>\n"
+            },
+            {
+              "NameDisplay": "描述",
+              "Type": "text",
+              "Value": "检测模型在您的机器上发现该命令操作注册表的方式高度可疑，可能是恶意软件或攻击者入侵后的配置修改行为。",
+              "ValueDisplay": "检测模型在您的机器上发现该命令操作注册表的方式高度可疑，可能是恶意软件或攻击者入侵后的配置修改行为。"
+            },
+            {
+              "NameDisplay": "处置建议",
+              "Type": "text",
+              "Value": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为.",
+              "ValueDisplay": "请先判断该命令是否是运维操作或业务正常的命令, 如果是, 请忽略该告警. 如果您在处理告警时此进程仍然存在, 建议先尝试kill进程避免后续进一步行为. 该命令可能仅是攻击者入侵过程中的其中一步, 请继续查看该机器的其他告警或排查日志, 分析是否还存在其他恶意行为."
+            }
+          ],
+          "DisplaySandboxResult": false,
+          "EventNotes": [],
+          "EventStatus": 1,
+          "EventSubType": "异常注册表操作",
+          "HasTraceInfo": true,
+          "Id": 720157412,
+          "InstanceId": "i-bp1864d401as14btd9vf",
+          "InstanceName": "range-rdp-service-abuse-victim",
+          "InternetIp": "121.41.86.186",
+          "IntranetIp": "172.16.33.176",
+          "LargeModel": true,
+          "LastTime": "2026-06-02 19:59:54",
+          "LastTimeStamp": 1780401594000,
+          "Level": "suspicious",
+          "Name": "进程异常行为-异常的注册表操作",
+          "OccurrenceTime": "2026-06-02 19:59:54",
+          "OccurrenceTimeStamp": 1780401594000,
+          "SaleVersion": "1",
+          "SecurityEventIds": "720157412",
+          "Stages": "[\"防御绕过\"]",
+          "SupportOperateCode": "AI.Insufficient_information_to_evaluate",
+          "TacticItems": [
+            {
+              "TacticDisplayName": "防御绕过",
+              "TacticId": "TA0005"
+            }
+          ],
+          "UniqueInfo": "8ed010c357cb2bca043b671443df3f43",
+          "Uuid": "81c68948-7aa1-4cc6-a520-da886bb329cf"
+        }
+      ],
+      "TotalCount": 7
+    },
+    {
+      "Count": 0,
+      "CurrentPage": 2,
+      "PageSize": 50,
+      "RequestId": "B61FCA19-C013-562C-ABDA-71E13A79FC8F",
+      "SuspEvents": [],
+      "TotalCount": 0
+    }
+  ],
+  "source": "SAS::describe_susp_events",
+  "uuid": "81c68948-7aa1-4cc6-a520-da886bb329cf"
+}

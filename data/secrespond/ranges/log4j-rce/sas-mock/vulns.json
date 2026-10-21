@@ -1,0 +1,26 @@
+{
+  "cve": {
+    "CurrentPage": 1,
+    "PageSize": 50,
+    "RequestId": "mock-range-log4j-rce-vuln-cve",
+    "TotalCount": 1,
+    "VulRecords": [
+      {
+        "AliasName": "CVE-2021-44228: Apache Log4j2 JNDI 远程代码执行漏洞",
+        "Name": "CVE-2021-44228",
+        "Necessity": "asap",
+        "Related": "log4j-core-2.14.1.jar",
+        "Type": "cve",
+        "FirstTs": 1714000000000,
+        "LastTs": 1714000000000,
+        "Ip": "__VICTIM_IP__",
+        "InternetIp": "__VICTIM_IP__",
+        "Level": "high"
+      }
+    ]
+  },
+  "sys": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-log4j-rce-vuln-sys", "TotalCount": 0, "VulRecords": [] },
+  "cms": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-log4j-rce-vuln-cms", "TotalCount": 0, "VulRecords": [] },
+  "app": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-log4j-rce-vuln-app", "TotalCount": 0, "VulRecords": [] },
+  "emg": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-log4j-rce-vuln-emg", "TotalCount": 0, "VulRecords": [] }
+}

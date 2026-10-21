@@ -1,0 +1,75 @@
+{
+  "RequestId": "mock-nextjs-rce-baselines",
+  "WarningSummarys": [
+    {
+      "RiskName": "SSH 配置风险",
+      "Level": "high",
+      "TypeAlias": "ssh",
+      "WarningItems": [
+        {
+          "ItemName": "SSH 允许 Root 登录",
+          "Level": "high",
+          "Status": 1,
+          "Description": "SSH 配置允许 root 用户直接密码登录，存在暴力破解风险",
+          "Advice": "将 PermitRootLogin 设置为 no 或 prohibit-password"
+        },
+        {
+          "ItemName": "SSH 密码认证开启",
+          "Level": "medium",
+          "Status": 1,
+          "Description": "SSH 开启了密码认证，建议使用密钥认证",
+          "Advice": "设置 PasswordAuthentication no，配置密钥登录"
+        },
+        {
+          "ItemName": "SSH MaxAuthTries 过高",
+          "Level": "medium",
+          "Status": 1,
+          "Description": "MaxAuthTries 设置为 100，远超默认值 6，降低暴力破解门槛",
+          "Advice": "将 MaxAuthTries 设置为 6 或更低"
+        }
+      ]
+    },
+    {
+      "RiskName": "数据库配置风险",
+      "Level": "high",
+      "TypeAlias": "database",
+      "WarningItems": [
+        {
+          "ItemName": "PostgreSQL 远程访问无限制",
+          "Level": "high",
+          "Status": 1,
+          "Description": "pg_hba.conf 允许来自任意 IP 的 md5 认证连接（0.0.0.0/0），数据库暴露在公网",
+          "Advice": "限制 pg_hba.conf 仅允许 localhost 或特定 IP 段访问"
+        },
+        {
+          "ItemName": "PostgreSQL 监听所有接口",
+          "Level": "medium",
+          "Status": 1,
+          "Description": "listen_addresses 设置为 '*'，数据库监听所有网络接口",
+          "Advice": "将 listen_addresses 设置为 'localhost' 或仅需要的 IP"
+        }
+      ]
+    },
+    {
+      "RiskName": "账户与权限风险",
+      "Level": "medium",
+      "TypeAlias": "account",
+      "WarningItems": [
+        {
+          "ItemName": "SUID 自定义可执行文件",
+          "Level": "medium",
+          "Status": 1,
+          "Description": "发现非标准的 SUID 文件 /usr/local/bin/backup-tool",
+          "Advice": "审计 SUID 文件列表，移除不必要的 SUID 位"
+        },
+        {
+          "ItemName": "用户 sudoers 配置宽松",
+          "Level": "medium",
+          "Status": 1,
+          "Description": "node 用户通过 /etc/sudoers.d/node-ops 获得 NOPASSWD 权限",
+          "Advice": "收紧 sudoers 配置，移除不必要的 NOPASSWD 权限"
+        }
+      ]
+    }
+  ]
+}

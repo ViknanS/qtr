@@ -1,0 +1,7 @@
+{
+  "cve": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-ssh-miner-vuln-cve", "TotalCount": 0, "VulRecords": [] },
+  "sys": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-ssh-miner-vuln-sys", "TotalCount": 0, "VulRecords": [] },
+  "cms": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-ssh-miner-vuln-cms", "TotalCount": 0, "VulRecords": [] },
+  "app": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-ssh-miner-vuln-app", "TotalCount": 0, "VulRecords": [] },
+  "emg": { "CurrentPage": 1, "PageSize": 50, "RequestId": "mock-range-ssh-miner-vuln-emg", "TotalCount": 0, "VulRecords": [] }
+}

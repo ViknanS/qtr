@@ -1,0 +1,19 @@
+{
+  "RequestId": "mock-nextjs-rce-vulns",
+  "_note": "SAS 应用漏洞扫描主要覆盖 Web 应用和系统包级别。Node.js/npm 依赖级别的漏洞（如 Next.js CVE-2025-66478）通常不会出现在 SAS 扫描结果中，需要 Agent 通过磁盘取证（package.json / node_modules）主动发现。",
+  "cve": {
+    "VulRecords": []
+  },
+  "sys": {
+    "VulRecords": []
+  },
+  "cms": {
+    "VulRecords": []
+  },
+  "app": {
+    "VulRecords": []
+  },
+  "emg": {
+    "VulRecords": []
+  }
+}

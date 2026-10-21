@@ -1,0 +1,117 @@
+{
+  "RequestId": "mock-nextjs-rce-alerts",
+  "PageInfo": {
+    "PageSize": 20,
+    "TotalCount": 6,
+    "CurrentPage": 1
+  },
+  "SuspEvents": [
+    {
+      "AlarmEventName": "Mining Activity",
+      "AlarmEventNameOriginal": "挖矿活动",
+      "AlarmEventType": "Mining",
+      "AlarmUniqueInfo": "mock-alert-001",
+      "Desc": "检测到疑似挖矿进程 /var/cache/.node-gc，存在与已知矿池地址 pool.evil-example.invalid 的通信行为",
+      "Details": [
+        {"Name": "process_path", "Value": "/var/cache/.node-gc"},
+        {"Name": "process_cmdline", "Value": "/bin/bash /var/cache/.node-gc"},
+        {"Name": "connect_info", "Value": "pool.evil-example.invalid:3333"}
+      ],
+      "EventLevel": "serious",
+      "InstanceId": "i-mock-victim-001",
+      "InstanceName": "webapp-prod-01",
+      "InternetIp": "__VICTIM_IP__",
+      "OccurrenceTime": "2026-04-20T14:30:00Z",
+      "Stages": "Impact"
+    },
+    {
+      "AlarmEventName": "Suspicious Process - Node.js Child Process",
+      "AlarmEventNameOriginal": "Node.js 异常子进程",
+      "AlarmEventType": "Suspicious Process",
+      "AlarmUniqueInfo": "mock-alert-002",
+      "Desc": "Node.js 进程派生了可疑子进程，执行了系统命令 id，parent_procpath=/usr/bin/node",
+      "Details": [
+        {"Name": "parent_procpath", "Value": "/usr/bin/node"},
+        {"Name": "process_cmdline", "Value": "sh -c id"},
+        {"Name": "parent_cmdline", "Value": "node /opt/webapp/node_modules/.bin/next start -p 3000"}
+      ],
+      "EventLevel": "suspicious",
+      "InstanceId": "i-mock-victim-001",
+      "InstanceName": "webapp-prod-01",
+      "InternetIp": "__VICTIM_IP__",
+      "OccurrenceTime": "2026-04-20T14:10:00Z",
+      "Stages": "Execution"
+    },
+    {
+      "AlarmEventName": "Webshell File Detected",
+      "AlarmEventNameOriginal": "Webshell文件检测",
+      "AlarmEventType": "Webshell",
+      "AlarmUniqueInfo": "mock-alert-003",
+      "Desc": "在 Web 应用目录中检测到可疑脚本文件，包含命令执行功能（execSync）",
+      "Details": [
+        {"Name": "filepath", "Value": "/opt/webapp/.next/static/chunks/debug.js"},
+        {"Name": "file_type", "Value": "JavaScript"},
+        {"Name": "risk_pattern", "Value": "execSync, http.createServer"}
+      ],
+      "EventLevel": "serious",
+      "InstanceId": "i-mock-victim-001",
+      "InstanceName": "webapp-prod-01",
+      "InternetIp": "__VICTIM_IP__",
+      "OccurrenceTime": "2026-04-20T14:15:00Z",
+      "Stages": "Persistence"
+    },
+    {
+      "AlarmEventName": "Suspicious Crontab Modification",
+      "AlarmEventNameOriginal": "可疑定时任务变更",
+      "AlarmEventType": "Persistence",
+      "AlarmUniqueInfo": "mock-alert-004",
+      "Desc": "检测到 root 用户 crontab 被添加了异常条目，指向隐藏路径的可执行文件",
+      "Details": [
+        {"Name": "crontab_content", "Value": "*/5 * * * * /var/cache/.node-gc > /dev/null 2>&1"},
+        {"Name": "user", "Value": "root"}
+      ],
+      "EventLevel": "suspicious",
+      "InstanceId": "i-mock-victim-001",
+      "InstanceName": "webapp-prod-01",
+      "InternetIp": "__VICTIM_IP__",
+      "OccurrenceTime": "2026-04-20T14:35:00Z",
+      "Stages": "Persistence"
+    },
+    {
+      "AlarmEventName": "Abnormal Systemd Service",
+      "AlarmEventNameOriginal": "异常 Systemd 服务",
+      "AlarmEventType": "Persistence",
+      "AlarmUniqueInfo": "mock-alert-005",
+      "Desc": "检测到新增 systemd 服务 node-gc-helper.service，指向隐藏路径可执行文件",
+      "Details": [
+        {"Name": "service_name", "Value": "node-gc-helper.service"},
+        {"Name": "exec_start", "Value": "/var/cache/.node-gc"},
+        {"Name": "unit_file", "Value": "/etc/systemd/system/node-gc-helper.service"}
+      ],
+      "EventLevel": "suspicious",
+      "InstanceId": "i-mock-victim-001",
+      "InstanceName": "webapp-prod-01",
+      "InternetIp": "__VICTIM_IP__",
+      "OccurrenceTime": "2026-04-20T14:36:00Z",
+      "Stages": "Persistence"
+    },
+    {
+      "AlarmEventName": "Suspicious Outbound Connection",
+      "AlarmEventNameOriginal": "可疑外连",
+      "AlarmEventType": "Network",
+      "AlarmUniqueInfo": "mock-alert-006",
+      "Desc": "检测到主机与疑似矿池地址建立出站 TCP 连接",
+      "Details": [
+        {"Name": "dst_ip", "Value": "pool.evil-example.invalid"},
+        {"Name": "dst_port", "Value": "3333"},
+        {"Name": "process_path", "Value": "/var/cache/.node-gc"}
+      ],
+      "EventLevel": "serious",
+      "InstanceId": "i-mock-victim-001",
+      "InstanceName": "webapp-prod-01",
+      "InternetIp": "__VICTIM_IP__",
+      "OccurrenceTime": "2026-04-20T14:31:00Z",
+      "Stages": "Command and Control"
+    }
+  ]
+}

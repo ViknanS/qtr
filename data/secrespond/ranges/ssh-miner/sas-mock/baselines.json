@@ -1,0 +1,62 @@
+{
+  "Count": 3,
+  "CurrentPage": 1,
+  "PageSize": 50,
+  "RequestId": "mock-range-ssh-miner-baselines",
+  "TotalCount": 3,
+  "WarningSummarys": [
+    {
+      "CheckCount": 12,
+      "HighWarningCount": 4,
+      "LastFoundTime": "2026-04-09 02:50:00",
+      "Level": "high",
+      "LowWarningCount": 2,
+      "MediumWarningCount": 3,
+      "RiskId": 1001,
+      "RiskName": "Linux SSH安全基线",
+      "SubTypeAlias": "Linux SSH安全基线",
+      "TypeAlias": "最佳安全实践",
+      "WarningMachineCount": 1,
+      "WarningItems": [
+        { "ItemName": "SSH-PermitRootLogin", "Level": "high", "Status": "failed", "Description": "SSH配置允许root直接登录（PermitRootLogin yes），应设置为no或prohibit-password", "Advice": "编辑/etc/ssh/sshd_config，设置PermitRootLogin no" },
+        { "ItemName": "SSH-PasswordAuthentication", "Level": "high", "Status": "failed", "Description": "SSH启用密码认证（PasswordAuthentication yes），建议使用密钥认证", "Advice": "编辑/etc/ssh/sshd_config，设置PasswordAuthentication no" },
+        { "ItemName": "SSH-MaxAuthTries", "Level": "high", "Status": "failed", "Description": "SSH最大认证尝试次数设置过大（MaxAuthTries 100），容易遭受暴力破解", "Advice": "编辑/etc/ssh/sshd_config，设置MaxAuthTries 3" },
+        { "ItemName": "SSH-Protocol", "Level": "medium", "Status": "passed", "Description": "SSH使用Protocol 2", "Advice": "" }
+      ]
+    },
+    {
+      "CheckCount": 7,
+      "HighWarningCount": 2,
+      "LastFoundTime": "2026-04-09 02:50:00",
+      "Level": "high",
+      "LowWarningCount": 1,
+      "MediumWarningCount": 1,
+      "RiskId": 1002,
+      "RiskName": "MySQL安全基线",
+      "SubTypeAlias": "MySQL安全基线",
+      "TypeAlias": "最佳安全实践",
+      "WarningMachineCount": 1,
+      "WarningItems": [
+        { "ItemName": "MySQL-RemoteRoot", "Level": "high", "Status": "failed", "Description": "MySQL root用户可从任意主机连接（'root'@'%'），建议限制为localhost", "Advice": "执行: REVOKE ALL ON *.* FROM 'root'@'%'; 或限制为特定IP" },
+        { "ItemName": "MySQL-WeakPassword", "Level": "high", "Status": "failed", "Description": "MySQL root密码强度不足", "Advice": "修改root密码为强密码（12位以上，含大小写字母、数字、特殊字符）" }
+      ]
+    },
+    {
+      "CheckCount": 8,
+      "HighWarningCount": 1,
+      "LastFoundTime": "2026-04-09 02:50:00",
+      "Level": "medium",
+      "LowWarningCount": 2,
+      "MediumWarningCount": 2,
+      "RiskId": 1003,
+      "RiskName": "Linux账户安全基线",
+      "SubTypeAlias": "Linux账户安全基线",
+      "TypeAlias": "最佳安全实践",
+      "WarningMachineCount": 1,
+      "WarningItems": [
+        { "ItemName": "Sudoers-NOPASSWD", "Level": "high", "Status": "failed", "Description": "用户devops配置了NOPASSWD sudo权限，可无密码执行任意命令", "Advice": "编辑/etc/sudoers.d/devops，移除NOPASSWD或限制允许的命令" },
+        { "ItemName": "Password-Policy", "Level": "medium", "Status": "failed", "Description": "系统密码策略未配置最小长度和复杂度要求", "Advice": "配置/etc/security/pwquality.conf设置密码复杂度策略" }
+      ]
+    }
+  ]
+}

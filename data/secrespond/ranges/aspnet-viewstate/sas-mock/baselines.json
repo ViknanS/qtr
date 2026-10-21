@@ -1,0 +1,7 @@
+{
+    "baselines": [
+        {"check": "SQL Server sa enabled with weak password", "result": "fail", "evidence": "SpikeWin2019!"},
+        {"check": "xp_cmdshell enabled", "result": "fail", "evidence": "sp_configure 'xp_cmdshell' = 1"},
+        {"check": "MachineKey hardcoded in web.config", "result": "fail", "evidence": "static validationKey + decryptionKey"}
+    ]
+}

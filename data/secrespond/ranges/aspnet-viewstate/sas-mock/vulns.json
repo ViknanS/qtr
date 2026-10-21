@@ -1,0 +1,7 @@
+{
+    "vulns": [
+        {"cve": "MISC-2024-VIEWSTATE", "severity": "critical", "target": "/CRM/Login.aspx", "description": "ASP.NET ViewState deserialization via leaked MachineKey"},
+        {"cve": "MISCONFIG-IIS-BAK", "severity": "high", "target": "/CRM/web.config.bak", "description": "Backup file exposed via IIS staticContent misconfig"},
+        {"cve": "MISCONFIG-APPPOOL", "severity": "high", "target": "DefaultAppPool", "description": "AppPool runs as LocalSystem"}
+    ]
+}

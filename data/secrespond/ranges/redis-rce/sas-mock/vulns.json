@@ -1,0 +1,6 @@
+{
+  "cve": { "CurrentPage": 1, "PageSize": 50, "RequestId": "C5F9E4G3-AF6D-7C8E-DB12-3456789012CD", "TotalCount": 0, "VulRecords": [] },
+  "sys": { "CurrentPage": 1, "PageSize": 50, "RequestId": "D6G0F5H4-BG7E-8D9F-EC23-4567890123DE", "TotalCount": 0, "VulRecords": [] },
+  "app": { "CurrentPage": 1, "PageSize": 50, "RequestId": "F8I2H7J6-DI9G-0F1H-GE45-6789012345FG", "TotalCount": 0, "VulRecords": [] },
+  "_comment": "SAS 免费版未检测到该实例上的 CVE 漏洞或应用漏洞。Redis 未授权访问属于配置弱点而非 CVE。"
+}

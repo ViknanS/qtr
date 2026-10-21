@@ -1,0 +1,26 @@
+{
+    "alerts": [
+        {
+            "severity": "high",
+            "type": "Webshell",
+            "path": "C:\\inetpub\\wwwroot\\CRM\\help.aspx",
+            "ts": "2026-05-14T10:00:00Z",
+            "description": "ASPX Webshell detected"
+        },
+        {
+            "severity": "high",
+            "type": "MaliciousProcess",
+            "name": "WindowsAuditSvc.exe",
+            "path": "C:\\ProgramData\\WindowsAudit\\WindowsAuditSvc.exe",
+            "ts": "2026-05-14T10:01:00Z",
+            "description": "Suspicious process in non-standard path making outbound HTTPS connection to malicious-update.example.cn:8443"
+        },
+        {
+            "severity": "medium",
+            "type": "PersistenceWMI",
+            "namespace": "root\\subscription",
+            "ts": "2026-05-14T10:02:00Z",
+            "description": "Suspicious WMI permanent subscription"
+        }
+    ]
+}

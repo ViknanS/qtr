@@ -1,0 +1,9 @@
+{
+  "Count": 0,
+  "CurrentPage": 1,
+  "PageSize": 50,
+  "RequestId": "B4E8D3F2-9F5C-6B7D-CA01-2345678901BC",
+  "TotalCount": 0,
+  "WarningSummarys": [],
+  "_comment": "SAS 免费版不提供主机级基线检查（SSH 配置、Redis 配置、账户安全等）。仅有云平台级的通用风控项（密钥对登录、快照策略、安全组策略等），与主机入侵检测无关，此处不包含。"
+}

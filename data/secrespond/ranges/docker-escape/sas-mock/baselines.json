@@ -1,0 +1,9 @@
+{
+  "Count": 0,
+  "CurrentPage": 1,
+  "PageSize": 50,
+  "RequestId": "F8I2H7J6-DI9G-0F1H-GE45-6789012345FG",
+  "TotalCount": 0,
+  "WarningSummarys": [],
+  "_comment": "SAS 免费版不提供主机级基线检查（Docker 配置、SSH 配置、账户安全等）。Docker TCP API 暴露 (0.0.0.0:2375) 属于 Docker 配置弱点但不在 SAS 免费版检测范围。"
+}

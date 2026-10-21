@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>qqr · ArenaRL tournament RL for open-ended agents</title>
+  <meta name="description" content="qqr is a lightweight extension for slime that trains open-ended LLM agents with ArenaRL: tournament-based relative ranking, MCP tool environments, ARISE-RL and RTI. Interactive tournament simulator and documentation.">
+  <meta name="theme-color" content="#12102a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4f3fa" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://viknans.github.io/qtr/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="qqr · ArenaRL">
+  <meta property="og:description" content="Tournament-based relative ranking for reinforcement learning of open-ended agents, with an in-browser tournament simulator.">
+  <meta property="og:url" content="https://viknans.github.io/qtr/">
+  <meta property="og:image" content="https://viknans.github.io/qtr/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preload" href="assets/fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    // apply the saved theme before first paint (no flash)
+    try { var t = localStorage.getItem("qqr-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<noscript><div class="ns">The interactive simulator needs JavaScript. All documentation below is readable without it.</div></noscript>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="qqr home">
+      <img src="assets/img/qqr-mark.webp" alt="" width="34" height="34">
+      <span>qqr <small>ArenaRL</small></span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#simulator">Simulator</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#benchmarks">Benchmarks</a></li>
+      <li><a href="#install">Install</a></li>
+      <li><a href="#papers">Papers</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+      </button>
+      <a class="icon-btn" href="https://github.com/ViknanS/qtr" aria-label="Source code on GitHub" title="Source code on GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+      </a>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ============================================================== HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <h1>Rank rollouts, <span class="line2">not raw scores.</span></h1>
+        <p class="lede">qqr trains open-ended LLM agents with <strong>ArenaRL</strong>: every group of rollouts plays a tournament judged pairwise by an LLM, and the final standings become the reinforcement-learning advantage. It plugs into <a href="https://github.com/THUDM/slime">slime</a> and runs tools through the Model Context Protocol.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#simulator">Run a tournament</a>
+          <a class="btn btn-ghost" href="https://github.com/ViknanS/qtr">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+            Source code
+          </a>
+        </div>
+        <div class="hero-meta">
+          <span class="chip"><b>v0.2.1</b> pairs with slime v0.3.1</span>
+          <span class="chip"><b>5</b> tournament topologies</span>
+          <span class="chip"><b>ICML 2026</b> ArenaRL paper</span>
+          <span class="chip">Apache-2.0</span>
+        </div>
+      </div>
+
+      <div class="arena-card" aria-labelledby="hero-bracket-title">
+        <header>
+          <h3 id="hero-bracket-title">Seeded single elimination, 8 rollouts</h3>
+          <span id="hero-calls">0 judge calls</span>
+        </header>
+        <div class="bracket" id="hero-bracket" role="img" aria-label="Animated tournament bracket for eight sample rollouts"></div>
+        <footer>
+          <span>Sample trip-planning rollouts, synthetic judge</span>
+          <button type="button" id="hero-replay">Replay</button>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <div class="fork-note">
+    <div class="wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 12h1v5h1"/></svg>
+      <span>This site documents the <a href="https://github.com/ViknanS/qtr">ViknanS/qtr</a> fork. qqr and the ArenaRL, ARISE-RL, RTI and SecRespond research are by the authors of <a href="https://github.com/Alibaba-NLP/qqr">Alibaba-NLP/qqr</a>, released under Apache-2.0.</span>
+    </div>
+  </div>
+
+  <!-- ========================================================== OVERVIEW -->
+  <section class="block" id="overview">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Why tournaments</h2>
+        <p>Open-ended tasks such as trip planning or deep research have no single correct answer. When an LLM judge scores each rollout on its own, the scores bunch together and the group advantages flatten out, so learning stalls. The ArenaRL paper calls this discriminative collapse. Comparing rollouts against each other keeps the signal sharp.</p>
+      </div>
+
+      <div class="contrast" id="contrast">
+        <div>
+          <h3>Pointwise scoring</h3>
+          <p class="muted">A judge gives each of 8 rollouts a 1–10 score. Most land on 7 or 8.</p>
+          <div class="bars" id="contrast-point"></div>
+          <p class="caption" id="contrast-point-cap"></p>
+        </div>
+        <div>
+          <h3>Round-robin tournament</h3>
+          <p class="muted">The same rollouts compared head to head, ranked by wins.</p>
+          <div class="bars" id="contrast-tour"></div>
+          <p class="caption" id="contrast-tour-cap"></p>
+        </div>
+      </div>
+      <p class="muted" style="font-size:.85rem;margin-top:10px">Illustration computed in your browser from fixed example scores with the same rules as <code>qqr/reward_models/arena</code>. Not a training result.</p>
+
+      <div class="features">
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h4v4H4zM4 15h4v4H4zM16 10h4v4h-4zM8 7h3v10H8M11 12h5"/></svg>
+          <h3>Five tournament topologies</h3>
+          <p>Anchor-based, round-robin, Swiss system, double elimination and seeded single elimination, each turning pairwise judgements into group-normalised rewards.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4v4M15 4v4M7 8h10v4a5 5 0 0 1-10 0zM12 17v3"/></svg>
+          <h3>Tools over MCP</h3>
+          <p>Environments are ordinary MCP servers (maps, web search, transport, τ²-bench domains, Claw-Eval services), with result caching and per-server concurrency limits.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h2M7 14h2M12 10h5M12 14h5"/></svg>
+          <h3>Built on slime</h3>
+          <p>Uses slime's Megatron training and sglang rollout engine. qqr adds the agent rollout loop and rewards without forking the trainer.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg>
+          <h3>ARISE-RL self-evolution</h3>
+          <p>A Generator writes tasks and rubrics near the Solver's ability boundary; the Solver learns from rubric rewards with reward-gated self-distillation.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v5c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h3>RTI interventions</h3>
+          <p>When every rollout in a group fails, a judge–corrector–post-check pipeline repairs the decisive step, gated by perplexity and reweighted per token.</p>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+          <h3>Benchmarks included</h3>
+          <p>Open-Travel, DeepResearch, ECR-Bench, Navigation, τ²-bench, Claw-Eval-Hard and SecRespond data ship with the repository. <a href="#benchmarks">See the list</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= SIMULATOR -->
+  <section class="block" id="simulator">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Tournament simulator</h2>
+        <p>Pick a topology and watch a group of rollouts get ranked. The ranking code is a JavaScript port of qqr's Python reward models, checked against them by the test suite. The judge is synthetic: each rollout has a hidden quality, and noise makes the judge disagree with it sometimes.</p>
+      </div>
+
+      <div class="sim">
+        <form class="panel controls" id="sim-controls" onsubmit="return false">
+          <div class="field">
+            <span class="label" id="method-label">Topology</span>
+            <div class="seg" id="method-seg" role="group" aria-labelledby="method-label"></div>
+          </div>
+          <div class="field">
+            <span class="label" id="data-label">Rollouts</span>
+            <div class="seg inline" role="group" aria-labelledby="data-label" id="data-seg">
+              <button type="button" data-data="sample" aria-pressed="true">Sample trip</button>
+              <button type="button" data-data="random" aria-pressed="false">Random</button>
+            </div>
+            <p class="hint" id="data-hint">8 trip-planning rollouts from <code>python -m qqr.demo</code>.</p>
+          </div>
+          <div class="field" id="size-field" hidden>
+            <div class="range-row"><label for="group-size">Group size</label><output id="group-size-out" for="group-size">8</output></div>
+            <input type="range" id="group-size" min="2" max="16" step="1" value="8">
+          </div>
+          <div class="field">
+            <div class="range-row"><label for="noise">Judge noise</label><output id="noise-out" for="noise">0.0</output></div>
+            <input type="range" id="noise" min="0" max="3" step="0.1" value="0">
+            <p class="hint">Standard deviation added to each score before comparing.</p>
+          </div>
+          <div class="field">
+            <label for="seed">Seed</label>
+            <input type="number" id="seed" min="0" max="999999" step="1" value="0" inputmode="numeric">
+          </div>
+          <div class="control-actions">
+            <button type="button" class="btn btn-primary" id="run-btn">Run tournament</button>
+            <button type="button" class="btn btn-ghost" id="reseed-btn">New seed</button>
+          </div>
+        </form>
+
+        <div class="panel">
+          <div class="kpis" aria-live="polite">
+            <div class="kpi"><div class="k">Judge calls</div><div class="v" id="kpi-calls">–</div></div>
+            <div class="kpi"><div class="k">Kendall τ vs quality</div><div class="v" id="kpi-tau">–</div></div>
+            <div class="kpi"><div class="k">Best rollout ranked first</div><div class="v" id="kpi-top">–</div></div>
+            <div class="kpi"><div class="k">Advantage spread</div><div class="v" id="kpi-spread">–</div></div>
+          </div>
+
+          <div class="tabs" role="tablist" aria-label="Simulator views">
+            <button role="tab" id="tab-standings" aria-controls="panel-standings" aria-selected="true">Standings</button>
+            <button role="tab" id="tab-matches" aria-controls="panel-matches" aria-selected="false" tabindex="-1">Matches</button>
+            <button role="tab" id="tab-compare" aria-controls="panel-compare" aria-selected="false" tabindex="-1">Compare topologies</button>
+          </div>
+
+          <div class="tabpanel" id="panel-standings" role="tabpanel" aria-labelledby="tab-standings">
+            <div class="table-scroll">
+              <table id="standings">
+                <thead><tr><th>Rank</th><th>Rollout</th><th class="num">Hidden quality</th><th class="num" id="score-col">Score</th><th>Advantage (reward)</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tabpanel viz" id="panel-matches" role="tabpanel" aria-labelledby="tab-matches" hidden></div>
+          <div class="tabpanel" id="panel-compare" role="tabpanel" aria-labelledby="tab-compare" hidden>
+            <p class="muted" style="font-size:.92rem">Runs every topology on <span id="cmp-trials">300</span> random groups of the chosen size and noise, then reports how well each final ranking agrees with the hidden quality, and what it costs in judge calls.</p>
+            <button type="button" class="btn btn-ghost" id="compare-btn">Run comparison</button>
+            <div id="compare-out" style="margin-top:18px"></div>
+          </div>
+
+          <div class="honesty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+            <span>Everything here is a simulation with a synthetic judge. It shows how each topology turns comparisons into rewards; it is not an LLM, not model training and not a benchmark result. Published results are in the <a href="#papers">papers</a>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== WORKFLOW -->
+  <section class="block" id="workflow">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How a training step runs</h2>
+        <p>One iteration of each algorithm in qqr, from sampled query to policy update. Step through to see what happens and where it lives in the code.</p>
+      </div>
+      <div class="flow-tabs" role="tablist" aria-label="Algorithm" id="flow-tabs">
+        <button role="tab" aria-selected="true" data-flow="arena">ArenaRL</button>
+        <button role="tab" aria-selected="false" data-flow="arise" tabindex="-1">ARISE-RL</button>
+        <button role="tab" aria-selected="false" data-flow="rti" tabindex="-1">RTI</button>
+      </div>
+      <div class="flow">
+        <ol class="steps" id="flow-steps"></ol>
+        <div class="step-detail" id="flow-detail" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== ARCHITECTURE -->
+  <section class="block" id="architecture">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Architecture</h2>
+        <p>qqr sits between slime's trainer and the outside world: it drives multi-turn agent rollouts against MCP tool servers and scores groups with LLM judges. Select a component to see its role and source path.</p>
+      </div>
+      <div class="arch">
+        <svg class="arch-desktop" viewBox="0 0 1100 460" role="group" aria-label="qqr architecture diagram">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="context-stroke"/></marker>
+          </defs>
+          <rect class="zone" x="14" y="30" width="300" height="414" rx="16"/>
+          <text class="t-zone" x="34" y="56">slime (GPU cluster)</text>
+          <rect class="zone" x="360" y="30" width="380" height="414" rx="16"/>
+          <text class="t-zone" x="380" y="56">qqr</text>
+          <rect class="zone" x="786" y="30" width="300" height="414" rx="16"/>
+          <text class="t-zone" x="806" y="56">External services</text>
+
+          <g class="node" data-node="trainer" tabindex="0"><rect class="box slime" x="40" y="80" width="248" height="88" rx="12"/><text class="t-title" x="58" y="114">Megatron trainer</text><text class="t-sub" x="58" y="140">GRPO update · RG-SED patch</text></g>
+          <g class="node" data-node="sglang" tabindex="0"><rect class="box slime" x="40" y="200" width="248" height="88" rx="12"/><text class="t-title" x="58" y="234">sglang engines</text><text class="t-sub" x="58" y="260">policy generation via router</text></g>
+          <g class="node" data-node="data" tabindex="0"><rect class="box slime" x="40" y="320" width="248" height="88" rx="12"/><text class="t-title" x="58" y="354">Prompt data</text><text class="t-sub" x="58" y="380">data/*.jsonl queries + labels</text></g>
+
+          <g class="node" data-node="rollout" tabindex="0"><rect class="box qqr" x="386" y="80" width="328" height="88" rx="12"/><text class="t-title" x="404" y="114">Agent rollout</text><text class="t-sub" x="404" y="140">multi-turn loop · Qwen tool-call parsing</text></g>
+          <g class="node" data-node="arena" tabindex="0"><rect class="box qqr" x="386" y="200" width="150" height="88" rx="12"/><text class="t-title" x="402" y="234">Arena RM</text><text class="t-sub" x="402" y="260">5 topologies</text></g>
+          <g class="node" data-node="mcp" tabindex="0"><rect class="box qqr" x="564" y="200" width="150" height="88" rx="12"/><text class="t-title" x="580" y="234">MCP layer</text><text class="t-sub" x="580" y="260">cache + limits</text></g>
+          <g class="node" data-node="rti" tabindex="0"><rect class="box qqr" x="386" y="336" width="328" height="88" rx="12"/><text class="t-title" x="404" y="370">Off-policy RTI / ARISE-RL</text><text class="t-sub" x="404" y="396">intervention pipeline · coach memory</text></g>
+
+          <g class="node" data-node="tools" tabindex="0"><rect class="box ext" x="812" y="200" width="248" height="88" rx="12"/><text class="t-title" x="830" y="234">MCP tool servers</text><text class="t-sub" x="830" y="260">AMap · search · τ² · Claw-Eval</text></g>
+          <g class="node" data-node="judge" tabindex="0"><rect class="box ext" x="812" y="336" width="248" height="88" rx="12"/><text class="t-title" x="830" y="370">LLM judge API</text><text class="t-sub" x="830" y="396">OpenAI-compatible endpoint</text></g>
+
+          <!-- rollout -> trainer: scored samples -->
+          <path class="wire hot" d="M386 104 H 292"/>
+          <text class="t-sub" x="308" y="96">rewards</text>
+          <!-- rollout <-> sglang: generation -->
+          <path class="wire hot" d="M290 236 C 340 236, 336 146, 384 146" marker-start="url(#arrow)"/>
+          <text class="t-sub" x="300" y="262">generate</text>
+          <!-- data -> rollout -->
+          <path class="wire" d="M290 364 C 352 364, 352 160, 384 160"/>
+          <!-- rollout -> arena / mcp -->
+          <path class="wire" d="M461 168 V 198"/>
+          <path class="wire" d="M639 168 V 198" marker-start="url(#arrow)"/>
+          <!-- rollout <-> RTI through the gap -->
+          <path class="wire" d="M550 334 V 170" marker-start="url(#arrow)"/>
+          <!-- mcp -> tools -->
+          <path class="wire" d="M714 244 H 810" marker-start="url(#arrow)"/>
+          <text class="t-sub" x="728" y="236">tool calls</text>
+          <!-- arena -> judge (routed under the row) -->
+          <path class="wire" d="M461 288 V 312 H 760 Q 772 312 772 324 V 366 H 810"/>
+          <!-- rti -> judge -->
+          <path class="wire" d="M714 392 H 810"/>
+          <text class="t-sub" x="724" y="384">judge calls</text>
+        </svg>
+        <div class="arch-mobile" id="arch-mobile" role="list" aria-label="qqr components"></div>
+        <div class="arch-info" id="arch-info" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== BENCHMARKS -->
+  <section class="block" id="benchmarks">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Benchmarks and evaluation</h2>
+        <p>Datasets bundled in <code>data/</code>, the scripts that train on them, and what each needs to run. Row counts are taken from the files in this repository. Reported scores live in the papers; this site does not reproduce or re-run them.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="bench">
+          <thead><tr><th>Benchmark</th><th>Data in repo</th><th>Used by</th><th>Launcher</th><th>Needs</th></tr></thead>
+          <tbody>
+            <tr><td>Open-Travel</td><td><code>data/travel</code>: 1,626 train · 5 × 50 test categories</td><td>ArenaRL</td><td><code>scripts/travel/run-qwen3-8B.sh</code></td><td><span class="tag gpu">8 GPUs</span><span class="tag key">AMAP · DashScope · Bailian search</span></td></tr>
+            <tr><td>DeepResearch</td><td><code>data/deepresearch</code>: 2,216 train · 100 test</td><td>ArenaRL</td><td><code>scripts/deepresearch/run-qwen3-8B.sh</code></td><td><span class="tag gpu">8 GPUs</span><span class="tag key">search API · judge</span></td></tr>
+            <tr><td>ECR-DeepResearch</td><td><code>data/ecr_deepresearch</code>: 100 queries</td><td>ARISE-RL</td><td><code>scripts/arise_rl_solver/deepresearch/</code></td><td><span class="tag gpu">8 GPUs</span><span class="tag key">search gateway · coach · judge</span></td></tr>
+            <tr><td>ECR-Travel</td><td><code>data/ecr_travel</code>: 5 × 100 queries</td><td>ARISE-RL</td><td><code>scripts/arise_rl_solver/travel/</code></td><td><span class="tag gpu">8 GPUs</span><span class="tag key">AMAP · search · judge</span></td></tr>
+            <tr><td>VitaBench</td><td>external, set <code>VITABENCH_DATA_DIR</code></td><td>ARISE-RL</td><td><code>scripts/arise_rl_solver/vitabench/</code></td><td><span class="tag gpu">8 GPUs</span><span class="tag key">user simulator</span></td></tr>
+            <tr><td>Navigation</td><td><code>data/navigation</code>: 529 train · 150 test</td><td>RTI</td><td><code>scripts/navigation/run-qwen3-8B.sh</code></td><td><span class="tag gpu">8 GPUs</span><span class="tag key">AMAP · inspector endpoint</span></td></tr>
+            <tr><td>τ²-bench</td><td><code>data/tau2_bench</code>: 1,982 train · 278 test (telecom, retail, airline) + RL databases</td><td>RTI</td><td><code>scripts/tau2_bench/run-qwen3-8B.sh</code></td><td><span class="tag gpu">8 GPUs</span><span class="tag key">user simulator · judge</span></td></tr>
+            <tr><td>Claw-Eval-Hard</td><td><code>data/claw-eval-hard</code>: 20 test · 160 synthesized train tasks</td><td>RTI</td><td><code>scripts/claw_eval/run-qwen3.5-9B.sh</code></td><td><span class="tag gpu">8 GPUs</span><span class="tag key">DashScope · IdeaLab · E2B</span></td></tr>
+            <tr><td>SecRespond</td><td><code>data/secrespond</code>: 10 cyber ranges, checklists, grader prompts (disk images on Hugging Face)</td><td>Evaluation only</td><td><code>scripts/secrespond/run_task.sh</code></td><td><span class="tag">OpenCode agent</span><span class="tag key">model API</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="support">
+        <div class="panel yes">
+          <h3>Runs on a laptop (macOS or Linux)</h3>
+          <ul>
+            <li>All five tournament reward models, with any OpenAI-compatible judge</li>
+            <li>MCP tool servers and the caching MCP client</li>
+            <li>Qwen3 / Qwen3.5 tool-call parsers, data utilities, RTI helper maths</li>
+            <li>Offline demo: <code>python -m qqr.demo</code>; environment check: <code>python -m qqr.doctor</code></li>
+            <li>The full <code>pytest</code> suite, with mocked services and no API keys</li>
+          </ul>
+        </div>
+        <div class="panel no">
+          <h3>Needs a Linux GPU node</h3>
+          <ul>
+            <li>Every training launcher in <code>scripts/</code> (8 NVIDIA GPUs per node by default)</li>
+            <li>slime v0.3.1 with Megatron-LM, sglang and Ray, plus the RG-SED patch for ARISE-RL</li>
+            <li>Agent rollouts (<code>qqr.rollout</code>) and RTI reference scoring, which call sglang</li>
+            <li>Model checkpoints such as Qwen3-8B or Qwen3.5-9B</li>
+            <li>API credentials for judges and tools, listed in <code>.env.example</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== INSTALL -->
+  <section class="block" id="install">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Install and use</h2>
+        <p>Start on any machine with the core package and the offline demo. Move to a GPU node with slime when you want to train.</p>
+      </div>
+      <div class="install-grid">
+        <div>
+          <h3>On your laptop</h3>
+          <div class="code"><button class="copy" type="button">Copy</button><pre><code><span class="cm"># Python 3.11+ (asyncio.TaskGroup)</span>
+git clone https://github.com/ViknanS/qtr.git
+cd qtr
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev,tools]"
+
+python -m qqr.doctor     <span class="cm"># what can run here</span>
+python -m qqr.demo       <span class="cm"># tournaments, mock judge</span>
+pytest                   <span class="cm"># offline test suite</span></code></pre></div>
+
+          <h3>Use a tournament in your own code</h3>
+          <div class="code"><button class="copy" type="button">Copy</button><pre><code>from qqr.reward_models import get_reward_model
+from qqr.schemas import LLMRewardModel
+
+class MyJudge(LLMRewardModel):
+    async def compute(self, prediction, reference, query):
+        ...  <span class="cm"># call your LLM, compare the two trajectories</span>
+        return {"prediction": 7.0, "reference": 5.5}
+
+arena = get_reward_model("swiss")(MyJudge(llm=None))
+rewards = await arena(predictions=trajectories, query=query)</code></pre></div>
+        </div>
+        <div>
+          <h3>Train on a GPU node</h3>
+          <div class="code"><button class="copy" type="button">Copy</button><pre><code><span class="cm"># 1. slime at the paired version</span>
+git clone https://github.com/THUDM/slime.git
+cd slime && git checkout v0.3.1   <span class="cm"># follow slime's Quick Start</span>
+
+<span class="cm"># 2. qqr</span>
+git clone https://github.com/ViknanS/qtr.git
+cd qtr && pip install -e ".[tools,examples]"
+
+<span class="cm"># 3. credentials (never commit .env)</span>
+cp .env.example .env && $EDITOR .env
+set -a && source .env && set +a
+
+<span class="cm"># 4. ArenaRL on Open-Travel</span>
+bash scripts/travel/run-qwen3-8B.sh</code></pre></div>
+          <p class="muted" style="font-size:.9rem">Launchers stop leftover sglang, Ray and training processes before they start, so they refuse to run unless the host is Linux with <code>nvidia-smi</code>. ARISE-RL also needs <code>patches/slime-rg-sed-v0.3.1.patch</code> applied to slime. Version pairs are listed in <a href="https://github.com/ViknanS/qtr/blob/main/docs/en/get_started/compatibility.md">the compatibility table</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PAPERS -->
+  <section class="block" id="papers">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Papers and references</h2>
+        <p>The research implemented in qqr. Please cite the original authors when you use the code.</p>
+      </div>
+      <div class="papers" id="papers-list"></div>
+      <h3 style="margin:36px 0 10px">Related projects</h3>
+      <ul class="prose">
+        <li><a href="https://github.com/THUDM/slime">slime</a>, the post-training framework qqr extends</li>
+        <li><a href="https://github.com/openai/openai-agents-python">openai-agents-python</a>, which provides the MCP client interfaces</li>
+        <li><a href="https://modelcontextprotocol.io">Model Context Protocol</a></li>
+        <li><a href="https://huggingface.co/collections/Alibaba-NLP/arenarl">ArenaRL collection on Hugging Face</a> and the <a href="https://tongyi-agent.github.io/blog/arenarl/">ArenaRL blog post</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <h3>qqr</h3>
+      <p>A lightweight, non-intrusive extension for slime that trains open-ended agents with ArenaRL. Licensed under Apache-2.0. Original work by the Alibaba-NLP qqr authors; this fork and site by ViknanS.</p>
+    </div>
+    <div>
+      <h3>Source</h3>
+      <ul>
+        <li><a href="https://github.com/ViknanS/qtr">Repository</a></li>
+        <li><a href="https://github.com/ViknanS/qtr/tree/main/qqr/reward_models/arena">Tournament code</a></li>
+        <li><a href="https://github.com/ViknanS/qtr/blob/main/.env.example">Environment variables</a></li>
+        <li><a href="https://github.com/ViknanS/qtr/blob/main/LICENSE">License</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Docs</h3>
+      <ul>
+        <li><a href="https://github.com/ViknanS/qtr/blob/main/docs/en/get_started/compatibility.md">Compatibility (English)</a></li>
+        <li><a href="https://github.com/ViknanS/qtr/blob/main/docs/zh/get_started/compatibility.md">兼容性 (中文)</a></li>
+        <li><a href="https://github.com/ViknanS/qtr/blob/main/patches/README.md">slime patches</a></li>
+        <li><a href="https://github.com/Alibaba-NLP/qqr">Upstream project</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/arena.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

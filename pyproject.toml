@@ -1,0 +1,92 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qqr"
+version = "0.2.1"
+authors = [{ name = "boli.cbl", email = "boli.cbl@alibaba-inc.com" }]
+description = "A lightweight and efficient RL framework."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+# asyncio.TaskGroup (used by every ArenaRL tournament) requires Python 3.11+.
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+# Core: tournament reward models, MCP integration, prompts and LLM clients.
+# These install and import on macOS / Linux / Windows without a GPU.
+dependencies = [
+    "openai-agents>=0.7.0",
+    "cachetools",
+    "httpx",
+    "numpy",
+]
+
+[project.optional-dependencies]
+# MCP tool servers under qqr/tools (AMap, web search, navigation, ...).
+tools = [
+    "click",
+    "requests",
+    "trafilatura",
+    "pypdf",
+    "fastapi",
+    "uvicorn",
+    "pyyaml",
+]
+# Extra runtime deps of the example rollout / reward modules. Training itself
+# additionally needs the slime stack (torch, sglang, Megatron, ray) installed
+# per docs/en/get_started/compatibility.md - it is intentionally not pinned here
+# because slime ships its own CUDA-specific builds.
+examples = [
+    "json-repair",
+    "pyyaml",
+    "pillow",
+    "pydantic>=2",
+]
+# Vendored tau2-bench environment (qqr/tools/tau2_bench).
+tau2 = [
+    "pandas",
+    "litellm",
+    "loguru",
+    "deepdiff",
+    "toml",
+    "addict",
+    "docstring-parser",
+    "rich",
+    "tiktoken",
+    "psutil",
+    "python-dotenv",
+    "pydantic>=2",
+    "fastapi",
+    "uvicorn",
+]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "pandas",
+    "ruff",
+]
+
+[project.urls]
+Homepage = "https://viknans.github.io/qtr/"
+Documentation = "https://viknans.github.io/qtr/"
+Repository = "https://github.com/ViknanS/qtr"
+Upstream = "https://github.com/Alibaba-NLP/qqr"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["docs/", "tests/", "data/", ".github/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-ra"
+markers = [
+    "integration: spawns real subprocesses (MCP stdio servers); no network or API keys needed",
+]

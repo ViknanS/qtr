@@ -1,0 +1,532 @@
+{
+  "Count": 6,
+  "CurrentPage": 1,
+  "PageSize": 50,
+  "RequestId": "mock-range-shiro-fastjson-baselines",
+  "WarningSummaries": [
+    {
+      "RiskId": 43,
+      "RiskName": "阿里云标准-CentOS Linux 7/8安全基线",
+      "TypeAlias": "最佳安全实践",
+      "Level": "high",
+      "CheckCount": 16,
+      "HighWarningCount": 2,
+      "MediumWarningCount": 4,
+      "LowWarningCount": 0,
+      "WarningMachineCount": 1,
+      "LastFoundTime": "2026-04-16 06:38:06",
+      "Warnings": [
+        {
+          "CheckId": 52,
+          "CheckWarningId": 1366428879,
+          "Item": "密码复杂度检查",
+          "Level": "high",
+          "Status": 1,
+          "Type": "身份鉴别",
+          "FixStatus": 1,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 58,
+          "CheckWarningId": 1366428575,
+          "Item": "检查密码重用是否受限制",
+          "Level": "high",
+          "Status": 1,
+          "Type": "身份鉴别",
+          "FixStatus": 1,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 3,
+          "CheckWarningId": 1366422891,
+          "Item": "设置密码失效时间",
+          "Level": "medium",
+          "Status": 1,
+          "Type": "身份鉴别",
+          "FixStatus": 1,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 4,
+          "CheckWarningId": 1366422897,
+          "Item": "设置密码修改最小间隔时间",
+          "Level": "medium",
+          "Status": 1,
+          "Type": "身份鉴别",
+          "FixStatus": 1,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 8,
+          "CheckWarningId": 1366422901,
+          "Item": "设置SSH空闲超时退出时间",
+          "Level": "medium",
+          "Status": 1,
+          "Type": "服务配置",
+          "FixStatus": 1,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 1342,
+          "CheckWarningId": 1366422892,
+          "Item": "使用非root账号登录实例",
+          "Level": "medium",
+          "Status": 1,
+          "Type": " SSH服务配置                 ",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 1,
+          "CheckWarningId": 1366422909,
+          "Item": "检查系统空密码账户",
+          "Level": "high",
+          "Status": 3,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 2,
+          "CheckWarningId": 1366422912,
+          "Item": "禁止SSH空密码用户登录",
+          "Level": "high",
+          "Status": 3,
+          "Type": " SSH服务配置                 ",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 6,
+          "CheckWarningId": 1366422925,
+          "Item": "确保SSH MaxAuthTries设置为3到6之间",
+          "Level": "high",
+          "Status": 3,
+          "Type": " SSH服务配置                 ",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 10,
+          "CheckWarningId": 1366428924,
+          "Item": "确保rsyslog服务已启用",
+          "Level": "high",
+          "Status": 3,
+          "Type": "安全审计",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 12,
+          "CheckWarningId": 1366422933,
+          "Item": "访问控制配置文件的权限设置",
+          "Level": "high",
+          "Status": 3,
+          "Type": "文件权限",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 13,
+          "CheckWarningId": 1366422937,
+          "Item": "设置用户权限配置文件的权限",
+          "Level": "high",
+          "Status": 3,
+          "Type": "文件权限",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 15,
+          "CheckWarningId": 1366422950,
+          "Item": "确保root是唯一的UID为0的帐户",
+          "Level": "high",
+          "Status": 3,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 5,
+          "CheckWarningId": 1366422921,
+          "Item": "确保密码到期警告天数为7或更多",
+          "Level": "medium",
+          "Status": 3,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 11,
+          "CheckWarningId": 1366422930,
+          "Item": "确保SSH LogLevel设置为INFO",
+          "Level": "medium",
+          "Status": 3,
+          "Type": "服务配置",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 14,
+          "CheckWarningId": 1366422942,
+          "Item": "开启地址空间布局随机化",
+          "Level": "medium",
+          "Status": 3,
+          "Type": "入侵防范",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        }
+      ]
+    },
+    {
+      "RiskId": 105,
+      "RiskName": "弱口令-Linux系统登录弱口令检查",
+      "TypeAlias": "弱口令",
+      "Level": "high",
+      "CheckCount": 1,
+      "HighWarningCount": 1,
+      "MediumWarningCount": 0,
+      "LowWarningCount": 0,
+      "WarningMachineCount": 1,
+      "LastFoundTime": "2026-04-16 06:48:45",
+      "Warnings": [
+        {
+          "CheckId": 907,
+          "CheckWarningId": 1366446457,
+          "Item": "Linux系统弱口令",
+          "Level": "high",
+          "Status": 1,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        }
+      ]
+    },
+    {
+      "RiskId": 23,
+      "RiskName": "阿里云标准-Apache Tomcat 安全基线",
+      "TypeAlias": "最佳安全实践",
+      "Level": "high",
+      "CheckCount": 13,
+      "HighWarningCount": 0,
+      "MediumWarningCount": 3,
+      "LowWarningCount": 1,
+      "WarningMachineCount": 1,
+      "LastFoundTime": "2026-04-16 06:39:52",
+      "Warnings": [
+        {
+          "CheckId": 96,
+          "CheckWarningId": 1366434694,
+          "Item": "禁止显示异常调试信息",
+          "Level": "medium",
+          "Status": 1,
+          "Type": "服务配置",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 98,
+          "CheckWarningId": 1366434692,
+          "Item": "禁止自动部署",
+          "Level": "medium",
+          "Status": 1,
+          "Type": "服务配置",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 100,
+          "CheckWarningId": 1366434684,
+          "Item": "删除项目无关文件和目录",
+          "Level": "medium",
+          "Status": 1,
+          "Type": "访问控制",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 99,
+          "CheckWarningId": 1366434691,
+          "Item": "限制服务器平台信息泄漏",
+          "Level": "low",
+          "Status": 1,
+          "Type": "服务配置",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 97,
+          "CheckWarningId": 1366434695,
+          "Item": "禁止Tomcat显示目录文件列表",
+          "Level": "high",
+          "Status": 3,
+          "Type": "服务配置",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 101,
+          "CheckWarningId": 1366434696,
+          "Item": "Tomcat目录权限检测",
+          "Level": "high",
+          "Status": 3,
+          "Type": "访问控制",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 102,
+          "CheckWarningId": 1366434700,
+          "Item": "Tomcat进程运行权限检测",
+          "Level": "high",
+          "Status": 3,
+          "Type": "访问控制",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 692,
+          "CheckWarningId": 1366434712,
+          "Item": "Tomcat弱口令",
+          "Level": "high",
+          "Status": 3,
+          "Type": "访问控制",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 913,
+          "CheckWarningId": 1366434706,
+          "Item": "AJP协议文件读取与包含严重漏洞",
+          "Level": "high",
+          "Status": 3,
+          "Type": "入侵防范",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 1272,
+          "CheckWarningId": 1366434714,
+          "Item": "Apache Tomcat Cluster 不安全配置导致反序列化代码执行漏洞\n",
+          "Level": "high",
+          "Status": 3,
+          "Type": "入侵防范",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 1273,
+          "CheckWarningId": 1366434718,
+          "Item": "Tomcat版本存在安全漏洞",
+          "Level": "high",
+          "Status": 3,
+          "Type": "入侵防范",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 1296,
+          "CheckWarningId": 1366434701,
+          "Item": "AJP文件读取与包含漏洞",
+          "Level": "high",
+          "Status": 3,
+          "Type": "入侵防范",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 95,
+          "CheckWarningId": 1366434720,
+          "Item": "开启日志记录",
+          "Level": "medium",
+          "Status": 3,
+          "Type": "安全审计",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        }
+      ]
+    },
+    {
+      "RiskId": 88,
+      "RiskName": "阿里云标准-Mysql安全基线",
+      "TypeAlias": "最佳安全实践",
+      "Level": "high",
+      "CheckCount": 12,
+      "HighWarningCount": 0,
+      "MediumWarningCount": 1,
+      "LowWarningCount": 0,
+      "WarningMachineCount": 1,
+      "LastFoundTime": "2026-04-16 06:40:35",
+      "Warnings": [
+        {
+          "CheckId": 752,
+          "CheckWarningId": 1366415129,
+          "Item": "修改默认3306端口",
+          "Level": "medium",
+          "Status": 1,
+          "Type": "服务配置",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 749,
+          "CheckWarningId": 1366415135,
+          "Item": "确保MYSQL_PWD环境变量未设置",
+          "Level": "high",
+          "Status": 3,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 750,
+          "CheckWarningId": 1366415138,
+          "Item": "为MySQL服务使用专用的最低特权账户",
+          "Level": "high",
+          "Status": 3,
+          "Type": "访问控制",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 753,
+          "CheckWarningId": 1366415140,
+          "Item": "禁止使用--skip-grant-tables选项启动MySQL服务",
+          "Level": "high",
+          "Status": 3,
+          "Type": "访问控制",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 755,
+          "CheckWarningId": 1366415148,
+          "Item": "删除'test'数据库",
+          "Level": "high",
+          "Status": 3,
+          "Type": "服务配置",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 759,
+          "CheckWarningId": 1366415157,
+          "Item": "匿名登录检查",
+          "Level": "high",
+          "Status": 3,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 1298,
+          "CheckWarningId": 1366415146,
+          "Item": "版本存在安全漏洞",
+          "Level": "high",
+          "Status": 3,
+          "Type": "入侵防范",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 754,
+          "CheckWarningId": 1366415142,
+          "Item": "禁用local-infile选项",
+          "Level": "medium",
+          "Status": 3,
+          "Type": "访问控制",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 757,
+          "CheckWarningId": 1366415155,
+          "Item": "确保log-raw选项没有配置为ON",
+          "Level": "medium",
+          "Status": 3,
+          "Type": "安全审计",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 758,
+          "CheckWarningId": 1366436098,
+          "Item": "确保没有用户配置了通配符主机名",
+          "Level": "medium",
+          "Status": 3,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 760,
+          "CheckWarningId": 1366415160,
+          "Item": "禁用symbolic-links选项",
+          "Level": "medium",
+          "Status": 3,
+          "Type": "服务配置",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        },
+        {
+          "CheckId": 756,
+          "CheckWarningId": 1366415150,
+          "Item": "确保配置了log-error选项",
+          "Level": "low",
+          "Status": 3,
+          "Type": "安全审计",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        }
+      ]
+    },
+    {
+      "RiskId": 109,
+      "RiskName": "弱口令-Apache Tomcat控制台弱口令检查",
+      "TypeAlias": "弱口令",
+      "Level": "high",
+      "CheckCount": 1,
+      "HighWarningCount": 0,
+      "MediumWarningCount": 0,
+      "LowWarningCount": 0,
+      "WarningMachineCount": 1,
+      "LastFoundTime": "2026-04-16 06:41:25",
+      "Warnings": [
+        {
+          "CheckId": 908,
+          "CheckWarningId": 1366436225,
+          "Item": "Tomcat弱口令",
+          "Level": "high",
+          "Status": 3,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        }
+      ]
+    },
+    {
+      "RiskId": 104,
+      "RiskName": "弱口令-Mysql数据库登录弱口令检查(不支持8.x版本)",
+      "TypeAlias": "弱口令",
+      "Level": "high",
+      "CheckCount": 1,
+      "HighWarningCount": 0,
+      "MediumWarningCount": 0,
+      "LowWarningCount": 0,
+      "WarningMachineCount": 1,
+      "LastFoundTime": "2026-04-16 06:40:35",
+      "Warnings": [
+        {
+          "CheckId": 906,
+          "CheckWarningId": 1366436099,
+          "Item": "Mysql弱口令(不支持8.x版本)",
+          "Level": "high",
+          "Status": 3,
+          "Type": "身份鉴别",
+          "FixStatus": 0,
+          "Uuid": "mock-uuid-shiro-fastjson-victim"
+        }
+      ]
+    }
+  ]
+}

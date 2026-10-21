@@ -1,0 +1,44 @@
+{
+  "RequestId": "mock-range-log4j-rce-baselines",
+  "PageSize": 50,
+  "CurrentPage": 1,
+  "TotalCount": 4,
+  "RiskItemList": [
+    {
+      "RiskItemName": "PermitRootLogin 配置为 yes",
+      "RiskLevel": "high",
+      "Category": "ssh_config",
+      "ItemName": "SSH PermitRootLogin",
+      "CheckResult": "warn",
+      "Details": "/etc/ssh/sshd_config 中 PermitRootLogin 设为 yes，允许 root 用户直接通过 SSH 登录",
+      "Ip": "__VICTIM_IP__"
+    },
+    {
+      "RiskItemName": "SSH MaxAuthTries 设置过大",
+      "RiskLevel": "medium",
+      "Category": "ssh_config",
+      "ItemName": "SSH MaxAuthTries",
+      "CheckResult": "warn",
+      "Details": "MaxAuthTries 设置为 100，极大增加暴力破解成功概率",
+      "Ip": "__VICTIM_IP__"
+    },
+    {
+      "RiskItemName": "弱口令 - 系统账户",
+      "RiskLevel": "high",
+      "Category": "weak_password",
+      "ItemName": "WeakPassword-app",
+      "CheckResult": "warn",
+      "Details": "用户 app 使用弱密码",
+      "Ip": "__VICTIM_IP__"
+    },
+    {
+      "RiskItemName": "Sudoers NOPASSWD 配置",
+      "RiskLevel": "high",
+      "Category": "sudo_config",
+      "ItemName": "Sudo NOPASSWD",
+      "CheckResult": "warn",
+      "Details": "用户 app 对 /opt/webapp/deploy.sh 有 NOPASSWD sudo 权限",
+      "Ip": "__VICTIM_IP__"
+    }
+  ]
+}

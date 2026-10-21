@@ -1,0 +1,6 @@
+{
+  "cve": { "CurrentPage": 1, "PageSize": 50, "RequestId": "G9J3I8K7-EJ0H-2I1J-HF56-7890123456GH", "TotalCount": 0, "VulRecords": [] },
+  "sys": { "CurrentPage": 1, "PageSize": 50, "RequestId": "H0K4J9L8-FK1I-3J2K-IG67-8901234567HI", "TotalCount": 0, "VulRecords": [] },
+  "app": { "CurrentPage": 1, "PageSize": 50, "RequestId": "I1L5K0M9-GL2J-4K3L-JH78-9012345678IJ", "TotalCount": 0, "VulRecords": [] },
+  "_comment": "SAS 未检测到 CVE 或应用漏洞。Docker Remote API 未授权访问属于配置弱点而非 CVE。"
+}

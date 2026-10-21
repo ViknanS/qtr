@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: pytest (Python ${{ matrix.python }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install qqr (core + tools + tau2 + dev)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev,tools,tau2]" playwright
+          python -m playwright install --with-deps chromium
+      - name: Environment report
+        run: python -m qqr.doctor
+      - name: Offline demo
+        run: python -m qqr.demo
+      - name: Tests (offline, mocked services)
+        run: pytest -q
+
+  pages-check:
+    name: Website files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the Pages entry point and assets exist
+        run: |
+          test -f docs/index.html
+          test -f docs/.nojekyll
+          test -f docs/404.html
+          grep -o 'assets/[^"]*' docs/index.html | sort -u | while read -r f; do
+            test -f "docs/$f" || { echo "missing docs/$f"; exit 1; }
+          done
